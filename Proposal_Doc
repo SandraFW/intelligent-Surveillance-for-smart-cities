@@ -1,0 +1,150 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{makecell}
+\usepackage[margin=0.7in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage[normalem]{ulem}
+
+\renewcommand\theadalign{bc}
+\renewcommand\theadfont{\bfseries}
+\renewcommand\theadgape{\Gape[4pt]}
+\renewcommand\cellgape{\Gape[4pt]}
+
+\usepackage[
+backend=biber,
+style=numeric,
+sorting=ynt
+]{biblatex}
+
+\addbibresource{references.bib}
+
+%opening
+\title{Software Proposal Document for project
+\newline Intelligent Surveillance for smart cities}
+\author{Mariam Hesham,Nour Ahmed ,Samiha Hesham,Sandra Fares}
+
+\begin{document}
+\maketitle
+\begin{table}[htp]
+
+\begin{tabular}{|l|l|l|}
+\hline
+\thead{Proposal Version}    & \thead{Date} & \thead{Reason for Change}  \\ \hline
+1.0 & 25-October-2020   & \makecell{Proposal First version’s specifications are defined}   \\ \hline
+1.1 & 28-October-2020   & \makecell{Scope updated} \\ \hline
+\end{tabular}
+\caption{Document version history}
+\end{table}
+
+\begin{table}[htp]
+\begin{tabular}{cc}
+\thead{GitHub:}    & {https://github.com/SandraFW/intelligent-Surveillance-for-smart-cities}   
+\end{tabular}
+\end{table}
+
+
+\begin{abstract}
+The main idea of this project is to study the ........
+(Word Limit 150)
+\end{abstract}
+
+\section{Introduction}
+The following is a sample outline for a project proposal. 
+Note that all questions for a section may not apply to
+your proposal, and should be used as a general guide only.
+\subsection{Background}
+Please start from very big domain for your problem then focus on some area inside this domain that match your interest.
+\subsection{Motivation}
+\subsubsection{Academic}
+This should be 1 to 3 paragraphs that discuss Academic needs for your project (\textbf{Why is this problem interesting}). You must include references.
+For this section consider answering the following questions:
+\begin{enumerate}
+\item What is the history of the problem?
+\item Why is this problem interesting?
+\item When and why does the problem occur?
+\item Is the problem already solved? 
+\item What is the most current/successful solutions available now?
+\item Reference and very briefly explain the most important related solutions.
+What are possible improvements to current solutions?
+\end{enumerate}
+\subsubsection{Business}
+Discuss business Needs for your project.
+
+\subsection{Problem Statement}
+Please put a focus on 1-2 challenges that this project aims to solve and state them very clear as your formal problem statement.
+
+\section{Project Description}
+List initial project requirements. A good requirement states something that is \textbf{necessary}, \textbf{verifiable}, and \textbf{attainable}. Even if it is verifiable and attainable if it is not necessary, it is not a good requirement \cite{hooks1994writing}.
+\\
+\\Show down with a figure the proposed system.
+
+\subsection{Objectives}
+Write as a minimum three statements that describe the “what” of your project. \\The concrete and measurable “what”. 
+\\Aim to use the specific, measurable, assignable, realistic, and time-related (SMART) method for writing effective Objectives.
+Examples of good Objectives:
+\begin{itemize}
+\item We will reduce the number of clicks it takes for a user to reach the highest traffic page that the majority of our website users regularly visit (the member directory) from any point on the site to 2 clicks or less by the end of our design phase on June 1st.
+\item We will write the SRS document to meet with IEEE 830-1998 standard, which will be delivered by December 2020.
+\end{itemize}
+\subsection{Scope}
+The scope of your project.
+\subsection{Project Overview}
+Some extra details for your system implementations.
+\subsection{Stakeholder}
+\subsubsection{Internal}
+State who is the team leader. list all team members with their responsibilities
+\subsubsection{External}
+State who are the End Users and clients
+
+\section{Similar System}
+\subsection{Academic}
+
+List down at least 10 papers from ACM and IEEE for similar work experience in the domain of your problem. You can add 5 papers or more from other sources (Springer, Elsevier,  ..etc)
+
+Be sure that each paper you list include the following points
+
+\begin{enumerate}
+\item The main problem statement of the work.
+\item How the researchers contributed to solve the problem
+\item The dataset used by the researchers
+\item What main results the researchers reach.
+\item Criticize the paper
+\item Figure/s of the work (if available)
+\end{enumerate}
+
+\subsection{Business Applications}
+Describe available business applications the the market with figures. (Optional)
+
+\section{What is new in the Proposed Project?}
+
+\section{Proof of concept}
+Demonstrate the 10\% implemented in your project so far.
+
+\section{Project Management and Deliverables}
+\subsection{Deliverables}
+\begin{itemize}
+\item What will the project produce? (program, reports, etc.)
+\item Describe in brief detail the features of each of the deliverables.
+\item Separate deliverables into milestones (based on MIU graduation project calendar)
+\end{itemize}
+\subsection{Tasks and Time Plan}
+Use some software for primitive plan of your project.
+\subsection{Budget and Resource Costs}
+
+\section{Supportive Documents}
+Add sections covering one or more of the following:
+\begin{itemize}
+
+\item Dataset.
+\item Contact documents
+\item users/survey
+\item Contacting authors.
+
+\end{itemize}
+
+\section {References}
+20 Reference Minimum (80\% Academic)
+\printbibliography
+\end{document}
