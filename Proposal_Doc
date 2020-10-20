@@ -46,8 +46,7 @@ sorting=ynt
 
 
 \begin{abstract}
-The main idea of this project is to study the ........
-(Word Limit 150)
+Surveillance systems are of vital importance for the development of smart cities. These systems can be considered vision organs of such cities. It is expected that a huge amount of data (Big Data) will be generated in smart cities. Therefore, to ensure the safety of its citizens, it is important to provide an efficient and real-time analysis of these data to get real-time responses, when catastrophic events occur. Accordingly, transmitting this massive data to the cloud, to be processed, is relatively slow. Therefore, the purpose of this project is to implement an edge computing- based surveillance system to offer real-time data processing. When surveillance videos capture an incident, the data get transferred to the edge for processing. Moreover, a rapid response is then provided to properly handle the occasion. Furthermore, despite tackling scalability obstacles, the system should handle privacy-sensitive data to overcome the privacy challenges in smart cities.
 \end{abstract}
 
 \section{Introduction}
@@ -62,17 +61,7 @@ The video surveillance system is a crucial component in the development of Smart
 Cloud computing was proposed then to solve some of those issues as mentioned in \cite{2} and \cite{3}, and it proved to be efficient but with the growth of data, it could not accomplish the desired results, and fast response due to the possible delay of transmitting the data to and from the cloud server, and also it could not solve the privacy and security concerns. So The term Fog Computing and video summarising were introduced .
 \subsection{Motivation}
 \subsubsection{Academic}
-This should be 1 to 3 paragraphs that discuss Academic needs for your project (\textbf{Why is this problem interesting}). You must include references.
-For this section consider answering the following questions:
-\begin{enumerate}
-\item What is the history of the problem?
-\item Why is this problem interesting?
-\item When and why does the problem occur?
-\item Is the problem already solved? 
-\item What is the most current/successful solutions available now?
-\item Reference and very briefly explain the most important related solutions.
-What are possible improvements to current solutions?
-\end{enumerate}
+Since smart cities utilize IoT devices in recent times, in order to improve their infrastructure, numerous amounts of data get generated at a rapid rate. Passing data to the cloud is unfavorable when dealing with surveillance systems, as these systems require urgent and  instant responses to avoid misfortune events. Therefore, it is necessary to procure a strategy that will assist in managing and processing data effectively in a short period of time. Edge computing is a recently proposed solution for this problem. Instead of transferring data to the cloud, it gets transferred to the edge for real-time data processing. Various techniques are used to exploit this new technology and use it efficiently to solve different barriers. B. V. Natesha and Ram Mohana Reddy Guddeti \cite{nateshafog} proposed a fog computing based surveillance system, for smart cities, that processes data using deep learning methods in order to provide low latency and minimize the cost of the services. Likewise, G. Baldoni et al. \cite{baldoni2017dynamic} present edge computing to reduce the network traffic and offer scalability.
 \subsubsection{Business}
 Discuss business Needs for your project.
 
