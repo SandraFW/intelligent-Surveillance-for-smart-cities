@@ -32,8 +32,8 @@ sorting=ynt
 \begin{tabular}{|l|l|l|}
 \hline
 \thead{Proposal Version}    & \thead{Date} & \thead{Reason for Change}  \\ \hline
-1.0 & 25-October-2020   & \makecell{Proposal First version’s specifications are defined}   \\ \hline
-1.1 & 28-October-2020   & \makecell{Scope updated} \\ \hline
+1.0 & 24-October-2020   & \makecell{Proposal First version’s specifications are defined}   \\ \hline
+
 \end{tabular}
 \caption{Document version history}
 \end{table}
@@ -56,7 +56,7 @@ your proposal, and should be used as a general guide only.
 \subsection{Background}
 The video surveillance system is a crucial component in the development of Smart Cities where they are useful for crime prevention, terrorist or forensic evidence detection, and traffic monitoring but the old traditional surveillance cannot accomplish it that's why smart surveillance systems with smart detection modules were introduced and always in enhancements till now.
  
-\cite{1}However, implementing a citywide smart video surveillance system involves many challenges. A large number of cameras have to be deployed across the city, producing huge amounts of data and information every day. Also, Besides, storing and enabling access to video devices and data at this large scale, in both real-time and on-demand manner, demand more computing and storage resources than traditional video surveillance systems. These challenges have to be addressed to maximize the effectiveness of smart video surveillance. 
+\cite{1}However, implementing a citywide smart video surveillance system involves many challenges. A large number of cameras have to be deployed across the city, producing huge amounts of data and information every day.Besides, storing and enabling access to video devices and data at this large scale, in both real-time and on-demand manner, demand more computing and storage resources than traditional video surveillance systems. These challenges have to be addressed to maximize the effectiveness of smart video surveillance. 
 
 Cloud computing was proposed then to solve some of those issues as mentioned in \cite{2} and \cite{3}, and it proved to be efficient but with the growth of data, it could not accomplish the desired results, and fast response due to the possible delay of transmitting the data to and from the cloud server, and also it could not solve the privacy and security concerns. So The term Fog Computing and video summarising were introduced .
 \subsection{Motivation}
