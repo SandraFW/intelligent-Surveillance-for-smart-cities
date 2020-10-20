@@ -18,7 +18,7 @@ style=numeric,
 sorting=ynt
 ]{biblatex}
 
-\addbibresource{references.bib}
+\addbibresource{References.bib}
 
 %opening
 \title{Software Proposal Document for project
@@ -138,6 +138,6 @@ Add sections covering one or more of the following:
 \end{itemize}
 
 \section {References}
-20 Reference Minimum (80\% Academic)
+\nocite{*}
 \printbibliography
 \end{document}
