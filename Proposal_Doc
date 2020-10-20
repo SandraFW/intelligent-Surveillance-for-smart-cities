@@ -59,7 +59,7 @@ The video surveillance system is a crucial component in the development of Smart
  
 \cite{1}However, implementing a citywide smart video surveillance system involves many challenges. A large number of cameras have to be deployed across the city, producing huge amounts of data and information every day. Also, Besides, storing and enabling access to video devices and data at this large scale, in both real-time and on-demand manner, demand more computing and storage resources than traditional video surveillance systems. These challenges have to be addressed to maximize the effectiveness of smart video surveillance. 
 
-Cloud computing was proposed then to solve some of those issues as mentioned in \cite{2} and \cite{3}, and it proved to be efficient but with the growth of data, it could not accomplish the desired results, and fast response due to the possible delay of transmitting the data to and from the cloud server, and also it could not solve the privacy and security concerns. So The term Fog Computing and video summarising were introduced.
+Cloud computing was proposed then to solve some of those issues as mentioned in \cite{2} and \cite{3}, and it proved to be efficient but with the growth of data, it could not accomplish the desired results, and fast response due to the possible delay of transmitting the data to and from the cloud server, and also it could not solve the privacy and security concerns. So The term Fog Computing and video summarising were introduced .
 \subsection{Motivation}
 \subsubsection{Academic}
 This should be 1 to 3 paragraphs that discuss Academic needs for your project (\textbf{Why is this problem interesting}). You must include references.
