@@ -30,7 +30,7 @@ sorting=ynt
 \begin{table}[htp]
 
 \begin{tabular}{|l|l|l|}
-\hline
+\hline 
 \thead{Proposal Version}    & \thead{Date} & \thead{Reason for Change}  \\ \hline
 1.0 & 24-October-2020   & \makecell{Proposal First version’s specifications are defined}   \\ \hline
 
