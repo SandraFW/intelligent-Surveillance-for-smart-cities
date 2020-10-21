@@ -65,8 +65,7 @@ Since smart cities utilize IoT devices in recent times, in order to improve thei
 \subsubsection{Business}
 Discuss business Needs for your project.
 
-\subsection{Problem Statement}
-Please put a focus on 1-2 challenges that this project aims to solve and state them very clear as your formal problem statement.
+\subsection{Problem Statement}One of the challenges that face a surveillance systems in smart cities is a Big data, as the smart city involves huge amount of cameras in 24/7 mode to cover the whole city. Each camera records a massive amount of video and audio data to be processing. To handle such a massive data it is essential to provide way to get real-time data processing analysis efficiently. Cloud computing has been utilized to perform data processing analysis leading to slower performance. Therefore edge computing is essential for real-time data processing analysis with high performance and low latency.
 
 \section{Project Description}
 List initial project requirements. A good requirement states something that is \textbf{necessary}, \textbf{verifiable}, and \textbf{attainable}. Even if it is verifiable and attainable if it is not necessary, it is not a good requirement \cite{hooks1994writing}.
