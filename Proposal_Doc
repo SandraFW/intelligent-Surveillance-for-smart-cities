@@ -74,12 +74,15 @@ List initial project requirements. A good requirement states something that is \
 \\Show down with a figure the proposed system.
 
 \subsection{Objectives}
-Write as a minimum three statements that describe the “what” of your project. \\The concrete and measurable “what”. 
-\\Aim to use the specific, measurable, assignable, realistic, and time-related (SMART) method for writing effective Objectives.
-Examples of good Objectives:
+
+
 \begin{itemize}
-\item We will reduce the number of clicks it takes for a user to reach the highest traffic page that the majority of our website users regularly visit (the member directory) from any point on the site to 2 clicks or less by the end of our design phase on June 1st.
-\item We will write the SRS document to meet with IEEE 830-1998 standard, which will be delivered by December 2020.
+
+\item We will improve an algorithm for anomaly detection in surveillance video with remarkable stability and accuracy.
+
+
+\item We will work on enhancing the Privacy protection scheme for data security in surveillance video.
+
 \end{itemize}
 \subsection{Scope}
 The scope of your project.
