@@ -91,7 +91,11 @@ List initial project requirements. A good requirement states something that is \
 \item The system will provide scalability with unlimited storage.
 \end{itemize}
 \subsection{Project Overview}
-Some extra details for your system implementations.
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=10cm]{untitled folder/1.png}
+\end{figure}
+Our system will be classified into three layers as shown in the figure. The first layer is the device layer where the surveillance cameras will capture the data and send those video streams over the network, then second which is the fog layer will do most of the work needed as on it the videos will be processed using a pre-trained classification model for anomaly detection with the help of our fog nodes; this layer can also be divided into two layers in order to facilitate and reduce the overhead and after detection, if no abnormality in the streams, those streams will be summarized to reduce the huge amount of data that can be sent and finally transfer them to the cloud layer.
 \subsection{Stakeholder}
 \subsubsection{Internal}
 The development team members are:
