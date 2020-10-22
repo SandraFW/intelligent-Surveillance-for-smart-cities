@@ -76,8 +76,9 @@ List initial project requirements. A good requirement states something that is \
 
 \begin{itemize}
 
+\item Fog computing-based framework using  video summarization for surveillance data.
 \item We will improve an algorithm for anomaly detection in surveillance video with remarkable stability and accuracy.
-
+\item We will work on enhancing the latency by reducing the amount of data.
 
 \item We will work on enhancing the Privacy protection scheme for data security in surveillance video.
 
@@ -95,9 +96,13 @@ List initial project requirements. A good requirement states something that is \
 Some extra details for your system implementations.
 \subsection{Stakeholder}
 \subsubsection{Internal}
-State who is the team leader. list all team members with their responsibilities
+The development team are:
+\item Nour Ahmed is the team leader.
+\item Mariam Hesham
+\item Sandra Fares
+\item Samiha Hesham
 \subsubsection{External}
-State who are the End Users and clients
+"Ministry of communication, government companies,smart cities and grand city shopping centers" where they need our system to monitor their places 24/7 with unlimited storage.Also detecting any abnormal activity efficiently.
 
 \section{Similar System}
 \subsection{Academic}
