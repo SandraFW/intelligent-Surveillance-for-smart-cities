@@ -191,16 +191,22 @@ Privacy protection scheme & April 2021 \\
 Use some software for primitive plan of your project.
 \subsection{Budget and Resource Costs}
 
+
 \section{Supportive Documents}
-Add sections covering one or more of the following:
-\begin{itemize}
 
-\item Dataset.
-\item Contact documents
-\item users/survey
-\item Contacting authors.
+contacting ELSEWEDY technology company 
+\newline
 
-\end{itemize}
+\includegraphics[width=1.0\textwidth]{untitled folder/6.png}
+\includegraphics[width=1.0\textwidth]{untitled folder/7.png}
+
+We have done a systmatic review and we wrote a paper; which was sent a systematic review paper to SSIC 2021(3rd International
+Conference on Smart Systems: Innovations in Computing) waiting for their response.The paper is available on github
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=10cm]{8.png}
+\end{figure}
+
 
 \section {References}
 \nocite{*}
