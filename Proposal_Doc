@@ -120,33 +120,32 @@ The development team members are:
 \end{figure}
 \item Yutong Liu et al \cite{liu2019litedge} address the obstacles faced when working with wireless surveillance systems, since wireless systems improve the performance and are easier to manage. As the amount of data to be transmitted gets larger, the challenges become visible and the burden on the network increases. This system reduces the pressure on the network by filtering and applying video compression. Moreover, the system provides real-time processing and monitoring using edge computing approach. Experimental results show that the system accomplishes 82 percent latency reduction. As well as, 91.26 percent transmission workload reduction as the redundant data get filtered out.
 
-\end{itemize}
-\cite{nateshafog}Fog-Based Video Surveillance System for Smart City Applications:the authors proposed two fog architecture as an experiment to reduce latency and cloud resource consumption. The first architecture shown in Fig2 was the Local Fog Node using SSN. They used the fog nodes at the lower level to analyze and extract the data in order to reduce data size and to help the low computational powered devices, an Intel Neural Compute Stick(NCS) which provides the pre-trained neural network model for video analysis and real-time object classification had been installed. The second architecture shown in Fig2 was Fog Server video processing using DNN. Where a  data center is used as the fog server as a layer between the cloud layer and devices. Applying those two architectures on vehicle data set proved that using fog computing for processing real-time videos is a successful approach while the other architecture is more efficient. However, they proved using one of those architectures or both of them creating a hybrid architecture can solve many challenges.
-\FloatBarrier
-\begin{figure}
+\item Natesha et al\cite{nateshafog} proposed two fog architecture as an experiment to reduce latency and cloud resource consumption. The first architecture shown in the figure was the Local Fog Node using SSN. They used the fog nodes at the lower level to analyze and extract the data in order to reduce data size and to help the low computational powered devices, an Intel Neural Compute Stick(NCS) which provides the pre-trained neural network model for video analysis and real-time object classification had been installed. The second architecture shown in Fig2 was Fog Server video processing using DNN. Where a  data center is used as the fog server as a layer between the cloud layer and devices. Applying those two architectures on vehicle data set proved that using fog computing for processing real-time videos is a successful approach while the other architecture is more efficient. However, they proved using one of those architectures or both of them creating a hybrid architecture can solve many challenges.
 
+\begin{figure}[!ht]
  \begin{minipage}{.5\textwidth}
-  \includegraphics[width=6.0cm, height=6.0cm]{./2.png}
+  \includegraphics[width=7.0cm, height=7.0cm]{./2.png}
   \caption{the Local Fog Node using SSN}
  \end{minipage}
   \begin{minipage}{.5\textwidth}
-  \includegraphics[width=6.0cm, height=6.0cm]{./3.png}
+  \includegraphics[width=7.0cm, height=7.0cm]{./3.png}
   \caption{Fog Server video processing using DNN}
  \end{minipage}
 \end{figure}
-\FloatBarrier
-\cite{6}Performance Evaluation of a Traffic Surveillance Application Using iFogSim: Using cloud-based architectures faces low latency while dealing with sensitive real-time applications; Therefore they proposed a new fog-based model for traffic surveillance was proposed. This model is based on three phases, inputting the IoT video streams, recognizing and tracking. Then, They used the ifogSim tool to simulate their approach using FogDevice, Sensor, Actuator, Tuple class, and Application class. The results compared to cloud-based systems proved to be efficient in the average latency, energy consumption, data transfer rate, and more. This paper also proved that fog-based applications do better than cloud ones.
 
-\cite{Santamaria2019}Cooperative Video-Surveillance Framework in Internet of Things (IoT) Domain:Due to the large number of data collected by surveillance cameras , many challenges appeared to analyze , store and retrieve data.In this chapter they are introducing the basics needs to build a framework for people's abnormal behaviors.After investigating the current techniques and technologies.Using distributed architecture as shown in fig 4. was the main solution as it helps the performance of the system, then they mentioned the responsibility of each layer in the system , the possible computer vision techniques that can be used with their pros and cons as Neural networks and KNN . Object detection and tracking 
+\item Sinqadu et al \cite{6} mentioned that using cloud-based architectures faces low latency while dealing with sensitive real-time applications; Therefore they proposed a new fog-based model for traffic surveillance was proposed. This model is based on three phases, inputting the IoT video streams, recognizing and tracking. Then, They used the ifogSim tool to simulate their approach using FogDevice, Sensor, Actuator, Tuple class, and Application class. The results compared to cloud-based systems proved to be efficient in the average latency, energy consumption, data transfer rate, and more. This paper also proved that fog-based applications do better than cloud ones.
+\newpage
+\item Santamaria et al \cite{Santamaria2019} mentioned that due to the large number of data collected by surveillance cameras , many challenges appeared to analyze , store and retrieve data.In this chapter they are introducing the basics needs to build a framework for people's abnormal behaviors.After investigating the current techniques and technologies.Using distributed architecture as shown in fig 4. was the main solution as it helps the performance of the system, then they mentioned the responsibility of each layer in the system , the possible computer vision techniques that can be used with their pros and cons as Neural networks and KNN . Object detection and tracking 
 \FloatBarrier
-\begin{figure}
+\begin{figure}[!ht]
 \centering
  \begin{minipage}{.5\textwidth}
-  \includegraphics[width=6.0cm, height=6.0cm]{./4.png}
+  \includegraphics[width=10.0cm, height=10.0cm]{./4.png}
   \caption{the Distributed eccosystem in cloud domain}
  \end{minipage}
 \end{figure}
 \FloatBarrier
+\end{itemize}
 
 \section{What is new in the Proposed Project?}
 
