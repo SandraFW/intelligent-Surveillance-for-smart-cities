@@ -97,10 +97,12 @@ Some extra details for your system implementations.
 \subsection{Stakeholder}
 \subsubsection{Internal}
 The development team are:
-\item Nour Ahmed is the team leader.
+\begin{itemize}
+\item Nour Ahmed (team leader).
 \item Mariam Hesham
 \item Sandra Fares
 \item Samiha Hesham
+\end{itemize}
 \subsubsection{External}
 "Ministry of communication, government companies,smart cities and grand city shopping centers" where they need our system to monitor their places 24/7 with unlimited storage.Also detecting any abnormal activity efficiently.
 
