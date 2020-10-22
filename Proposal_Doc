@@ -154,11 +154,29 @@ Demonstrate the 10\% implemented in your project so far.
 
 \section{Project Management and Deliverables}
 \subsection{Deliverables}
+In order to reach our goal and obtain satisfactory results, we need to successfully achieve and deliver the fundamental elements of our system:
+
 \begin{itemize}
-\item What will the project produce? (program, reports, etc.)
-\item Describe in brief detail the features of each of the deliverables.
-\item Separate deliverables into milestones (based on MIU graduation project calendar)
+\item System's architectural model
+\item Algorithms for anomaly detection
+\item Framework for video summarization
+\item Privacy protection scheme    
+
 \end{itemize}
+First, the fog computing- based surveillance system architecture should be implemented using a simulation and modeling tool. Then, anomaly detection algorithms should be efficiently implemented to offer real-time data processing. Moreover, a framework should be developed for video summarization, in order to overcome the scalability challenge. In addition, privacy protection scheme will be presented for data security and to overcome privacy concerns in smart cities.
+
+\hfill \break
+
+\begin{tabular}{|l|l|l|}
+\hline 
+\thead{Deliverables}    & \thead{Completion date}   \\ \hline
+System Architecture & December 2020     \\ \hline
+anomaly detection+ video summarization & February 2021 \\
+\hline
+Privacy protection scheme & April 2021 \\
+\hline
+\end{tabular}
+
 \subsection{Tasks and Time Plan}
 Use some software for primitive plan of your project.
 \subsection{Budget and Resource Costs}
