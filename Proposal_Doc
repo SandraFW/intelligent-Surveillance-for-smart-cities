@@ -93,7 +93,7 @@ List initial project requirements. A good requirement states something that is \
 \subsection{Project Overview}
 \begin{figure}[!htbp]
   \centering
-  \includegraphics[width=10cm]{untitled folder/1.png}
+  \includegraphics[width=10cm]{./1.png}
 \end{figure}
 Our system will be classified into three layers as shown in the figure. The first layer is the device layer where the surveillance cameras will capture the data and send those video streams over the network, then second which is the fog layer will do most of the work needed as on it the videos will be processed using a pre-trained classification model for anomaly detection with the help of our fog nodes; this layer can also be divided into two layers in order to facilitate and reduce the overhead and after detection, if no abnormality in the streams, those streams will be summarized to reduce the huge amount of data that can be sent, then we will apply a securing algorithm to provide privacy while transferring the data.And finally send them to the cloud layer to be stored and retrieved easily.\subsection{Stakeholder}
 \subsubsection{Internal}
@@ -154,7 +154,36 @@ The development team members are:
 
 \item In the article \cite{chen2019distributed}. The authors propose a deep learning based distributed intelligent video surveillance system and deploy it in an edge computing. Due to the massive data generated from the IoT devices and massive network communication, the system aims to solve such challenges and provide real-time and accurate data analysis with low latency. Therefore, the proposed system will transfer the computing data from center network to the edge network. The proposed approach shows that the system perform well and can handle such a huge video data and provide accurate and accelerated analysis. Moreover, it shows that the edge computing provides the system with scalability and flexibility.
 
+
+\item \cite{7983190}The authors proposes a video surveillance platform for smart cities that presents the following main features: Opening to different video acquiring technologies, plug-and-play, flexibility and scalability with the number of transmitting and receiving devices.The proposed technology is achieved by using SAN and NAN prototypes that are recognized according to the SDN/NFV standard paradigm by using general purpose x86-based hardware equipped with a software SDN switch and a virtualization environment.The proposed platform presents a lot of advantages like reduction of network traffic,low end to end latency,OpEx and CapEx reduction, scalability and platform add-ons.
+
+\begin{figure}[!ht]
+ \begin{minipage}{.5\textwidth}
+  \includegraphics[width=7.0cm, height=7.0cm]{./10.png}
+  \caption{Platfrom architecture}
+ \end{minipage}
+  \begin{minipage}{.5\textwidth}
+  \includegraphics[width=7.0cm, height=7.0cm]{./11.png}
+  \caption{Prototype description}
+ \end{minipage}
+\end{figure}
+
+\newpage
+
+\item In this article\cite{9126126}The authors proposed a task offloading method for the video surveillance in edge computing enable IoV to shorten the time cost,remain the load balance of edge nodes and to maximize the privacy entropy.They presented a new  algorithm design called TOM that solves multi-objective optimization problem by SPEA2(improving the strength Pareto evolutionary algorithm).Moreover,implementing the normalization processing by TOPSIS(Technique for Order Preference by Similarity to Ideal Solution) and MCDM(Multiple Criteria Decision Making) methods.The final results shows that when the number of tasks is huge,TOM has stronger improvement on privacy protection than FFD algorithm which proofs that the experimental simulation performs efficient and trust.
 \FloatBarrier
+\begin{figure}[!ht]
+\centering
+ \begin{minipage}{.5\textwidth}
+  \includegraphics[width=10.0cm, height=10.0cm]{./12.png}
+  \caption{A video surveillance architecture with the edge computing.}
+ \end{minipage}
+\end{figure}
+
+\newpage
+
+
+\item  In this article \cite{8807184} The authors .
 \end{itemize}
 \section{What is new in the Proposed Project?}
 
@@ -195,7 +224,7 @@ Use some software for primitive plan of your project.
 
 contacting ELSEWEDY technology company 
 \newline
-\includegraphics[width=0.8\textwidth]{untitled folder/5.png}
+\includegraphics[width=0.8\textwidth]{./5.png}
 \newline
 \includegraphics[width=0.8\textwidth]{untitled folder/6.png}
 
