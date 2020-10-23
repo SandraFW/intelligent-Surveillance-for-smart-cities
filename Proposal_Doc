@@ -83,7 +83,6 @@ List initial project requirements. A good requirement states something that is \
 \end{itemize}
 \subsection{Scope}
 \begin{itemize}
-\item The system will work in 24/7 mode to control the city during the whole day.
 \item The system will provide real time data processing analysis.
 \item The system will detect any accident or abnormal event efficiently.
 \item The system will response immediately and take a proper action when an event is detected.
