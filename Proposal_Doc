@@ -186,7 +186,7 @@ The development team members are:
 \item  In this article \cite{8807184} The authors .
 \end{itemize}
 \section{What is new in the Proposed Project?}
-
+Nowadays with the expansion of video surveillance system in public places, the system can expose the identity of the people and transfer the private data to server-based video analysis, which make the data insecure and it is considered as violating privacy rights. The proposed system will design Fog-Edge based surveillance system for smart cities. The system provides a real-time data processing analysis effectively and rapidly decision taking with high performance. Moreover, the system ensures privacy protection and secure citizen's data by balancing between the video analysis and unnecessary data that appear the user's identity in the video.
 \section{Proof of concept}
 Demonstrate the 10\% implemented in your project so far.
 
