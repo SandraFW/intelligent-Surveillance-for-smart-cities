@@ -72,8 +72,7 @@ List initial project requirements. A good requirement states something that is \
 \subsection{Objectives}
 
 
-Our main objective is to build a fog computing based framework using video summarizing for surveillance data.As we will improve an algorithm for anomaly detection  with remarkable stability and accuracy.The system is also developed to work on enhancing the latency by reducing the amount of data. Moreover,We will work on developing the privacy protection scheme for data security.
-
+Our main objective is to build a fog computing based framework using video summarizing for surveillance data.We will improve an algorithm for anomaly detection  with remarkable stability and accuracy.The system is also developed to work on enhancing the latency by reducing the amount of data. Moreover,We will work on developing the privacy protection scheme for data security.
 \subsection{Scope}
 \begin{itemize}
 \item The system will provide real time data processing analysis.
