@@ -70,7 +70,7 @@ One of the challenges that face surveillance systems in smart cities is Big data
 \subsection{Objectives}
 
 
-Our main objective is to build a fog computing based framework using video summarizing for surveillance data in order to detect abnormal human behaviors in the streets.We will improve an algorithm for anomaly detection  with remarkable stability and accuracy.The system is also developed to work on enhancing the latency by reducing the amount of data.Moreover,We will work on developing the privacy protection scheme for data security.
+Our main objective is to build a fog computing based framework for surveillance data in order to detect abnormal human behaviors in the streets.We will improve an algorithm for anomaly detection  with remarkable stability and accuracy.The system is also developed to work on enhancing the latency by reducing the amount of data.Moreover,We will work on developing the privacy protection scheme for data security.
 \begin{itemize}
 \item The system will provide real time data processing analysis.
 
