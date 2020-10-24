@@ -183,6 +183,7 @@ Moreover, implementing the normalization processing by TOPSIS(Technique for Orde
 Nowadays, with the expansion of video surveillance system in public places, the system can expose the identity of the people and transfer the private data to server-based video analysis, which make the data insecure and it is considered as violating privacy rights. The proposed system will design Fog-Edge based surveillance system for smart cities. The system provides a real-time data processing analysis effectively and rapidly decision taking with high performance. Moreover, the system ensures privacy protection and secure citizen's data by balancing between the video analysis and unnecessary data that appear the user's identity in the video.
 
 \section{Proof of concept}
+\section{Proof of concept}
 Our system should proceed over several processes for it to perform effectively. As the first step is to model and simulate the system, we initiated the procedure by searching for an appropriate tool to use for building the system's architecture. As shown in Figure 9, iFogSim is a widely used simulation tool. Moreover, it is designed specifically for the modeling and simulation of fog computing, which makes it suitable to use in our project.
 \begin{figure}[htp]
     \centering
@@ -194,7 +195,7 @@ Our system should proceed over several processes for it to perform effectively. 
 Additionally, we installed iFogSim and examined the features, packages, and the libraries introduced in it as a set up for our simulation process. As well as the components needed to perform simulation that are displayed in Figure 10: Physical Components, Logical Components, and Management Components.
 \begin{figure}[htp]
     \centering
-    \includegraphics[width=13cm]{Screenshot (149).png}
+    \includegraphics[width=20cm]{Screenshot (149).png}
     \caption{iFogSim simulation components}
     \label{fig:2}
 \end{figure}
@@ -212,15 +213,15 @@ a case study for intelligent surveillance and examined the results presented in 
 \end{figure}
 
 In addition, we created a topology using the fog.GUI package, as shown in Figure 12, as an initial step to developing an architectural design for our system, analyzing it, and starting up the implementation for our system.
-\newpage
-\begin{figure}[htp]
+
+\begin{figure}[h]
     \centering
-    \includegraphics[width=13cm]{WhatsApp Image 2020-10-24 at 4.40.16 PM.jpeg}
+    \includegraphics[width=10cm]{WhatsApp Image 2020-10-24 at 4.40.16 PM.jpeg}
     \caption{System topology }
     \label{fig:2}
 \end{figure}
 
-
+\newpage
 \section{Project Management and Deliverables}
 \subsection{Deliverables}
 In order to reach our goal and obtain satisfactory results, we need to successfully achieve and deliver the fundamental elements of our system:
