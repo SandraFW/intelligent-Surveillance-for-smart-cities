@@ -106,7 +106,7 @@ The development team members are:
 
 \item In the hopes of exploiting fog computing and tackling the cost challenges faced when building surveillance systems, Mansoor Nasir et al \cite{nasir2019fog} presented a cost-effective fog computing based surveillance system. The system does not only reduce the energy consumed and the bandwidth, but also reduces the cost. The authors proposed a video summarization technique to reach their goal. By using Raspberry Pi devices as the system’s fog nodes, and by distributing data onto these nodes to provide a summary, the system is scalable and delivers satisfactory outcomes.
 
-\item Ning Chen et al. \cite{chen2017smart} discussed in their chapter (Smart City Surveillance in Fog Computing) fog computing and its impact on smart city surveillance systems. Moreover, they stated the major challenges faced in smart cities, the advantages of fog computing compared to cloud computing, and introduced a traffic detection case study. The system architecture is made up of three layers as it demonstrated in Figure 2: data collection, fog, and cloud center. In the system, drones capture video streams and send them to get processed, using target tracking and speed calculation algorithms, in the fog layer. Moreover, data can be transmitted to the cloud center for further long-term analysis. This approach provides real-time processing and covers a wide range of areas.
+\item Ning Chen et al. \cite{chen2017smart} discussed in their chapter (Smart City Surveillance in Fog Computing) fog computing and its impact on smart city surveillance systems. Moreover, they stated the major challenges faced in smart cities, the advantages of fog computing compared to cloud computing, and introduced a traffic detection case study. The system architecture is made up of three layers: data collection, fog, and cloud center. In the system, drones capture video streams and send them to get processed, using target tracking and speed calculation algorithms, in the fog layer. Moreover, data can be transmitted to the cloud center for further long-term analysis. This approach provides real-time processing and covers a wide range of areas.
 \begin{figure}[htp]
     \centering
     \includegraphics[width=10cm]{336804_1_En_9_Fig3_HTML.png}
@@ -115,29 +115,31 @@ The development team members are:
 \end{figure}
 \newpage
 \item Yutong Liu et al \cite{liu2019litedge} address the obstacles faced when working with wireless surveillance systems, since wireless systems improve the performance and are easier to manage. As the amount of data to be transmitted gets larger, the challenges become visible and the burden on the network increases. This system reduces the pressure on the network by filtering and applying video compression. Moreover, the system provides real-time processing and monitoring using edge computing approach. Experimental results show that the system accomplishes 82 percent latency reduction. As well as, 91.26 percent transmission workload reduction as the redundant data get filtered out.
-
-\item Natesha et al\cite{nateshafog} proposed two fog architecture as an experiment to reduce latency and cloud resource consumption. The first architecture shown in the figure was the Local Fog Node using SSN. They used the fog nodes at the lower level to analyze and extract the data in order to reduce data size and to help the low computational powered devices, an Intel Neural Compute Stick(NCS) which provides the pre-trained neural network model for video analysis and real-time object classification had been installed. The second architecture shown in Fig2 was Fog Server video processing using DNN. Where a  data center is used as the fog server as a layer between the cloud layer and devices. Applying those two architectures on vehicle data set proved that using fog computing for processing real-time videos is a successful approach while the other architecture is more efficient. However, they proved using one of those architectures or both of them creating a hybrid architecture can solve many challenges.
+\item Natesha et al\cite{nateshafog} proposed two fog architecture as an experiment to reduce latency and cloud resource consumption. The first architecture Figure\ref{natasha} was the Local Fog Node using SSN. They used the fog nodes at the lower level to analyze and extract the data to reduce data size and to help the low computational powered devices, an Intel Neural Compute Stick(NCS) which provides the pre-trained neural network model for video analysis and real-time object classification had been installed. The second architecture Figure\ref{natasha2} was Fog Server video processing using DNN. Where a  data center is used as the fog server as a layer between the cloud layer and devices. Applying those two architectures on the vehicle data set proved that using fog computing for processing real-time videos is a successful approach while the other architecture is more efficient. However, they proved using one of those architectures or both of them creating a hybrid architecture can solve many challenges.
 
 \begin{figure}[!ht]
  \begin{minipage}{.5\textwidth}
   \includegraphics[width=7.0cm, height=7.0cm]{./2.png}
   \caption{the Local Fog Node using SSN}
+  \label{natasha}
  \end{minipage}
   \begin{minipage}{.5\textwidth}
   \includegraphics[width=7.0cm, height=7.0cm]{./3.png}
   \caption{Fog Server video processing using DNN}
+  \label{natasha2}
  \end{minipage}
 \end{figure}
 \newpage
 \item Sinqadu et al \cite{6} mentioned that using cloud-based architectures faces low latency while dealing with sensitive real-time applications; Therefore they proposed a new fog-based model for traffic surveillance was proposed. This model is based on three phases, inputting the IoT video streams, recognizing and tracking. Then, They used the ifogSim tool to simulate their approach using FogDevice, Sensor, Actuator, Tuple class, and Application class. The results compared to cloud-based systems proved to be efficient in the average latency, energy consumption, data transfer rate, and more. This paper also proved that fog-based applications do better than cloud ones.
 
-\item Santamaria et al \cite{Santamaria2019} mentioned that due to the large number of data collected by surveillance cameras , many challenges appeared to analyze , store and retrieve data.In this chapter they are introducing the basics needs to build a framework for people's abnormal behaviors.After investigating the current techniques and technologies.Using distributed architecture as shown in fig 4. was the main solution as it helps the performance of the system, then they mentioned the responsibility of each layer in the system , the possible computer vision techniques that can be used with their pros and cons as Neural networks and KNN . Object detection and tracking 
+\item Santamaria et al \cite{Santamaria2019} mentioned that due to the large number of data collected by surveillance cameras, many challenges appeared to analyze, store, and retrieve data. In this chapter they are introducing the basics needs to build a framework for people's abnormal behaviors. After investigating the current techniques and technologies. Using distributed architecture Figure\ref{Santamaria}. was the main solution as it helps the performance of the system, then they mentioned the responsibility of each layer in the system, the possible computer vision techniques that can be used with their pros and cons as Neural networks and KNN for Object detection and tracking.
 \FloatBarrier
 \begin{figure}[!ht]
 \centering
  \begin{minipage}{.5\textwidth}
   \includegraphics[width=10.0cm, height=10.0cm]{./4.png}
   \caption{the Distributed eccosystem in cloud domain}
+  \label{Santamaria}
  \end{minipage}
 \end{figure}
 
