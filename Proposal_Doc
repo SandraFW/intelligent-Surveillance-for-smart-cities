@@ -184,7 +184,43 @@ Moreover, implementing the normalization processing by TOPSIS(Technique for Orde
 Nowadays, with the expansion of video surveillance system in public places, the system can expose the identity of the people and transfer the private data to server-based video analysis, which make the data insecure and it is considered as violating privacy rights. The proposed system will design Fog-Edge based surveillance system for smart cities. The system provides a real-time data processing analysis effectively and rapidly decision taking with high performance. Moreover, the system ensures privacy protection and secure citizen's data by balancing between the video analysis and unnecessary data that appear the user's identity in the video.
 
 \section{Proof of concept}
-Demonstrate the 10\% implemented in your project so far.
+Our system should proceed over several processes for it to perform effectively. As the first step is to model and simulate the system, we initiated the procedure by searching for an appropriate tool to use for building the system's architecture. As shown in Figure 9, iFogSim is a widely used simulation tool. Moreover, it is designed specifically for the modeling and simulation of fog computing, which makes it suitable to use in our project.
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=13cm]{WhatsApp Image 2020-10-24 at 4.45.29 PM.jpeg}
+    \caption{Simulator tools comparison}
+    \label{fig:2}
+\end{figure}
+\newpage
+Additionally, we installed iFogSim and examined the features, packages, and the libraries introduced in it as a set up for our simulation process. As well as the components needed to perform simulation that are displayed in Figure 10: Physical Components, Logical Components, and Management Components.
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=13cm]{Screenshot (149).png}
+    \caption{iFogSim simulation components}
+    \label{fig:2}
+\end{figure}
+\newline 
+As Redowan Mahmud and Rajkumar Buyya \cite{mahmud2019modelling} illustrated, fog devices are required to be classified. After arranging them, we can then move to the logical components which are classified into three classes: AppEdge, AppModule, and AppLoop. These components are needed for the structure of the application. By means, the application module class identifies different modules within the application. Moreover, the Application edge connects modules with each other if any dependencies are visible. Lastly, the management components include the Controller and the Mapping class, which manage both the physical and logical components. The mapping class associates each accessible resource to the fog devices, according to the AppModule demands. Finally, the Controller collects all the results (cost, energy consumption, etc.).
+\break
+We inspected the DCNS.fog class which contains
+a case study for intelligent surveillance and examined the results presented in Figure 11.
+\newpage
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=13cm]{dcnsoutput.jpg}
+    \caption{case study: intelligent surveillance output }
+    \label{fig:2}
+\end{figure}
+
+In addition, we created a topology using the fog.GUI package, as shown in Figure 12, as an initial step to developing an architectural design for our system, analyzing it, and starting up the implementation for our system.
+\newpage
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=13cm]{WhatsApp Image 2020-10-24 at 4.40.16 PM.jpeg}
+    \caption{System topology }
+    \label{fig:2}
+\end{figure}
+
 
 \section{Project Management and Deliverables}
 \subsection{Deliverables}
