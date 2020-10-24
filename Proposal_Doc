@@ -97,18 +97,21 @@ Our main objective is to build a fog computing based framework for surveillance 
 \end{figure}
 Our system will be classified into three layers as shown in the figure. The first layer is the device layer where the surveillance cameras will capture the data and send those video streams over the network, then second which is the fog layer will do most of the work needed as on it the videos will be processed using a pre-trained classification model for anomaly detection with the help of our fog nodes; this layer can also be divided into two layers in order to facilitate and reduce the overhead and after detection, if no abnormality in the streams, those streams will be summarized to reduce the huge amount of data that can be sent, then we will apply a securing algorithm to provide privacy while transferring the data.And finally send them to the cloud layer to be stored and retrieved easily.\subsection{Stakeholder}
 \subsection{Stakeholder}
+\subsection{Stakeholder}
 \subsubsection{Internal}
-The development team members are:
+ Team members:
 \begin{itemize}
 \item Nour Ahmed (team leader)
 \item Mariam Hesham
 \item Sandra Fares
 \item Samiha Hesham
-\end{itemize}
-Under supervision of:
-\begin{itemize}
-\item Dr Islam Tharwat
+\item Dr.Islam Tharwat
 \item Eng.Lobna Shahen
+\end{itemize}
+
+General supervisor:
+\begin{itemize}
+\item Dr.Ashraf AbdelRaouf.
 \end{itemize}
 \subsubsection{External}
 "Ministry of communication,Elsewedy technology,Government companies,Smart cities and Grand city shopping centers" where they need our system to monitor their places 24/7 with unlimited storage.Also detecting any abnormal activity efficiently.
