@@ -64,6 +64,8 @@ Since smart cities utilize IoT devices in recent times, in order to improve thei
 With the expansion of IoT devices in smart cities, there is a massive amount of data generated from the cameras. The edge-based surveillance system provides businesses and organizations with significant benefits. It provides real-time data processing analysis which helps the organizations to take proper action and make an immediate decision efficiently in case of an accident or abnormal events. Furthermore, huge organizations as smart cities need to keep their information and their citizen's data secure. Edge computing provides the system with security and privacy while working on lower bandwidth. Moreover, Edge computing needs limited storage to keep the data. So, there is no need for a central server for action-taking. Therefore it provides the business and the organizations with lower costs.
 \subsection{Problem Statement}
 One of the challenges that face surveillance systems in smart cities is Big data, as the smart city involves a huge amount of cameras in 24/7 mode to cover the whole city. Each camera records a massive amount of video and audio data to be processed. To handle such massive data, it is essential to provide a way to get real-time data processing analysis efficiently. Cloud computing has been utilized to perform data processing analysis leading to slower performance. Therefore, edge computing is essential for real-time data processing analysis with high performance and low latency.
+
+
 \section{Project Description}
 
 \subsection{Objectives}
