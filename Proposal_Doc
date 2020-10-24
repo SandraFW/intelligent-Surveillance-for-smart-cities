@@ -7,6 +7,7 @@
 \usepackage{mathptmx}
 \usepackage[normalem]{ulem}
 
+ 
 \renewcommand\theadalign{bc}
 \renewcommand\theadfont{\bfseries}
 \renewcommand\theadgape{\Gape[4pt]}
@@ -52,11 +53,13 @@ Surveillance systems are of vital importance for the development of smart cities
 \section{Introduction}
 
 \subsection{Background}
-The video surveillance system is a crucial component in the development of smart cities; where they are useful for crime prevention, terrorist or forensic evidence detection, and traffic monitoring. But the old traditional surveillance cannot accomplish it, that's why smart surveillance systems with smart detection modules were introduced and always in enhancements till now.
+The video surveillance system is a crucial component in the development of smart cities. Where they are useful for crime prevention,terrorist or forensic evidence detection,and traffic monitoring. But the old traditional surveillance cannot accomplish it,that's why smart surveillance systems with smart detection modules were introduced and always in enhancements till now.
  
 However, implementing a citywide smart video surveillance system involves many challenges. A large number of cameras have to be deployed across the city, producing large amounts of data and information every day. Besides, storing and enabling access to video devices and data at this large scale, in both real-time and on-demand manner, demand more computing and storage resources than traditional video surveillance systems. These challenges have to be addressed to maximize the effectiveness of smart video surveillance\cite{1}. 
 
-Cloud computing was proposed then to solve some of those issues as mentioned in \cite{2} and \cite{3}, and it proved to be efficient but with the growth of data, it could not accomplish the desired results, and fast response due to the possible delay of transmitting the data to and from the cloud server, and also it could not solve the privacy and security concerns. So The term" Fog Computing" was introduced.\subsection{Motivation}
+Cloud computing was proposed then to solve some of those issues as mentioned in\cite{2} and \cite{3}, and it proved to be efficient but with the growth of data, it could not accomplish the desired results, and fast response due to the possible delay of transmitting the data to and from the cloud server, and also it could not solve the privacy and security concerns. So, fog computing technology is recently introduced as a promising one to handle the current challenges of the surveillance systems development for smart cities.
+
+\subsection{Motivation}
 \subsubsection{Academic}
 Since smart cities utilize IoT devices in recent times, in order to improve their infrastructure, numerous amounts of data get generated at a rapid rate. Passing data to the cloud is unfavorable when dealing with surveillance systems, as these systems require urgent and  instant responses to avoid misfortune events. Therefore, it is necessary to procure a strategy that will assist in managing and processing data effectively in a short period of time. Edge computing is a recently proposed solution for this problem. Instead of transferring data to the cloud, it gets transferred to the edge for real-time data processing. Various techniques are used to exploit this new technology and use it efficiently to solve different barriers. B. V. Natesha and Ram Mohana Reddy Guddeti \cite{nateshafog} proposed a fog computing based surveillance system, for smart cities, that processes data using deep learning methods in order to provide low latency and minimize the cost of the services. Likewise, G. Baldoni et al. \cite{baldoni2017dynamic} present edge computing to reduce the network traffic and offer scalability.
 \subsubsection{Business}
@@ -68,9 +71,7 @@ One of the challenges that face surveillance systems in smart cities is Big data
 \section{Project Description}
 
 \subsection{Objectives}
-
-
-Our main objective is to build a fog computing based framework for surveillance data in order to detect abnormal human behaviors in the streets.We will improve an algorithm for anomaly detection  with remarkable stability and accuracy.The system is also developed to work on enhancing the latency by reducing the amount of data.Moreover,We will work on developing the privacy protection scheme for data security.
+Our main objective is to build a fog computing based framework for surveillance data in order to detect abnormal human behaviors in the streets. We will improve an algorithm for anomaly detection  with remarkable stability and accuracy. The system is also developed to work on enhancing the latency by reducing the amount of data. Moreover, we will work on developing the privacy protection scheme for data security.
 \begin{itemize}
 \item The system will provide real time data processing analysis.
 
@@ -95,11 +96,10 @@ Our main objective is to build a fog computing based framework for surveillance 
   \label{fig:1}
    \caption{three-layer fog computing architecture}
 \end{figure}
-Our system will be classified into three layers as shown in the figure. The first layer is the device layer where the surveillance cameras will capture the data and send those video streams over the network, then second which is the fog layer will do most of the work needed as on it the videos will be processed using a pre-trained classification model for anomaly detection with the help of our fog nodes; this layer can also be divided into two layers in order to facilitate and reduce the overhead and after detection, if no abnormality in the streams, those streams will be summarized to reduce the huge amount of data that can be sent, then we will apply a securing algorithm to provide privacy while transferring the data.And finally send them to the cloud layer to be stored and retrieved easily.\subsection{Stakeholder}
-\subsection{Stakeholder}
+Our system will be classified into three layers as shown in the figure. The first layer is the device layer where the surveillance cameras will capture the data and send those video streams over the network, then second which is the fog layer will do most of the work needed as on it the videos will be processed using a pre-trained classification model for anomaly detection with the help of our fog nodes; this layer can also be divided into two layers in order to facilitate and reduce the overhead and after detection, if no abnormality in the streams, those streams will be summarized to reduce the huge amount of data that can be sent, then we will apply a securing algorithm to provide privacy while transferring the data.And finally send them to the cloud layer to be stored and retrieved easily.
 \subsection{Stakeholder}
 \subsubsection{Internal}
- Team members:
+Team members:
 \begin{itemize}
 \item Nour Ahmed (team leader)
 \item Mariam Hesham
@@ -114,7 +114,7 @@ General supervisor:
 \item Dr.Ashraf AbdelRaouf.
 \end{itemize}
 \subsubsection{External}
-"Ministry of communication,Elsewedy technology,Government companies,Smart cities and Grand city shopping centers" where they need our system to monitor their places 24/7 with unlimited storage.Also detecting any abnormal activity efficiently.
+Ministry of communication, Elsewedy technology, Government companies, Smart cities and Grand city shopping centers as they need our system to monitor their places 24/7 with unlimited storage.Also detecting any abnormal activity efficiently.
 
 \section{Similar System}
 \subsection{Academic}
@@ -123,7 +123,7 @@ General supervisor:
 
 \item In the hopes of exploiting fog computing and tackling the cost challenges faced when building surveillance systems, Mansoor Nasir et al \cite{nasir2019fog} presented a cost-effective fog computing based surveillance system. The system does not only reduce the energy consumed and the bandwidth, but also reduces the cost. The authors proposed a video summarization technique to reach their goal. By using Raspberry Pi devices as the system’s fog nodes, and by distributing data onto these nodes to provide a summary, the system is scalable and delivers satisfactory outcomes.
 
-\item Ning Chen et al. \cite{chen2017smart} discussed in their chapter (Smart City Surveillance in Fog Computing) fog computing and its impact on smart city surveillance systems. Moreover, they stated the major challenges faced in smart cities, the advantages of fog computing compared to cloud computing, and introduced a traffic detection case study. The system architecture is made up of three layers: data collection, fog, and cloud center. In the system, drones capture video streams and send them to get processed, using target tracking and speed calculation algorithms, in the fog layer. Moreover, data can be transmitted to the cloud center for further long-term analysis. This approach provides real-time processing and covers a wide range of areas.
+\item Ning Chen et al. \cite{chen2017smart} discussed in their chapter (Smart City Surveillance in Fog Computing) fog computing and its impact on smart city surveillance systems. Moreover, they stated the major challenges faced in smart cities, the advantages of fog computing compared to cloud computing, and introduced a traffic detection case study. The system architecture is made up of three layers demonstrated in Figure 2: data collection, fog, and cloud center. In the system, drones capture video streams and send them to get processed, using target tracking and speed calculation algorithms, in the fog layer. Moreover, data can be transmitted to the cloud center for further long-term analysis. This approach provides real-time processing and covers a wide range of areas.
 \begin{figure}[htp]
     \centering
     \includegraphics[width=10cm]{336804_1_En_9_Fig3_HTML.png}
@@ -132,7 +132,7 @@ General supervisor:
 \end{figure}
 \newpage
 \item Yutong Liu et al \cite{liu2019litedge} address the obstacles faced when working with wireless surveillance systems, since wireless systems improve the performance and are easier to manage. As the amount of data to be transmitted gets larger, the challenges become visible and the burden on the network increases. This system reduces the pressure on the network by filtering and applying video compression. Moreover, the system provides real-time processing and monitoring using edge computing approach. Experimental results show that the system accomplishes 82 percent latency reduction. As well as, 91.26 percent transmission workload reduction as the redundant data get filtered out.
-\item Natesha et al\cite{nateshafog} proposed two fog architecture as an experiment to reduce latency and cloud resource consumption. The first architecture Figure\ref{natasha} was the Local Fog Node using SSN. They used the fog nodes at the lower level to analyze and extract the data to reduce data size and to help the low computational powered devices, an Intel Neural Compute Stick(NCS) which provides the pre-trained neural network model for video analysis and real-time object classification had been installed. The second architecture Figure\ref{natasha2} was Fog Server video processing using DNN. Where a  data center is used as the fog server as a layer between the cloud layer and devices. Applying those two architectures on the vehicle data set proved that using fog computing for processing real-time videos is a successful approach while the other architecture is more efficient. However, they proved using one of those architectures or both of them creating a hybrid architecture can solve many challenges.
+\item Natesha et al\cite{nateshafog} proposed two fog architecture as an experiment to reduce latency and cloud resource consumption. The first architecture shown in Figure \ref{natasha} was the Local Fog Node using SSN. They used the fog nodes at the lower level to analyze and extract the data to reduce data size and to help the low computational powered devices, an Intel Neural Compute Stick(NCS) which provides the pre-trained neural network model for video analysis and real-time object classification had been installed. The second architecture in Figure \ref{natasha2} was Fog Server video processing using DNN. Where a  data center is used as the fog server as a layer between the cloud layer and devices. Applying those two architectures on the vehicle data set proved that using fog computing for processing real-time videos is a successful approach while the other architecture is more efficient. However, they proved using one of those architectures or both of them creating a hybrid architecture can solve many challenges.
 
 \begin{figure}[!ht]
  \begin{minipage}{.5\textwidth}
@@ -149,8 +149,8 @@ General supervisor:
 \newpage
 \item Sinqadu et al \cite{6} mentioned that using cloud-based architectures faces low latency while dealing with sensitive real-time applications; Therefore they proposed a new fog-based model for traffic surveillance was proposed. This model is based on three phases, inputting the IoT video streams, recognizing and tracking. Then, They used the ifogSim tool to simulate their approach using FogDevice, Sensor, Actuator, Tuple class, and Application class. The results compared to cloud-based systems proved to be efficient in the average latency, energy consumption, data transfer rate, and more. This paper also proved that fog-based applications do better than cloud ones.
 
-\item Santamaria et al \cite{Santamaria2019} mentioned that due to the large number of data collected by surveillance cameras, many challenges appeared to analyze, store, and retrieve data. In this chapter they are introducing the basics needs to build a framework for people's abnormal behaviors. After investigating the current techniques and technologies. Using distributed architecture Figure\ref{Santamaria}. was the main solution as it helps the performance of the system, then they mentioned the responsibility of each layer in the system, the possible computer vision techniques that can be used with their pros and cons as Neural networks and KNN for Object detection and tracking.
-\FloatBarrier
+\item Santamaria et al \cite{Santamaria2019} mentioned that due to the large number of data collected by surveillance cameras, many challenges appeared to analyze, store, and retrieve data. In this chapter they are introducing the basics needs to build a framework for people's abnormal behaviors. After investigating the current techniques and technologies. Using distributed architecture Figure \ref{Santamaria}. was the main solution as it helps the performance of the system, then they mentioned the responsibility of each layer in the system, the possible computer vision techniques that can be used with their pros and cons as Neural networks and KNN for Object detection and tracking.
+
 \begin{figure}[!ht]
 \centering
  \begin{minipage}{.5\textwidth}
@@ -166,8 +166,8 @@ General supervisor:
 
 \item Jianguo Chen et al \cite{chen2019distributed} proposed a deep learning-based distributed intelligent video surveillance system and deploy it in edge computing. Due to the massive data generated from the IoT devices and massive network communication, the system aims to solve such challenges and provide real-time and accurate data analysis with low latency. Therefore, the proposed system will transfer the computing data from the central network to the edge network. The proposed approach shows that the system performs well and can handle such a huge video data and provide accurate and accelerated analysis. Moreover, it shows that edge computing provides the system with scalability and flexibility.
 
-
 \item Baladoni et al\cite{7983190} Proposed a video surveillance platform for smart cities as shown in Figure 3 that presents the following main features: Opening to different video acquiring technologies,Plug-and-play,Flexibility and scalability with the number of transmitting and receiving devices.The proposed technology is achieved by using SAN and NAN prototypes that are recognized according to the SDN/NFV standard paradigm by using general purpose x86-based hardware equipped with a software SDN switch and a virtualization environment as shown in Figure 4.The proposed platform presents a lot of advantages like reduction of network traffic,Low end to end latency,OpEx and CapEx reduction,Scalability and platform add-ons.
+
 
 \begin{figure}[!ht]
  \begin{minipage}{.5\textwidth}
@@ -183,7 +183,7 @@ General supervisor:
 \newpage
 
 \item Xu et al\cite{9126126} Presented a task offloading method for the video surveillance using the edge computing as shown in Figure 5 that enables IoV to shorten the time cost,Remain the load balance of edge nodes and to maximize the privacy entropy.They presented a new algorithm design called TOM that solves multi-objective optimization problem by SPEA2(improving the strength Pareto evolutionary algorithm).Moreover,Implementing the normalization processing by TOPSIS(Technique for Order Preference by Similarity to Ideal Solution)and MCDM(Multiple Criteria Decision Making)methods.The final results shows that when the number of tasks is huge,TOM has stronger improvement on privacy protection than FFD algorithm which proofs that the experimental simulation performs efficient and trust.
-\FloatBarrier
+
 \begin{figure}[!ht]
 \centering
  \begin{minipage}{.5\textwidth}
@@ -192,15 +192,12 @@ General supervisor:
  \end{minipage}
 \end{figure}
 
-\newpage
+\item  Sun et al \cite{8807184} Mentioned that due to the large number of data collected by video surveillance many challenges appears later on in the pre-processing stage. As a result, The authors proposed a video usefulness model the(VU) model for large scale video surveillance systems to detect failures in data set to reduce the network bandwidth overload and improve the storage usage in the cloud.Which is based on edge computing and cloud computing. Efficiently and accurately analyzing useful video streams using suitable resources. Moreover,They mentioned ten different types of failures and categorized them into three main domains.They used a data set from a realistic video surveillance system that has approximately 4,433 IP cameras. In addition to 4,232 online cameras that contains different types of failures to examine there proposed model.The types of failures they collected where conducted into two main groups basic evaluation and scalability evaluation.The basic evolution is measured by two metrics which are TP and TN.The results shows that their proposed model helps to reduce the bandwidth of the network and the amount of useless data that are stored in the cloud.
 
-
-\item  Sun et al \cite{8807184} Mentioned that due to the large number of data collected by video surveillance many challenges appears later on in the pre-processing stage.As a result,The authors proposed a video usefulness model the(VU) model for large scale video surveillance systems to detect failures in data set to reduce the network bandwidth overload and improve the storage usage in the cloud.Which is based on edge computing and cloud computing.Efficiently and accurately analyzing useful video streams using suitable resources.Moreover,They mentioned ten different types of failures and categorized them into three main domains.They used a data set from a realistic video surveillance system that has approximately 4,433 IP cameras.In addition to 4,232 online cameras that contains different types of failures to examine there proposed model.The types of failures they collected where conducted into two main groups basic evaluation and scalability evaluation.The basic evolution is measured by two metrics which are TP and TN.The results shows that their proposed model helps to reduce the bandwidth of the network and the amount of useless data that are stored in the cloud.
 \end{itemize}
 \newpage
 \section{What is new in the Proposed Project?}
 Nowadays, with the expansion of video surveillance system in public places, the system can expose the identity of the people and transfer the private data to server-based video analysis, which make the data insecure and it is considered as violating privacy rights. The proposed system will design Fog-Edge based surveillance system for smart cities. The system provides a real-time data processing analysis effectively and rapidly decision taking with high performance. Moreover, the system ensures privacy protection and secure citizen's data by balancing between the video analysis and unnecessary data that appear the user's identity in the video.
-
 
 \section{Proof of concept}
 Our system should proceed over several processes for it to perform effectively. As the first step is to model and simulate the system, we initiated the procedure by searching for an appropriate tool to use for building the system's architecture. As shown in Figure 9, iFogSim is a widely used simulation tool. Moreover, it is designed specifically for the modeling and simulation of fog computing, which makes it suitable to use in our project.
@@ -214,24 +211,31 @@ Our system should proceed over several processes for it to perform effectively. 
 Additionally, we installed iFogSim and examined the features, packages, and the libraries introduced in it as a set up for our simulation process. As well as the components needed to perform simulation that are displayed in Figure 10: Physical Components, Logical Components, and Management Components.
 \begin{figure}[htp]
     \centering
-    \includegraphics[width=10.0cm, height=12.0cm ]{Screenshot (149).png}
+    \includegraphics[width=20cm]{Screenshot (149).png}
     \caption{iFogSim simulation components}
     \label{fig:2}
 \end{figure}
 \newline 
 As Redowan Mahmud and Rajkumar Buyya \cite{mahmud2019modelling} illustrated, fog devices are required to be classified. After arranging them, we can then move to the logical components which are classified into three classes: AppEdge, AppModule, and AppLoop. These components are needed for the structure of the application. By means, the application module class identifies different modules within the application. Moreover, the Application edge connects modules with each other if any dependencies are visible. Lastly, the management components include the Controller and the Mapping class, which manage both the physical and logical components. The mapping class associates each accessible resource to the fog devices, according to the AppModule demands. Finally, the Controller collects all the results (cost, energy consumption, etc.).
 \break
-We inspected the DCNS.fog class which contains
-a case study for intelligent surveillance and examined the results presented in Figure 11.
+We inspected the DCNS.fog class in Figure\ref{fig} which contains
+a case study for intelligent surveillance and examined the results presented in Figure\ref{fig1} .
 \newpage
 \begin{figure}[htp]
     \centering
-    \includegraphics[width=13cm]{dcnsoutput.jpg}
-    \caption{case study: intelligent surveillance output }
-    \label{fig:2}
+    \includegraphics[width=10cm]{DCNSS.jpg}
+    \caption{DCNS code }
+    \label{fig}
 \end{figure}
 
-In addition, we created a topology using the fog.GUI package, as shown in Figure 12, as an initial step to developing an architectural design for our system, analyzing it, and starting up the implementation for our system.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=10cm]{dcnsoutput.jpg}
+    \caption{case study: intelligent surveillance output }
+    \label{fig1}
+\end{figure}
+
+In addition, we created a topology using the fog.GUI package, as shown in Figure\ref{fig:2}, as an initial step to developing an architectural design for our system, analyzing it, and starting up the implementation for our system.
 
 \begin{figure}[h]
     \centering
@@ -239,7 +243,6 @@ In addition, we created a topology using the fog.GUI package, as shown in Figure
     \caption{System topology }
     \label{fig:2}
 \end{figure}
-
 \newpage
 \section{Project Management and Deliverables}
 \subsection{Deliverables}
@@ -284,20 +287,18 @@ Conference on Smart Systems: Innovations in Computing). we are waiting for their
     \caption{Review Paper}
  \end{figure}
 
-\newline
+
     \begin{figure}[htp]
     \includegraphics[width=15cm]{7.png}
     \caption{Submission email from SSIC 2021}
 
 \end{figure}
 \subsection{Tasks and Time Plan}
-\newline
-\newline
+
 \includegraphics[width=1\textwidth]{./20.jpg}
 \newline
 \subsection{Budget and Resource Costs}
-The budget is unclear yet, as there's not enough information to determine this in the moment.
-
+we may publish articles and research papers in the future. Moreover, we may use additional computing tools.
 
 
 
