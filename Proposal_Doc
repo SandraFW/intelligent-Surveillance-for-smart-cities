@@ -201,6 +201,13 @@ Ministry of communication, Elsewedy technology, Government companies, Smart citi
 \item  For the sake of demonstrating the smart city surveillance technology, Mark Witten \cite{witten_2020} discussed the case studies and the investigations proposed by David Murakami Wood, who is an investigator and a professor in surveillance studies at Queen’s University in Canada. First, the author states Wood’s  research observations on smart cities. The inspections show that surveillance systems have a huge role in the development of smart cities. However, one concern mentioned by professor Wood is the privacy of the cities’ citizens. Moreover, he argues that a good smart city is the one which a government has a role in, as technology companies work for their own favour rather than what’s best for the people.
 
 \item The security world market website \cite{securityworldmarket.com} proposed an article about Operational Technology Systems (OTS), which is a Hong Kong company that offers monitoring systems to manage difficulties faced in smart cities. The company provides a mobile surveillance system that presents solutions for various barriers including illegal activity detection, operation management, safety measurement, etc. Moreover, it collects data effectively from urban areas to achieve efficient outcomes and fully satisfy its stakeholders. The mobile surveillance system is easy to install, provides continuous video recording, and supports numerous networking technologies such as WiFi, 4G, 3G, etc.
+\begin{figure}[!ht]
+\centering
+ \begin{minipage}{.5\textwidth}
+  \includegraphics[width=12.0cm, height=8.0cm]{20190926-The-Intelligent-Traffic-Solution-Day-02.jpg}
+  \caption{   OTS Mobile surveillance solution}
+ \end{minipage}
+\end{figure}
 
 \item Logipix Technical Development Ltd. \cite{logipix}, which is a privately held company established in 1996 in Budapest, Hungar, they develop and manufacture intelligent video monitoring solutions specifically for large-scale projects and wide areas. They shared an article about the solutions they offer for safe smart cities, they highlighted their solutions as a scalable city-wide system that is designed to achieve traffic violation management and video surveillance tasks at the same time. Their goals are reducing the number of potential accidents and traffic jams using traffic violations detection algorithms and providing a safe and secure system using an efficient surveillance large-scale system securing the streets 24/7 with face recognition if possible.
 
