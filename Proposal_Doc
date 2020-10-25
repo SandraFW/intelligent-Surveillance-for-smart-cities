@@ -195,6 +195,17 @@ Ministry of communication, Elsewedy technology, Government companies, Smart citi
 \item  Sun et al \cite{8807184} Mentioned that due to the large number of data collected by video surveillance many challenges appears later on in the pre-processing stage. As a result, The authors proposed a video usefulness model the(VU) model for large scale video surveillance systems to detect failures in data set to reduce the network bandwidth overload and improve the storage usage in the cloud.Which is based on edge computing and cloud computing. Efficiently and accurately analyzing useful video streams using suitable resources. Moreover,They mentioned ten different types of failures and categorized them into three main domains.They used a data set from a realistic video surveillance system that has approximately 4,433 IP cameras. In addition to 4,232 online cameras that contains different types of failures to examine there proposed model.The types of failures they collected where conducted into two main groups basic evaluation and scalability evaluation.The basic evolution is measured by two metrics which are TP and TN.The results shows that their proposed model helps to reduce the bandwidth of the network and the amount of useless data that are stored in the cloud.
 
 \end{itemize}
+\subsection{Business Applications}
+\begin{itemize}
+\item  For the sake of demonstrating the smart city surveillance technology, Mark Witten \cite{witten_2020} discussed the case studies and the investigations proposed by David Murakami Wood, who is an investigator and a professor in surveillance studies at Queen’s University in Canada. First, the author states Wood’s  research observations on smart cities. The inspections show that surveillance systems have a huge role in the development of smart cities. However, one concern mentioned by professor Wood is the privacy of the cities’ citizens. Moreover, he argues that a good smart city is the one which a government has a role in, as technology companies work for their own favour rather than what’s best for the people.
+
+\item The security world market website \cite{securityworldmarket.com} proposed an article about Operational Technology Systems (OTS), which is a Hong Kong company that offers monitoring systems to manage difficulties faced in smart cities. The company provides a mobile surveillance system that presents solutions for various barriers including illegal activity detection, operation management, safety measurement, etc. Moreover, it collects data effectively from urban areas to achieve efficient outcomes and fully satisfy its stakeholders. The mobile surveillance system is easy to install, provides continuous video recording, and supports numerous networking technologies such as WiFi, 4G, 3G, etc.
+
+
+
+
+\end{itemize}
+
 \newpage
 \section{What is new in the Proposed Project?}
 Nowadays, with the expansion of video surveillance system in public places, the system can expose the identity of the people and transfer the private data to server-based video analysis, which make the data insecure and it is considered as violating privacy rights. The proposed system will design Fog-Edge based surveillance system for smart cities. The system provides a real-time data processing analysis effectively and rapidly decision taking with high performance. Moreover, the system ensures privacy protection and secure citizen's data by balancing between the video analysis and unnecessary data that appear the user's identity in the video.
