@@ -23,19 +23,19 @@ citestyle=ieee
 \addbibresource{References.bib}
 
 %opening
-\title {Software Proposal Document for project
-Intelligent Surveillance for smart cities}
-\author{Mariam Hesham,Nour Ahmed ,Samiha Hesham,Sandra Fares}
+\title { \vspace{ Software Proposal Document for }
+\newline Intelligent Surveillance for smart cities}
+\author{Nour Ahmed ,Mariam Hesham,Samiha Hesham,Sandra Fares}
 
 \begin{document}
 \maketitle
-\begin{table}[htp]
 
+\begin{table}[htp]
 \begin{tabular}{|l|l|l|}
 \hline 
 \thead{Proposal Version}    & \thead{Date} & \thead{Reason for Change}  \\ \hline
 1.0 & 24-October-2020   & \makecell{Proposal First version’s specifications are defined}   \\ \hline
-
+2.0 & 26-October-2020   & \makecell{Similar systems, busniess applications added}   \\ \hline
 \end{tabular}
 \caption{Document version history}
 \end{table}
@@ -124,12 +124,12 @@ Ministry of communication, Elsewedy technology, Government companies, Smart citi
 
 \item In the hopes of exploiting fog computing and tackling the cost challenges faced when building surveillance systems, Mansoor Nasir et al \cite{nasir2019fog} presented a cost-effective fog computing based surveillance system. The system does not only reduce the energy consumed and the bandwidth, but also reduces the cost. The authors proposed a video summarization technique to reach their goal. By using Raspberry Pi devices as the system’s fog nodes, and by distributing data onto these nodes to provide a summary, the system is scalable and delivers satisfactory outcomes.
 
-\item Ning Chen et al. \cite{chen2017smart} discussed in their chapter (Smart City Surveillance in Fog Computing) fog computing and its impact on smart city surveillance systems. Moreover, they stated the major challenges faced in smart cities, the advantages of fog computing compared to cloud computing, and introduced a traffic detection case study. The system architecture is made up of three layers demonstrated in Figure 2: data collection, fog, and cloud center. In the system, drones capture video streams and send them to get processed, using target tracking and speed calculation algorithms, in the fog layer. Moreover, data can be transmitted to the cloud center for further long-term analysis. This approach provides real-time processing and covers a wide range of areas.
+\item Ning Chen et al. \cite{chen2017smart} discussed in their chapter (Smart City Surveillance in Fog Computing) fog computing and its impact on smart city surveillance systems. Moreover, they stated the major challenges faced in smart cities, the advantages of fog computing compared to cloud computing, and introduced a traffic detection case study. The system architecture is made up of three layers demonstrated in Figure \ref{fog}: data collection, fog, and cloud center. In the system, drones capture video streams and send them to get processed, using target tracking and speed calculation algorithms, in the fog layer. Moreover, data can be transmitted to the cloud center for further long-term analysis. This approach provides real-time processing and covers a wide range of areas.
 \begin{figure}[htp]
     \centering
     \includegraphics[width=10cm]{336804_1_En_9_Fig3_HTML.png}
     \caption{Fog-based Traffic Detection in Smart Cities}
-    \label{fig:2}
+    \label{fog}
 \end{figure}
 \newpage
 \item Yutong Liu et al \cite{liu2019litedge} address the obstacles faced when working with wireless surveillance systems, since wireless systems improve the performance and are easier to manage. As the amount of data to be transmitted gets larger, the challenges become visible and the burden on the network increases. This system reduces the pressure on the network by filtering and applying video compression. Moreover, the system provides real-time processing and monitoring using edge computing approach. Experimental results show that the system accomplishes 82 percent latency reduction. As well as, 91.26 percent transmission workload reduction as the redundant data get filtered out.
@@ -167,29 +167,32 @@ Ministry of communication, Elsewedy technology, Government companies, Smart citi
 
 \item Jianguo Chen et al \cite{chen2019distributed} proposed a deep learning-based distributed intelligent video surveillance system and deploy it in edge computing. Due to the massive data generated from the IoT devices and massive network communication, the system aims to solve such challenges and provide real-time and accurate data analysis with low latency. Therefore, the proposed system will transfer the computing data from the central network to the edge network. The proposed approach shows that the system performs well and can handle such a huge video data and provide accurate and accelerated analysis. Moreover, it shows that edge computing provides the system with scalability and flexibility.
 
-\item Baladoni et al\cite{7983190} Proposed a video surveillance platform for smart cities as shown in Figure 3 that presents the following main features: Opening to different video acquiring technologies,Plug-and-play,Flexibility and scalability with the number of transmitting and receiving devices.The proposed technology is achieved by using SAN and NAN prototypes that are recognized according to the SDN/NFV standard paradigm by using general purpose x86-based hardware equipped with a software SDN switch and a virtualization environment as shown in Figure 4.The proposed platform presents a lot of advantages like reduction of network traffic,Low end to end latency,OpEx and CapEx reduction,Scalability and platform add-ons.
+\item Baladoni et al\cite{7983190} Proposed a video surveillance platform for smart cities as shown in Figure \ref{arch} that presents the following main features: Opening to different video acquiring technologies,Plug-and-play,Flexibility and scalability with the number of transmitting and receiving devices.The proposed technology is achieved by using SAN and NAN prototypes that are recognized according to the SDN/NFV standard paradigm by using general purpose x86-based hardware equipped with a software SDN switch and a virtualization environment as shown in Figure \ref{Desc}.The proposed platform presents a lot of advantages like reduction of network traffic,Low end to end latency,OpEx and CapEx reduction,Scalability and platform add-ons.
 
 
 \begin{figure}[!ht]
  \begin{minipage}{.5\textwidth}
   \includegraphics[width=7.0cm, height=7.0cm]{./10.png}
   \caption{Platfrom architecture}
+  \label{arch}
  \end{minipage}
   \begin{minipage}{.5\textwidth}
   \includegraphics[width=7.0cm, height=7.0cm]{./11.png}
   \caption{Prototype description}
+  \label{Desc}
  \end{minipage}
 \end{figure}
 
 \newpage
 
-\item Xu et al\cite{9126126} Presented a task offloading method for the video surveillance using the edge computing as shown in Figure 5 that enables IoV to shorten the time cost,Remain the load balance of edge nodes and to maximize the privacy entropy.They presented a new algorithm design called TOM that solves multi-objective optimization problem by SPEA2(improving the strength Pareto evolutionary algorithm).Moreover,Implementing the normalization processing by TOPSIS(Technique for Order Preference by Similarity to Ideal Solution)and MCDM(Multiple Criteria Decision Making)methods.The final results shows that when the number of tasks is huge,TOM has stronger improvement on privacy protection than FFD algorithm which proofs that the experimental simulation performs efficient and trust.
+\item Xu et al\cite{9126126} Presented a task offloading method for the video surveillance using the edge computing as shown in Figure \ref{edge} that enables IoV to shorten the time cost,Remain the load balance of edge nodes and to maximize the privacy entropy.They presented a new algorithm design called TOM that solves multi-objective optimization problem by SPEA2(improving the strength Pareto evolutionary algorithm).Moreover,Implementing the normalization processing by TOPSIS(Technique for Order Preference by Similarity to Ideal Solution)and MCDM(Multiple Criteria Decision Making)methods.The final results shows that when the number of tasks is huge,TOM has stronger improvement on privacy protection than FFD algorithm which proofs that the experimental simulation performs efficient and trust.
 
 \begin{figure}[!ht]
 \centering
  \begin{minipage}{.5\textwidth}
   \includegraphics[width=10.0cm, height=10.0cm]{./12.png}
   \caption{A video surveillance architecture with the edge computing.}
+  \label{edge}
  \end{minipage}
 \end{figure}
 
@@ -210,6 +213,7 @@ Ministry of communication, Elsewedy technology, Government companies, Smart citi
 \end{figure}
 
 \item Logipix Technical Development Ltd. \cite{logipix}, which is a privately held company established in 1996 in Budapest, Hungar, they develop and manufacture intelligent video monitoring solutions specifically for large-scale projects and wide areas. They shared an article about the solutions they offer for safe smart cities, they highlighted their solutions as a scalable city-wide system that is designed to achieve traffic violation management and video surveillance tasks at the same time. Their goals are reducing the number of potential accidents and traffic jams using traffic violations detection algorithms and providing a safe and secure system using an efficient surveillance large-scale system securing the streets 24/7 with face recognition if possible.
+\newpage
 \item BT Busines .\cite{BT}, is a retail division of United Kingdom telecommunications company that provides many services including IT services to businesses and the public sector in the UK and Ireland. They shared an article about smart cities and securing it, defining smart cities as intelligently connected cities in order to help the administrators make swift, decisions and helping them to fast respond to what’s going on and to prevent suspicious events before they happen. They helped many United Kingdom cities to turn to smart cities by the installation of cameras to help monitor traffics, give real-time alerts for trams, buses and etc, and many more. Finally, they gave easy steps to turn any city into a smart city by installing public WiFi, install cameras that can tell more in many cases and different situations, and controlling it.
 \end{itemize}
 
@@ -218,20 +222,20 @@ Ministry of communication, Elsewedy technology, Government companies, Smart citi
 Nowadays, with the expansion of video surveillance system in public places, the system can expose the identity of the people and transfer the private data to server-based video analysis, which make the data insecure and it is considered as violating privacy rights. The proposed system will design Fog-Edge based surveillance system for smart cities. The system provides a real-time data processing analysis effectively and rapidly decision taking with high performance. Moreover, the system ensures privacy protection and secure citizen's data by balancing between the video analysis and unnecessary data that appear the user's identity in the video.
 
 \section{Proof of concept}
-Our system should proceed over several processes for it to perform effectively. As the first step is to model and simulate the system, we initiated the procedure by searching for an appropriate tool to use for building the system's architecture. As shown in Figure 9, iFogSim is a widely used simulation tool. Moreover, it is designed specifically for the modeling and simulation of fog computing, which makes it suitable to use in our project.
+Our system should proceed over several processes for it to perform effectively. As the first step is to model and simulate the system, we initiated the procedure by searching for an appropriate tool to use for building the system's architecture. As shown in Figure \ref{Sim}, iFogSim is a widely used simulation tool. Moreover, it is designed specifically for the modeling and simulation of fog computing, which makes it suitable to use in our project.
 \begin{figure}[htp]
     \centering
     \includegraphics[width=13cm]{WhatsApp Image 2020-10-24 at 4.45.29 PM.jpeg}
     \caption{Simulator tools comparison}
-    \label{fig:2}
+    \label{Sim}
 \end{figure}
 \newpage
-Additionally, we installed iFogSim and examined the features, packages, and the libraries introduced in it as a set up for our simulation process. As well as the components needed to perform simulation that are displayed in Figure 10: Physical Components, Logical Components, and Management Components.
+Additionally, we installed iFogSim and examined the features, packages, and the libraries introduced in it as a set up for our simulation process. As well as the components needed to perform simulation that are displayed in Figure \ref{ifogsim}: Physical Components, Logical Components, and Management Components.
 \begin{figure}[htp]
     \centering
     \includegraphics[width=20cm]{Screenshot (149).png}
     \caption{iFogSim simulation components}
-    \label{fig:2}
+    \label{ifogsim}
 \end{figure}
 \newline 
 As Redowan Mahmud and Rajkumar Buyya \cite{mahmud2019modelling} illustrated, fog devices are required to be classified. After arranging them, we can then move to the logical components which are classified into three classes: AppEdge, AppModule, and AppLoop. These components are needed for the structure of the application. By means, the application module class identifies different modules within the application. Moreover, the Application edge connects modules with each other if any dependencies are visible. Lastly, the management components include the Controller and the Mapping class, which manage both the physical and logical components. The mapping class associates each accessible resource to the fog devices, according to the AppModule demands. Finally, the Controller collects all the results (cost, energy consumption, etc.).
@@ -261,7 +265,20 @@ In addition, we created a topology using the fog.GUI package, as shown in Figure
     \caption{System topology }
     \label{fig:2}
 \end{figure}
-\newpage
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=12cm]{G1.png}
+    \caption{Github Repository}
+    \label{Repo}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=13cm]{G2.png}
+    \caption{Contribution }
+    \label{Contrib}
+\end{figure}
+\clearpage
 \section{Project Management and Deliverables}
 \subsection{Deliverables}
 In order to reach our goal and obtain satisfactory results, we need to successfully achieve and deliver the fundamental elements of our system:
@@ -276,7 +293,8 @@ In order to reach our goal and obtain satisfactory results, we need to successfu
 First, the fog computing- based surveillance system architecture should be implemented using a simulation and modeling tool. Then, anomaly detection algorithms should be efficiently implemented to offer real-time data processing. Moreover, a framework should be developed for video summarization, in order to overcome the scalability challenge. In addition, privacy protection scheme will be presented for data security and to overcome privacy concerns in smart cities.
 
 \hfill \break
-
+\begin{table}[h]
+    \centering
 \begin{tabular}{|l|l|l|}
 \hline 
 \thead{Deliverables}    & \thead{Completion date}   \\ \hline
@@ -286,7 +304,8 @@ anomaly detection+ video summarization & February 2021 \\
 Privacy protection scheme & April 2021 \\
 \hline
 \end{tabular}
-
+\end{table}
+\break
 \section{Supportive Documents}
 We have done a systematic review, as well as a review paper, which was sent to SSIC 2021(3rd International
 Conference on Smart Systems: Innovations in Computing). we are waiting for their response.The paper is available on github.
@@ -317,12 +336,6 @@ Conference on Smart Systems: Innovations in Computing). we are waiting for their
 \newline
 \subsection{Budget and Resource Costs}
 we may publish articles and research papers in the future. Moreover, we may use additional computing tools.
-
-
-
-
-
-
 
 \section {References}
 \nocite{*}
