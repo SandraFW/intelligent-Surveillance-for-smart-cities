@@ -95,8 +95,7 @@ Our main objective is to build a fog computing based framework for surveillance 
   \label{fig:1}
    \caption{three-layer fog computing architecture}
 \end{figure}
-Our system will be classified into three layers as shown in the figure. The first layer is the device layer where the surveillance cameras will capture the data and send those video streams over the network. Then, second, which is the fog layer, will do most of the work needed, as the videos will be processed on it using a pre-trained classification model for anomaly detection with the help of our fog nodes; this layer can also be divided into two layers in order to facilitate and reduce the overhead and after detection, if there's no abnormality in the streams, those streams will be summarized to reduce the huge amount of data that can be sent. Moreover, we will apply a securing algorithm to provide privacy while transferring the data.And finally send them to the cloud layer to be stored and retrieved easily.\subsection{Stakeholder}
-\subsubsection{Internal}
+Our system will be classified into three layers as shown in the figure. The first layer is the device layer where the surveillance cameras will capture the data and send those video streams over the network. Then, second, which is the fog layer, will do most of the work needed, as the videos will be processed on it using a pre-trained classification model for anomaly detection with the help of our fog nodes; this layer can also be divided into two layers in order to facilitate and reduce the overhead and after detection, if there's no abnormality in the streams, those streams will be summarized to reduce the huge amount of data that can be sent. Moreover, we will apply a securing algorithm to provide privacy while transferring the data, and send them to the cloud layer to be stored and retrieved easily.\subsubsection{Internal}
 
 \begin{itemize}
 \item Nour Ahmed (team leader)
