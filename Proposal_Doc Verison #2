@@ -246,8 +246,8 @@ Additionally, we installed iFogSim and examined the features, packages, and the 
 \newline 
 As Redowan Mahmud and Rajkumar Buyya \cite{mahmud2019modelling} illustrated, fog devices are required to be classified. After arranging them, we can then move to the logical components which are classified into three classes: AppEdge, AppModule, and AppLoop. These components are needed for the structure of the application. By means, the application module class identifies different modules within the application. Moreover, the Application edge connects modules with each other if any dependencies are visible. Lastly, the management components include the Controller and the Mapping class, which manage both the physical and logical components. The mapping class associates each accessible resource to the fog devices, according to the AppModule demands. Finally, the Controller collects all the results (cost, energy consumption, etc.).
 \break
-We inspected the DCNS.fog class in Figure\ref{fig} which contains
-a case study for intelligent surveillance and examined the results presented in Figure\ref{fig1} .
+We inspected the DCNS.fog class in Figure \ref{fig} which contains
+a case study for intelligent surveillance and examined the results presented in Figure \ref{fig1} .
 \newpage
 \begin{figure}[h]
    \centering
@@ -317,7 +317,7 @@ Privacy protection scheme & April 2021 \\
 \end{tabular}
 \end{table}
 \subsection{Management}
-We used Trello, which is a web application that helps us manage our tasks and keep track of our progress. It includes the activity and work done by all the team members in each phase as shown in Figure \ref{trello}.
+We used Trello, which is a web application that helps us manage our tasks and keep track of our progress. It includes the activities and work done by all the team members in each phase as shown in Figure \ref{trello} and Figure \ref{task}.
 \newline
 \textbf{Trello:}  {https://trello.com/b/7Z0ibwVz/graduation-project}   
 \begin{figure}[htp]
@@ -330,7 +330,7 @@ We used Trello, which is a web application that helps us manage our tasks and ke
     \centering
     \includegraphics[width=9.2cm]{tasks.jpg}
     \caption{Trello: Proposal task cards}
-    \label{trello}
+    \label{task}
 \end{figure}
 
 \newpage
