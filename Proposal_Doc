@@ -271,6 +271,7 @@ In addition, we created a topology using the fog.GUI package, as shown in Figure
     \caption{System topology }
     \label{fig:2}
 \end{figure}
+\subsection{Github}
 \begin{figure}[h]
     \centering
     \includegraphics[width=12cm]{G1.png}
@@ -284,9 +285,10 @@ In addition, we created a topology using the fog.GUI package, as shown in Figure
     \caption{Contribution }
     \label{Contrib}
 \end{figure}
-\FloatBarrier
 
-\FloatBarrier
+\newpage
+
+
 \section{Project Management and Deliverables}
 \subsection{Deliverables}
 In order to reach our goal and obtain satisfactory results, we need to successfully achieve and deliver the fundamental elements of our system:
