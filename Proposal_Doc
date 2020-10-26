@@ -29,7 +29,6 @@ citestyle=ieee
 
 \begin{document}
 
-
 \begin{table}[htp]
 \maketitle
 \begin{tabular}{|l|l|l|}
