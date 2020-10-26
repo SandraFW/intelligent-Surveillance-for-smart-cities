@@ -285,12 +285,7 @@ In addition, we created a topology using the fog.GUI package, as shown in Figure
     \label{Contrib}
 \end{figure}
 \FloatBarrier
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=13cm]{trello.jpeg}
-    \caption{Tasks assignment on trello }
-    \label{Contrib}
-\end{figure}
+
 \FloatBarrier
 \section{Project Management and Deliverables}
 \subsection{Deliverables}
