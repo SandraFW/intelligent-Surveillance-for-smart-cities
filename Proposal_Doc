@@ -25,7 +25,7 @@ citestyle=ieee
 %opening
 \title { \vspace{ Software Proposal Document for }
 \newline Intelligent Surveillance for smart cities}
-\author{Nour Ahmed ,Mariam Hesham,Samiha Hesham,Sandra Fares}
+\author{Nour Ahmed, Mariam Hesham, Samiha Hesham, Sandra Fares}
 
 \begin{document}
 
