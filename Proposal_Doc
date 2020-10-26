@@ -6,7 +6,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{mathptmx}
 \usepackage[normalem]{ulem}
-
+\usepackage[section]{placeins}
  
 \renewcommand\theadalign{bc}
 \renewcommand\theadfont{\bfseries}
@@ -28,13 +28,14 @@ citestyle=ieee
 \author{Nour Ahmed ,Mariam Hesham,Samiha Hesham,Sandra Fares}
 
 \begin{document}
-\maketitle
+
 
 \begin{table}[htp]
+\maketitle
 \begin{tabular}{|l|l|l|}
 \hline 
 \thead{Proposal Version}    & \thead{Date} & \thead{Reason for Change}  \\ \hline
-1.0 & 24-October-2020   & \makecell{Proposal First version’s specifications are defined}   \\ \hline
+1.0 & 24-October-2020   & \makecell{Proposal First version’s specifications are defined}   \\ \hline 
 2.0 & 26-October-2020   & \makecell{Similar systems, busniess applications added}   \\ \hline
 \end{tabular}
 \caption{Document version history}
@@ -283,7 +284,14 @@ In addition, we created a topology using the fog.GUI package, as shown in Figure
     \caption{Contribution }
     \label{Contrib}
 \end{figure}
-\clearpage
+\FloatBarrier
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=13cm]{trello.jpeg}
+    \caption{Tasks assignment on trello }
+    \label{Contrib}
+\end{figure}
+\FloatBarrier
 \section{Project Management and Deliverables}
 \subsection{Deliverables}
 In order to reach our goal and obtain satisfactory results, we need to successfully achieve and deliver the fundamental elements of our system:
@@ -315,21 +323,19 @@ Privacy protection scheme & April 2021 \\
 We have done a systematic review, as well as a review paper, which was sent to SSIC 2021(3rd International
 Conference on Smart Systems: Innovations in Computing). we are waiting for their response.The paper is available on github.
     \begin{figure}[htp]
-    
-    \includegraphics[width=15cm]{5.png}
+    \includegraphics[width=13cm]{5.png}
     \caption{Contacting ELSEWEDY technology company}
     \end{figure}
-    
-    \begin{figure}[htp]
-    \includegraphics[width=15cm]{6.png}
+
+    \begin{figure}[!h]
+    \includegraphics[width=13cm]{6.png}
     \caption{The company's response}
     \end{figure}
    \begin{figure}[htp]
     \includegraphics[width=15cm]{8.png}
     \caption{Review Paper}
  \end{figure}
-
-
+ \FloatBarrier
     \begin{figure}[htp]
     \includegraphics[width=15cm]{7.png}
     \caption{Submission email from SSIC 2021}
@@ -340,7 +346,11 @@ Conference on Smart Systems: Innovations in Computing). we are waiting for their
 \includegraphics[width=1\textwidth]{./20.jpg}
 \newline
 \subsection{Budget and Resource Costs}
-we may publish articles and research papers in the future. Moreover, we may use additional computing tools.
+Article processing charges
+\begin{itemize}
+\item Articles publishing fees average 2000\$.
+\item Conference Registrations fees average 330\$.
+\end{itemize}
 
 \section {References}
 \nocite{*}
