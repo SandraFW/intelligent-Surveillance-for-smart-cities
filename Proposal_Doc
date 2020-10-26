@@ -318,6 +318,17 @@ Privacy protection scheme & April 2021 \\
 \hline
 \end{tabular}
 \end{table}
+\subsection{Management}
+We used Trello, which is a web application that helps us manage our tasks and keep track of our progress. It includes the activity and work done by all the team members in each phase as shown in Figure \ref{trello}.
+\newline
+\textbf{Trello:}  {https://trello.com/b/7Z0ibwVz/graduation-project}   
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=14cm]{Screenshot (155).png}
+    \caption{Trello: activity board}
+    \label{trello}
+\end{figure}
+
 \break
 \section{Supportive Documents}
 We have done a systematic review, as well as a review paper, which was sent to SSIC 2021(3rd International
