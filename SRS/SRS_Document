@@ -22,10 +22,11 @@ citestyle=ieee
 \addbibresource{references.bib}
 
 %opening
-\title{Software Requirement Specification Document for Project Name}
+\title{Software Requirement Specification Document for Intelligent Surveillance for smart cities}
 \author{
-Ahmed Mohamed, Mohamed Ahmed\\
+Nour Ahmed, Nour ElHoda Hisham, Mariam Hesham, Samiha Hesham, Sandra Fares\\
 Supervised by:
+Dr. Islam Tharwat, Eng. Lobna Mostafa
 }
 
 \begin{document}
