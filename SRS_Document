@@ -1,0 +1,286 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{makecell}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage[normalem]{ulem}
+
+\renewcommand\theadalign{bc}
+\renewcommand\theadfont{\bfseries}
+\renewcommand\theadgape{\Gape[4pt]}
+\renewcommand\cellgape{\Gape[4pt]}
+
+\usepackage[
+backend=biber,
+style=numeric,
+sorting=none,
+citestyle=ieee
+]{biblatex}
+
+\addbibresource{references.bib}
+
+%opening
+\title{Software Requirement Specification Document for Project Name}
+\author{
+Ahmed Mohamed, Mohamed Ahmed\\
+Supervised by:
+}
+
+\begin{document}
+\maketitle
+
+\begin{table}[htp]
+\caption{Document version history}
+\begin{center}
+\begin{tabular}{|c|c|l|}
+\hline
+\thead{Version}    & \thead{Date} & \thead{Reason for Change}  \\ \hline
+1.0 & 25-Oct-2020   & \makecell[l]{SRS First version’s specifications are defined.}   \\ \hline
+1.1 & 2-Dec-2020   & \makecell[l]{Added use case for User and Admin.\\Identified remaining functional requirements.\\Identified hardware constraints} \\ \hline
+1.3 & 5-Dec-2020   & \makecell[l]{Non-Functional Requirements updated.\\Removed additional unnecessary user interface design constraints.} \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[htp]
+\begin{tabular}{cc}
+\thead{GitHub:}    & {........................................................}   
+\end{tabular}
+\end{table}
+
+\pagebreak
+\begin{abstract}
+The main idea of this project is to study the ........
+(Word Limit 150)
+\end{abstract}
+
+\section{Introduction}
+
+\subsection{Purpose of this document}
+Describes the purpose of the document, and the intended audience. 
+
+\subsection{Scope of this document}
+Describes the scope of this requirements definition effort. Introduces the requirements elicitation team, including users, customers, system engineers, and developers. 
+This section also details any constraints that were placed upon the requirements elicitation process, such as schedules, costs, or the software engineering environment used to develop requirements. 
+
+\subsection{System Overview}
+Provides a brief overview of the product defined as a result of the requirements elicitation process. 
+
+\subsection{System Scope}
+Define The scope of your project. The scope should briefly:
+\begin{itemize}
+\item Define the boundaries of the project.
+\item Define the expected outcomes of the project.
+\end{itemize} 
+
+\subsection{Business Context}
+Identify here the business needs for your project.(if applicable)\\
+It’s important to realize that some projects are driven by opportunities, not problems. For example, stakeholders might save xx\% in operating costs if they change to a new software.
+\section{Similar Systems}
+\subsection{Academic}
+List here the most important related research work (Maximum 5 papers).
+Be sure that each paper you list include the following points
+
+\begin{enumerate}
+\item The main problem statement of the work.
+\item How the researchers contributed to solve the problem
+\item The dataset used by the researchers
+\item What main results the researchers reach.
+\item Criticize the paper
+\item Figure/s of the work (if available)
+\end{enumerate} 
+\subsection{Business Applications}
+Describe similar available business applications the the market with figures. (Optional) (Maximum 2)
+
+\section{System Description}
+
+\subsection{User Problem Statement}
+This section describes the essential problem(s) currently confronted by the user community. 
+
+\subsection{ User Objectives}
+This section describes the set of objectives and requirements for the system from the user's perspective. It may include a "wish list" of desirable characteristics, along with more feasible solutions that are in line with the business objectives. 
+
+\subsection{ User Characteristics}
+Describes the features of the user community, including their expected expertise with software systems and the application domain. 
+
+\subsection{System Context}
+State the context of the system, the boundaries of the system and if the system interacts with any external component. Show all this in a Context Diagram also.
+
+\pagebreak 
+\section{Functional Requirements}
+\subsection{System Functions}\label{System Functions}
+Describes the general functionality of the product using \textbf{Use Cases diagrams}. \\
+You also need to list  project requirements. A good requirement states something that is \textbf{necessary}, \textbf{verifiable}, and \textbf{attainable}. Even if it is verifiable and attainable if it is not necessary, it is not a good requirement \cite{hooks1994writing}.
+For example:
+\begin{enumerate}
+\item The user shall be able to search either all of the initial set of databases or select a subset from it. 
+\item The admin shall update security rules.
+\item The user shall be able to create a new event.
+\end{enumerate}
+
+\subsection{Detailed Functional Specification}
+Show the details of all functions shown in section \ref{System Functions}. Describe each function in the following structure.
+\begin{table}[htb!]
+\caption{readFile Function Description}
+\begin{tabular}{|p{0.15\textwidth}|p{0.85\textwidth}|}
+\hline
+\textbf{Name}           &  Such as: readFile \\ \hline
+\textbf{Code}           & Such as FR01 \\ \hline
+\textbf{Priority}       & Such as: Extreme, high, low \\ \hline
+\textbf{Critical}       & Describes how essential this requirement is to the overall system. \\ \hline
+\textbf{Description}    & A full description of the requirement such as: reads a file and writes it to the output buffer.  \\ \hline
+\textbf{Input}          & Such as: File name                                                                                                                                                                   \\ \hline
+\textbf{Output}         & Such as: Boolean (true for success, false otherwise)                                                                                                                                                                     \\ \hline
+\textbf{Pre-condition}  & Such as: User must be logged in and file exist                                                                                                                                                                     \\ \hline
+\textbf{Post-condition} & Such as: Redirect to view file page and displays file content      \\ \hline
+\textbf{Dependency}     & \begin{tabular}[c]{@{}l@{}}
+Dependencies with other requirements\\ Describes interactions with other requirements.
+\end{tabular}                                       \\ \hline
+\textbf{Risk}           & Describes the circumstances under which this requirement might not able to be satisfied, and what actions can be taken to reduce the probability of this occurrence. \\ \hline
+\end{tabular}
+\end{table} 
+
+
+\section{Interface Requirements}
+This section describes how the software interfaces with other software products or users for input or output. Examples of such interfaces include library routines, token streams, shared memory, data streams, and so forth. 
+\subsection{User Interfaces}
+Use some software for primitive plan of your project.
+Describes how this product interfaces with the user. 
+\subsubsection {GUI}
+Describes the graphical user interface if present. This section should include a set of screen dumps or mockups to illustrate user interface features. 
+If the system is menu-driven, a description of all menus and their components should be provided. 
+\subsubsection { CLI}
+Describes the command-line interface if present. For each command, a description of all arguments and example values and invocations should be provided. 
+
+
+\subsection{Hardware Interfaces}
+Describes interfaces to hardware devices. (According to your Project)
+\subsection{Communications Interfaces}
+Describes network interfaces. (According to your Project)
+\subsection {API}
+Describes the application programming interface, if present. For each public interface function, the name, arguments, return values, examples of invocation, and interactions with other functions should be provided. 
+
+\section{Design Constraints}
+Specifies any constraints for the design team using this document. 
+\subsection{ Standards Compliance}
+\subsection{ Hardware Limitations}
+\subsection{ Other Constraints as appropriate}
+
+
+\section{Non-functional Requirements}
+Specifies any other particular non-functional attributes required by the system. Such as: Security, Reliability, Maintainability, Portability, Extensibility
+
+\section{Data Design}
+\subsection{Data Description}
+Explain how the information domain of your system is transformed into data structures. Describe how the major data or system entities are stored, processed and organized. \\
+Explain your Dataset. How the dataset is collected, stored and organized.\\
+You may consider the answer for the following questions:
+\begin{itemize}
+\item What is the original format of the data (paper based, excel files, old system database)?
+\item Identify the method used to capture the data into your system(web page forms, import documents etc..)?
+\item How large is the database expected to be (in numbers of rows and columns for the main entities)?
+\item What is the expected number of users/customers for the system?
+\item How is your entity keys(ids) constructed (is there a specific code or format for ID definition)
+\item Does your data contain date/time, if yes which format are they presented in
+\end{itemize}
+
+
+\subsection{Database design description}
+Describe any databases (provide database schema diagram) and/or description of other data storage items. (According to your Project)
+
+
+
+\section{Preliminary Object-Oriented Domain Analysis}
+This section presents a list of the fundamental objects that must be modeled within the system to satisfy its requirements. The purpose is to provide an alternative, ''structural'' view on the requirements stated above and how they might be satisfied in the system. A primitive class diagram to be delivered.
+
+\subsection{Inheritance Relationships}
+This section should contain a set of graphs that illustrate the primary inheritance hierarchy (is-kind-of) for the system. For example Figure \ref{fig:image}. 
+
+\begin{figure}[htp]
+\centering
+\includegraphics[width=0.7\linewidth]{./image}
+\caption{Inheritance Relations}
+\label{fig:image}
+\end{figure}
+
+\subsection{Class descriptions}
+This section presents a more detailed description of each class identified during the OO Domain Analysis. Add class diagram and describe each class in the following structure: 
+
+\begin{table}[ht]
+\caption{Class Name - xxx}
+\label{tab:my-table}
+\begin{tabular}{|p{0.25\textwidth}|p{0.75\textwidth}|}
+\hline
+\textbf{Abstract or Concrete:} & Indicates whether this class is abstract or concrete.
+\\ \hline
+\textbf{List of Superclasses}  & Names all immediate superclasses.                                                       
+\\ \hline
+\textbf{List of Subclasses}    & List of Subclasses                                                                      
+\\ \hline
+\textbf{Purpose}               & Purpose                                                                                 
+\\ \hline
+\textbf{Collaborations}        & Names each class with which this class must interact in order to accomplish its purpose, and how.
+\\ \hline
+\textbf{Attributes}            & Lists each attribute (state variable) associated with each instance of this class, and indicates examples of possible values (or a range).
+\\ \hline
+\textbf{Operations}            & Lists each operation that can be invoked upon instances of this class.  For each operation, the arguments (and their type), the return value (and its type), and any side effects of the operation should be specified. 
+\\ \hline
+\textbf{Constraints}           & Lists any restrictions upon the general state or behavior of instances of this class.   
+\\ \hline
+\end{tabular}
+\end{table}
+
+\section{Operational Scenarios}
+This section should describe a set of scenarios that illustrate, from the user's perspective, what will be experienced when utilizing the system under various situations. 
+In the article Inquiry-Based Requirements Analysis (IEEE Software, March 1994), scenarios are defined as follows: 
+In the broad sense, a scenario is simply a proposed specific use of the system. More specifically, a scenario is a description of one or more end-to-end transactions involving the required system and its environment. Scenarios can be documented in different ways, depending up on the level of detail needed. The simplest form is a use case, which consists merely of a short description with a number attached. More detailed forms are called scripts. These are usually represented as tables or diagrams and involved identifying an action and the agent (doer) of the action. For this reason, a script can also be called an action table. 
+Although scenarios are useful in acquiring and validating requirements, they are not themselves requirements, because the describe the system's behavior only in specific situations; a specification, on the other hand, describes what the system should do in general. 
+
+\section{Project Plan}
+This section provides an initial version of the project plan, including the major tasks to be accomplished, their inter-dependencies, and their tentative start/stop dates. The plan also includes information on hardware, software, and  resource requirements. 
+The project plan should be accompanied by one or more PERT or GANTT charts such as the chart shown in Figure \ref{fig:GANTT Chart}.\\
+The plan should include the projects task and who is responsible for this task.
+Table \ref{tab:Time Plan} shows a simple example.
+
+\begin{table}[h]
+\centering
+\caption{Project name time plan}
+\label{tab:Time Plan}
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+Id & Task               & Start Date & Number of Days & Team Member \\ \hline
+1  & Collect Dataset    & 12/10/2020 & 10             & X, Y        \\ \hline
+2  & Work on GUI        & 12/21/2020 & 15             & Z, Y        \\ \hline
+3  & Pre-Processing     & 12/21/2020 & 5              & X           \\ \hline
+4  & Feature Extraction & 12/26/2020 & 5              & X, Z, Y     \\ \hline
+5  & Classification     & 12/31/2020 & 10             & Z           \\ \hline
+6  & Writing Paper      & 01/05/2021 & 30             & X, Z, Y     \\ \hline
+7  & Experiments        & 01/10/2021 & 20             & X, Z, Y     \\ \hline
+\end{tabular}
+\end{table}
+
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=\linewidth]{./GANTT}
+\caption{Project name GANTT Chart}
+\label{fig:GANTT Chart}
+\end{figure}
+
+\section{Appendices}
+Specifies other useful information for understanding the requirements. All SRS documents should include at least the following two appendices: 
+
+\subsection{Definitions, Acronyms, Abbreviations}
+Provides definitions of unfamiliar definitions, terms, and acronyms. 
+
+
+\subsection{Supportive Documents}
+
+
+\section {References}
+30 Reference Minimum (80\% Academic)
+\printbibliography
+\end{document}
