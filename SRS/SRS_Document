@@ -95,6 +95,20 @@ It’s important to realize that some projects are driven by opportunities, not 
 
 \item Hui Sun et al. \cite{sun2019vu} presented an edge computing-enabled video usefulness model (VU) in order to handle failures that might occur in surveillance videos, using failure detection approaches, as it usually takes a great amount of time for maintenance teams to determine what causes the failure. Moreover, the system provides bandwidth improvement, as useless video surveillance data might consume bandwidth that is needed by useful and informative videos. Experimental results show that the system detects failures efficiently.
  
+ \newpage
+\item Due to the large number of data collected by surveillance cameras, many challenges appeared in analyzing, storing, and retrieving data. Santamaria et al. \cite{santamaria2019cooperative} introduced the basics needed to build a framework for people’s abnormal behaviors, after investigating the current techniques and technologies. The authors proposed a distributed architecture as shown in Figure \ref{Santamaria}. Distributed architectures assist in reducing the computation of the end devices, which help in improving the performance and avoiding waste of bandwidth and memory.  In addition, they mentioned the responsibility of each layer in the system, the possible computer vision techniques that can be used with their pros and cons as Neural networks, and the KNN model for object detection and tracking. Results show that an alarm is triggered when detecting an anomaly in  order to track it.
+
+
+
+\begin{figure}[!ht]
+\centering
+ \begin{minipage}{.5\textwidth}
+  \includegraphics[width=10.0cm, height=10.0cm]{./4.png}
+  \caption{the distributed ecosystem in cloud domain}
+  \label{Santamaria}
+ \end{minipage}
+\end{figure}
+ 
 \end{itemize}
 
 
