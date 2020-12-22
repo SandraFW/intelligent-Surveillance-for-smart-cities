@@ -68,7 +68,13 @@ Describes the scope of this requirements definition effort. Introduces the requi
 This section also details any constraints that were placed upon the requirements elicitation process, such as schedules, costs, or the software engineering environment used to develop requirements. 
 
 \subsection{System Overview}
-Provides a brief overview of the product defined as a result of the requirements elicitation process. 
+\begin{figure}[htp]
+\centering
+\includegraphics[width=15cm,height=10cm,keepaspectratio]{./D2.jpeg}
+\caption{Illustration of high-level view of the system.}
+\label{fig:D1}
+\end{figure}
+The system aims to prevent Kidnapping acts in smart cities by fast prediction and detection of those incidents, using a framework composed of three computing layers. First, the cameras located at the potential crime scenes acting as the edge nodes; Light-weighted algorithms are deployed on them for any possible failure in the device and human motion detection. Once it detects abnormal motion, the data moves to the second layer, the fog nodes layer where the processing is completed and alerts are generated to the authorities, with possibilities to track and detect the kidnapper's face too. Then transmits the data to the third layer, the cloud layer where data backup and system updates are done. The system must ensure safety and privacy measures for the citizens while using and transferring the captured data throughout the day. 
 
 \subsection{System Scope}
 Define The scope of your project. The scope should briefly:
@@ -129,9 +135,19 @@ This section describes the set of objectives and requirements for the system fro
 Describes the features of the user community, including their expected expertise with software systems and the application domain. 
 
 \subsection{System Context}
-State the context of the system, the boundaries of the system and if the system interacts with any external component. Show all this in a Context Diagram also.
+\begin{figure}[htp]
+\centering
+\includegraphics[width=15cm,height=10cm,keepaspectratio]{./D1.jpeg}
+\caption{Architecture of the system.}
+\label{fig:D1}
+\end{figure}
+ \begin{figure}[htp]
+\centering
+\includegraphics[width=15cm,height=10cm,keepaspectratio]{./D3.jpeg}
+\caption{Context Diagram of the system.}
+\label{fig:D3}
+\end{figure}
 
-\pagebreak 
 \section{Functional Requirements}
 \subsection{System Functions}\label{System Functions}
 Describes the general functionality of the product using \textbf{Use Cases diagrams}. \\
@@ -165,6 +181,40 @@ Dependencies with other requirements\\ Describes interactions with other require
 \end{tabular}
 \end{table} 
 
+\begin{table}[htb!]
+\caption{Motion Image Dispatch Function }
+\begin{tabular}{|p{0.15\textwidth}|p{0.85\textwidth}|}
+\hline
+\textbf{Name}           &   image motion dispatch \\ \hline
+\textbf{Code}           &  FR04 \\ \hline
+\textbf{Priority}       &  Extreme \\ \hline
+\textbf{Critical}       & It is very essential function for the system \\ \hline
+\textbf{Description}    & On abnormal motion detection , it gathers location information and dispatches motion image and sends it for the further processing. \\ \hline
+\textbf{Input}          & video stream  \\ \hline
+\textbf{Output}         & video stream  \\ \hline
+\textbf{Pre-condition}  & abnormal motion detected in function FR03        \\ \hline
+\textbf{Post-condition} & Dispatch the stream to other processing \\ \hline
+\textbf{Dependency}     & FR01-FR03 \\ \hline
+\textbf{Risk}           & Camera has any failure in capturing the video streams and can be fixed with FR01\\ \hline
+\end{tabular}
+\end{table} 
+\begin{table}[htb!]
+\caption{Kidnapper Tracking Function }
+\begin{tabular}{|p{0.15\textwidth}|p{0.85\textwidth}|}
+\hline
+\textbf{Name}           & Kidnapper Tracking Function \\ \hline
+\textbf{Code}           &  FR07 \\ \hline
+\textbf{Priority}       &  low \\ \hline
+\textbf{Critical}       & it is a supplementary function in the system\\ \hline
+\textbf{Description}    & After detection of a kidnapping incident their should be a tracking for the kidnapper from the location of the incident to help the authorities catch him \\ \hline
+\textbf{Input}          & location  \\ \hline
+\textbf{Output}         & location  \\ \hline
+\textbf{Pre-condition}  & abnormal motion detected FR03,location detetcted and video dispatched in FR04 and predection FR05     \\ \hline
+\textbf{Post-condition} & tracing kidnapper location and report the authorities \\ \hline
+\textbf{Dependency}     & FR01-FR03-FR04-FR05 \\ \hline
+\textbf{Risk}           & Camera has any failure in capturing the video streams and can be fixed with FR01. Or kidnapper runs to a place can't be reached by the system\\ \hline
+\end{tabular}
+\end{table} 
 
 \section{Interface Requirements}
 This section describes how the software interfaces with other software products or users for input or output. Examples of such interfaces include library routines, token streams, shared memory, data streams, and so forth. 
