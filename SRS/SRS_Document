@@ -19,7 +19,7 @@ sorting=none,
 citestyle=ieee
 ]{biblatex}
 
-\addbibresource{references.bib}
+\addbibresource{Ref.bib}
 
 %opening
 \title{Software Requirement Specification Document for Intelligent Surveillance for smart cities}
@@ -80,6 +80,7 @@ Define The scope of your project. The scope should briefly:
 \subsection{Business Context}
 Identify here the business needs for your project.(if applicable)\\
 It’s important to realize that some projects are driven by opportunities, not problems. For example, stakeholders might save xx\% in operating costs if they change to a new software.
+\newpage
 \section{Similar Systems}
 \subsection{Academic}
 \begin{itemize}
@@ -92,7 +93,6 @@ It’s important to realize that some projects are driven by opportunities, not 
     \label{security}
 \end{figure}
 
-\item 
  
 \end{itemize}
 
