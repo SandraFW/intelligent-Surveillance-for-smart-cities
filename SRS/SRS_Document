@@ -93,6 +93,7 @@ It’s important to realize that some projects are driven by opportunities, not 
     \label{security}
 \end{figure}
 
+\item Hui Sun et al. \cite{sun2019vu} presented an edge computing-enabled video usefulness model (VU) in order to handle failures that might occur in surveillance videos, using failure detection approaches, as it usually takes a great amount of time for maintenance teams to determine what causes the failure. Moreover, the system provides bandwidth improvement, as useless video surveillance data might consume bandwidth that is needed by useful and informative videos. Experimental results show that the system detects failures efficiently.
  
 \end{itemize}
 
