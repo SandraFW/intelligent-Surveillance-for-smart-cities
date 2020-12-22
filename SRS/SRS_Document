@@ -82,17 +82,23 @@ Identify here the business needs for your project.(if applicable)\\
 It’s important to realize that some projects are driven by opportunities, not problems. For example, stakeholders might save xx\% in operating costs if they change to a new software.
 \section{Similar Systems}
 \subsection{Academic}
-List here the most important related research work (Maximum 5 papers).
-Be sure that each paper you list include the following points
+\begin{itemize}
+\item In the hopes of decreasing and preventing crimes in a smart home environment (SHE), Tanin Sultana and Khan A. Wahid \cite{sultana2019iot} proposed a framework called IoT guard. The authors designed an edge-fog architecture to assist in detecting crimes, predicting them, and sending alerts to police units to take immediate actions and prevent any catastrophic event from occurring. As shown in Figure \ref{security}, Initially, the edge nodes, or the cameras, detect if an event took place. Whenever an action is detected, the edge nodes will forward the surveillance data to the fog nodes to get processed. The fog nodes will then apply object detection algorithms, predict possible events, send alerts to the police unit, and finally send data to the cloud server for system updates or any further analysis. Results show the system’s performance is better than transitional IoT surveillance systems. It is efficient and scalable.
 
-\begin{enumerate}
-\item The main problem statement of the work.
-\item How the researchers contributed to solve the problem
-\item The dataset used by the researchers
-\item What main results the researchers reach.
-\item Criticize the paper
-\item Figure/s of the work (if available)
-\end{enumerate} 
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=12cm]{Screenshot (299).png}
+    \caption{IoT-guard security management system}
+    \label{security}
+\end{figure}
+
+\item 
+ 
+\end{itemize}
+
+
+
+
 \subsection{Business Applications}
 Describe similar available business applications the the market with figures. (Optional) (Maximum 2)
 
