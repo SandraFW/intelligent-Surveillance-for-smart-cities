@@ -220,6 +220,28 @@ FR01.\\ This function depends on FR01, because if any failure took place on surv
 \textbf{Risk}           & Camera has any failure in capturing the video streams and can be fixed with FR01\\ \hline
 \end{tabular}
 \end{table} 
+
+\begin{table}[htb!]
+\caption{action prediction}
+\begin{tabular}{|p{0.15\textwidth}|p{0.85\textwidth}|}
+\hline
+\textbf{Name}           &  action prediction function \\ \hline
+\textbf{Code}           & FR05 \\ \hline
+\textbf{Priority}       & High \\ \hline
+\textbf{Critical}       & It is important to predict an event before occurring in order to prevent it and avoid tragic situations.  \\ \hline
+\textbf{Description}    & after dispatching the needed video stream, an event prediction function can be applied to determine the possible events that could happen.  \\ \hline
+\textbf{Input}          & video stream                                                                                                                                                                   \\ \hline
+\textbf{Output}         &  Boolean if action is kidnapping.                                                                                                                                                                   \\ \hline
+\textbf{Pre-condition}  & Dispatched video stream is processed.                                                                                                                                                            \\ \hline
+\textbf{Post-condition} & action is predicted.      \\ \hline
+\textbf{Dependency}     & \begin{tabular}[c]{@{}l@{}}
+FR01, FR03, FR04.\\  FR01: if any failure took place on surveillance cameras, motion will not be detected \\ in order to predict it. \\
+FR03: if motion is not detected, surveillance data cannot be processed further more.\\ So, prediction  will not occur. \\ FR04: video stream needs to be dispatched before forwarding it for further \\ processing.
+\end{tabular}                                       \\ \hline
+\textbf{Risk}           &  If any failure happens when capturing video streams, if motion was not detected, or if the needed video stream was not dispatched. \\ \hline
+\end{tabular}
+\end{table} 
+
 \begin{table}[htb!]
 \caption{Kidnapper Tracking Function }
 \begin{tabular}{|p{0.15\textwidth}|p{0.85\textwidth}|}
