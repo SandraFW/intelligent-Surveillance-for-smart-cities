@@ -182,6 +182,28 @@ Dependencies with other requirements\\ Describes interactions with other require
 \end{table} 
 
 \begin{table}[htb!]
+\caption{action detection}
+\begin{tabular}{|p{0.15\textwidth}|p{0.85\textwidth}|}
+\hline
+\textbf{Name}           &  action detection function \\ \hline
+\textbf{Code}           & FR03 \\ \hline
+\textbf{Priority}       & Extreme \\ \hline
+\textbf{Critical}       & It is really essential; An action needs to be detected in order to take the appropriate action to predict or prevent it.   \\ \hline
+\textbf{Description}    & when any action is captured from a surveillance camera, motion detection algorithms, as well as image processing techniques, are applied to detect it.  \\ \hline
+\textbf{Input}          & video stream                                                                                                                                                                   \\ \hline
+\textbf{Output}         &  video stream                                                                                                                                                                     \\ \hline
+\textbf{Pre-condition}  & surveillance camera captures an event.                                                                                                                                                                    \\ \hline
+\textbf{Post-condition} & the event gets detected.      \\ \hline
+\textbf{Dependency}     & \begin{tabular}[c]{@{}l@{}}
+FR01.\\ This function depends on FR01, because if any failure took place on surveillance \\ cameras, the event will not be detected.
+\end{tabular}                                       \\ \hline
+\textbf{Risk}           & If any failure happens when capturing video streams. \\ \hline
+\end{tabular}
+\end{table} 
+
+
+
+\begin{table}[htb!]
 \caption{Motion Image Dispatch Function }
 \begin{tabular}{|p{0.15\textwidth}|p{0.85\textwidth}|}
 \hline
