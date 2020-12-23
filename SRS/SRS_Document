@@ -182,10 +182,10 @@ Dependencies with other requirements\\ Describes interactions with other require
 \end{table} 
 
 \begin{table}[htb!]
-\caption{action detection}
+\caption{motion detection}
 \begin{tabular}{|p{0.15\textwidth}|p{0.85\textwidth}|}
 \hline
-\textbf{Name}           &  action detection function \\ \hline
+\textbf{Name}           &  motion detection function \\ \hline
 \textbf{Code}           & FR03 \\ \hline
 \textbf{Priority}       & Extreme \\ \hline
 \textbf{Critical}       & It is really essential; An action needs to be detected in order to take the appropriate action to predict or prevent it.   \\ \hline
