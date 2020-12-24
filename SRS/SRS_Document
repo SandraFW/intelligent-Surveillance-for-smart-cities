@@ -193,6 +193,24 @@ Dependencies with other requirements\\ Describes interactions with other require
 \end{table} 
 
 \begin{table}[htb!]
+\caption{Check failure of the camera}
+\begin{tabular}{|p{0.15\textwidth}|p{0.85\textwidth}|}
+\hline
+\textbf{Name}           &  Check failure of the camera \\ \hline
+\textbf{Code}           &  FR01 \\ \hline
+\textbf{Priority}       & Extreme \\ \hline
+\textbf{Critical}       & It's essential to detect if any failure happens to the video streams and enclose it to efficiently detect an event, avoid network overload, and improve the cloud storage usage \\ \hline
+\textbf{Description}    & The system detects if any failure that impacts the usefulness of the video streams (i.e., natural occlusion, disruption) happens. Then, sending an alert of the failure to the maintenance team to recover it   \\ \hline
+\textbf{Input}          & Video stream                                                                             \\ \hline
+\textbf{Output}         & Boolean if it detects failure or not                                                                             \\ \hline
+\textbf{Pre-condition}  & A failure happens in the video streams.                                                                                                                                                                    \\ \hline
+\textbf{Post-condition} & A failure is detected and enclosed with an alert to the maintenance team to recover it      \\ \hline
+\textbf{Dependency}     & -                                      \\ \hline
+\textbf{Risk}           & - \\ \hline
+\end{tabular}
+\end{table} 
+
+\begin{table}[htb!]
 \caption{motion detection}
 \begin{tabular}{|p{0.15\textwidth}|p{0.85\textwidth}|}
 \hline
