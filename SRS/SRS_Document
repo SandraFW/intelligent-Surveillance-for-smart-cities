@@ -211,6 +211,24 @@ Dependencies with other requirements\\ Describes interactions with other require
 \end{table} 
 
 \begin{table}[htb!]
+\caption{Face blurring}
+\begin{tabular}{|p{0.15\textwidth}|p{0.85\textwidth}|}
+\hline
+\textbf{Name}           &  Face blurring \\ \hline
+\textbf{Code}           &  FR02 \\ \hline
+\textbf{Priority}       & Extreme \\ \hline
+\textbf{Critical}       & It's extremely essential to ensure the privacy and identity of the citizens that exposed to privacy violation in the video surveillance \\ \hline
+\textbf{Description}    &In the real-time video surveillance after detecting the people's faces, the system uses a blur algorithm to blur the face to be indiscernible.   \\ \hline
+\textbf{Input}          & Video stream                                                                             \\ \hline
+\textbf{Output}         & Video stream                                                                             \\ \hline
+\textbf{Pre-condition}  & Detecting people's faces in real-time video surveillance to blur it                                                                                                                                                                    \\ \hline
+\textbf{Post-condition} &The detected faces are been blurred      \\ \hline
+\textbf{Dependency}     & FR01 – FR03                                      \\ \hline
+\textbf{Risk}           &If there is any failure that impacts the usefulness of the video stream \\ \hline
+\end{tabular}
+\end{table} 
+
+\begin{table}[htb!]
 \caption{motion detection}
 \begin{tabular}{|p{0.15\textwidth}|p{0.85\textwidth}|}
 \hline
