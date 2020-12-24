@@ -61,8 +61,8 @@ The main idea of this project is to study the ........
 \section{Introduction}
 
 \subsection{Purpose of this document}
-Describes the purpose of the document, and the intended audience. 
-
+The main purpose of this software requirement specification document is to clarify and illustrate the idea of our project, which is mainly about IoT guard. Nowadays, cloud-based IoT architectures have many issued in storing and processing essential surveillance data. By locating fog in between cloud and edge devices, it would offer decentralized computing infrastructure to execute significant amount of storage, management, control and communication. Also, it will respond quickly.
+On the other hand, instead of using camera sensors all the time in the presence of any target events, event driven offered to monitor surveillance activity in the field of view.
 \subsection{Scope of this document}
 Describes the scope of this requirements definition effort. Introduces the requirements elicitation team, including users, customers, system engineers, and developers. 
 This section also details any constraints that were placed upon the requirements elicitation process, such as schedules, costs, or the software engineering environment used to develop requirements. 
@@ -90,8 +90,9 @@ The system aims to prevent Kidnapping acts in smart cities by fast prediction an
 \end{itemize} 
 
 \subsection{Business Context}
-Identify here the business needs for your project.(if applicable)\\
-It’s important to realize that some projects are driven by opportunities, not problems. For example, stakeholders might save xx\% in operating costs if they change to a new software.
+The proposed system is implemented to reduce kidnapping rate. By using fog-edge computing in camera sensors, it will be easy to detect kidnapping or predict it before happening, also it would recognize the criminal by face recognition by the aid of AI and ML. Moreover, it will alert the police to track him.
+The most important thing that fog computing has an important role to store and processing essential surveillance data even though it's big storage.
+
 \newpage
 \section{Similar Systems}
 \subsection{Academic}
@@ -136,7 +137,8 @@ It’s important to realize that some projects are driven by opportunities, not 
 \section{System Description}
 
 \subsection{User Problem Statement}
-This section describes the essential problem(s) currently confronted by the user community. 
+One of the problems that face inhabitants in smart cities is kidnapping. Nowadays, the rate of kidnapping is constantly increasing which threatens 
+national security. Moreover, there is nothing to prevent or reduce this problem like a camera sensor when something dangerous happened, it makes an alert to the police.
 
 \subsection{ User Objectives}
 Our system is crucial, as its fundamental goal is to ensure the citizens’ safety. For our users, the system should provide a rapid response to take appropriate action in time. When an anomaly gets captured on a surveillance camera, the system should detect it and determine if it’s a kidnapping case. Moreover, the system should track the kidnapper, identify his face, and trigger an alarm for our users, in our case, to the nearest police unit.
@@ -252,6 +254,26 @@ FR03: if motion is not detected, surveillance data cannot be processed further m
 \end{table} 
 
 \begin{table}[htb!]
+\caption{Alert Function Description}
+\begin{tabular}{|p{0.15\textwidth}|p{0.85\textwidth}|}
+\hline
+\textbf{Name}           & Alert  \\ \hline
+\textbf{Code}           & FR06 \\ \hline
+\textbf{Priority}       & Extreme  \\ \hline
+\textbf{Critical}       & It is important to alert police by kidnapping incident. \\ \hline
+\textbf{Description}    & To maintain the situation, there must an alert send to the police to come urgently and catch the criminal.. \\ \hline
+\textbf{Input}          & Video stream , face recognition ,location                                                                                                                                                                 \\ \hline
+\textbf{Output}         & Alert                                                                                                                                                                   \\ \hline
+\textbf{Pre-condition}  & After detection of kidnapping incident in FR05 and face recognition in FR08, an alert must be sent to police by Fog computing.                      \\ \hline                                                                                          
+\textbf{Post-condition} & Alert to police.      \\ \hline
+\textbf{Dependency}     & \begin{tabular}[c]{@{}l@{}}
+FR05: By detection of the kidnapping incident, \\ FR08: by Face recognition \\ FR07: By detecting the location of the criminal, Fog will send an alert to the police to rescue the victim.
+\end{tabular}                                       \\ \hline
+\textbf{Risk}           & Failure to send an alert if there is data is missing or there was a difficulty to send an alert. \\ \hline
+\end{tabular}
+\end{table} 
+
+\begin{table}[htb!]
 \caption{Kidnapper Tracking Function }
 \begin{tabular}{|p{0.15\textwidth}|p{0.85\textwidth}|}
 \hline
@@ -266,6 +288,27 @@ FR03: if motion is not detected, surveillance data cannot be processed further m
 \textbf{Post-condition} & tracing kidnapper location and report the authorities \\ \hline
 \textbf{Dependency}     & FR01-FR03-FR04-FR05 \\ \hline
 \textbf{Risk}           & Camera has any failure in capturing the video streams and can be fixed with FR01. Or kidnapper runs to a place can't be reached by the system\\ \hline
+\end{tabular}
+\end{table} 
+
+\begin{table}[htb!]
+\caption{Face Recognition Function Description}
+\begin{tabular}{|p{0.15\textwidth}|p{0.85\textwidth}|}
+\hline
+\textbf{Name}           & Face Recognition  \\ \hline
+\textbf{Code}           & FR08 \\ \hline
+\textbf{Priority}       & Extreme  \\ \hline
+\textbf{Critical}       & It is important to recognize the criminal's face to make it easy for the police to catch him. \\ \hline
+\textbf{Description}    & During the crime scene, there should face recognition from a camera sensor to detect the features of the criminal. \\ \hline
+\textbf{Input}          & Video stream                                                                                                                                                                 \\ \hline
+\textbf{Output}         & Criminal's face                                                                                                                                                                    \\ \hline
+\textbf{Pre-condition}  & After detection of the kidnapping incident in FR05, the camera must capture a criminal's face.  \\ \hline                                                                                                                                                           
+\textbf{Post-condition} & Face recognition      \\ \hline
+\textbf{Dependency}     & \begin{tabular}[c]{@{}l@{}}
+FR05: By detection of the kidnapping incident, the camera will capture or recognize \\ the features of the criminal.
+Failure in camera when capturing the criminal.
+\end{tabular}                                       \\ \hline
+\textbf{Risk}           & Failure in camera when capturing criminal. \\ \hline
 \end{tabular}
 \end{table} 
 
