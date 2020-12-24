@@ -127,7 +127,11 @@ It’s important to realize that some projects are driven by opportunities, not 
 
 
 \subsection{Business Applications}
-Describe similar available business applications the the market with figures. (Optional) (Maximum 2)
+\begin{itemize}
+\item For helping smart cities to achieve a safe and secure environment, Logipix \cite{logipix} Technical Development Ltd is a privately held organization founded in 1996 in Hungary that provides intelligent video monitoring solutions for wide public areas in the cities. They highlighted their solutions as a scalable city-wide system that is designed and developed to achieve a video surveillance system and traffic violation management tasks at the same time. The main goal of Logipix solutions is to provide a real-time system that is able to surveil the whole city 24/7 efficiently, the system also can respond immediately and take proper action in case of detecting any abnormal event. Moreover, the system captures all the events with high resolution even at miles away, face recognition is still possible. For helping the competent authorities, these recordings can be used as unappealable evidence on demand.
+
+\item BT Business \cite{BT} is a retail division of the United Kingdom telecommunications company that provides many solutions that build smart cities. For securing smart cities and in order to help the administrators make swift decisions and help them to fast respond to what’s going on and to prevent suspicious events before they happen, BT provides surveillance solutions for local councils, streets, public transport , police stations and more. Moreover, they helped many United Kingdom cities to turn to smart cities by the installation of public WiFi and cameras to help monitor traffics, give real-time alerts for trams, buses and more. For cost-effective and best-of-breed surveillance solutions, BT company partners with industry-leading suppliers as CISCO and BOSCH and many other huge suppliers.
+\end{itemize} 
 
 \section{System Description}
 
