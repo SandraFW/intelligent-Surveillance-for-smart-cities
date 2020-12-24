@@ -54,8 +54,7 @@ Dr. Islam Tharwat, Eng. Lobna Mostafa
 
 \pagebreak
 \begin{abstract}
-The main idea of this project is to study the ........
-(Word Limit 150)
+Surveillance systems are of vital importance for the development of smart cities. These systems can be considered vision organs of such cities. It is expected that a huge amount of data (Big Data) will be generated in smart cities. Therefore, to ensure the safety of its citizens, it is important to provide an efficient and real-time analysis of these data to get real-time responses, when catastrophic events occur. Accordingly, transmitting this massive data to the cloud, to be processed, is relatively slow. Therefore, the purpose of this project is to implement an edge computing- based surveillance system to offer real-time data processing. When surveillance videos capture an incident, the data get transferred to the edge for processing. Moreover, a rapid response is then provided to properly handle the occasion. Furthermore, despite tackling scalability obstacles, the system should handle privacy-sensitive data to overcome the privacy challenges in smart cities.
 \end{abstract}
 
 \section{Introduction}
@@ -64,9 +63,9 @@ The main idea of this project is to study the ........
 The main purpose of this software requirement specification document is to clarify and illustrate the idea of our project, which is mainly about IoT guard. Nowadays, cloud-based IoT architectures have many issued in storing and processing essential surveillance data. By locating fog in between cloud and edge devices, it would offer decentralized computing infrastructure to execute significant amount of storage, management, control and communication. Also, it will respond quickly.
 On the other hand, instead of using camera sensors all the time in the presence of any target events, event driven offered to monitor surveillance activity in the field of view.
 \subsection{Scope of this document}
-\subsection{Scope of this document}
 Intelligent surveillance system is useful for kidnapping prevention,terrorist or forensic evidence detection and traffic monitoring.The system is fog computing based that should be accurate and responsive.The police units will receive a notification when a kidnapping accident occurs.Also the location of the accident will be sent to reach the place quickly.The system will also enhance privacy in order to keep citizen's data blurred.
 \subsection{System Overview}
+
 \begin{figure}[htp]
 \centering
 \includegraphics[width=15cm,height=10cm,keepaspectratio]{./D2.jpeg}
@@ -74,7 +73,8 @@ Intelligent surveillance system is useful for kidnapping prevention,terrorist or
 \label{fig:D1}
 \end{figure}
 The system aims to prevent Kidnapping acts in smart cities by fast prediction and detection of those incidents, using a framework composed of three computing layers. First, the cameras located at the potential crime scenes acting as the edge nodes; Light-weighted algorithms are deployed on them for any possible failure in the device and human motion detection. Once it detects abnormal motion, the data moves to the second layer, the fog nodes layer where the processing is completed and alerts are generated to the authorities, with possibilities to track and detect the kidnapper's face too. Then transmits the data to the third layer, the cloud layer where data backup and system updates are done. The system must ensure safety and privacy measures for the citizens while using and transferring the captured data throughout the day. 
-
+\floatbarrier
+\newpage
 \subsection{System Scope}
 \begin{itemize}
 \item Fog/Edge computing-based surveillance system to monitoring the whole city 24/7.
@@ -169,8 +169,7 @@ Our system is crucial, as its fundamental goal is to ensure the citizens’ safe
 \item The system should send alert if any failure is detected in the cameras occurred in order to help the maintenance team to solve the problem.
 \item The system must send alert message when anomaly behaviour is detected using the fog nodes in the architecture system.
 \item The system shall provide face recognition feature for the kidnapper.
-\item The system should filter the incident using video splitting technique in order to be saved and sent to the cloud to save storage.
-
+to search either all of the initial set of databases or select a subset from it. 
 
 \end{enumerate}
 
@@ -333,7 +332,7 @@ Failure in camera when capturing the criminal.
 \textbf{Risk}           & Failure in camera when capturing criminal. \\ \hline
 \end{tabular}
 \end{table} 
-
+\newpage
 \section{Interface Requirements}
 This section describes how the software interfaces with other software products or users for input or output. Examples of such interfaces include library routines, token streams, shared memory, data streams, and so forth. 
 \subsection{User Interfaces}
