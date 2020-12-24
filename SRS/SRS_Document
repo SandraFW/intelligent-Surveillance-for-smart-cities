@@ -164,10 +164,9 @@ Our system is crucial, as its fundamental goal is to ensure the citizens’ safe
 \begin{enumerate}
 \item The system must be able to detect the accident accurately.
 \item The system must be able to predict the event before occurring in order to prevent it.
-
+\item The system must be able to track the kidnapper from the location of the incident.
 to search either all of the initial set of databases or select a subset from it. 
-\item The admin shall update security rules.
-\item The user shall be able to create a new event.
+
 \end{enumerate}
 
 \subsection{Detailed Functional Specification}
@@ -207,24 +206,6 @@ Dependencies with other requirements\\ Describes interactions with other require
 \textbf{Post-condition} & A failure is detected and enclosed with an alert to the maintenance team to recover it      \\ \hline
 \textbf{Dependency}     & -                                      \\ \hline
 \textbf{Risk}           & - \\ \hline
-\end{tabular}
-\end{table} 
-
-\begin{table}[htb!]
-\caption{Face blurring}
-\begin{tabular}{|p{0.15\textwidth}|p{0.85\textwidth}|}
-\hline
-\textbf{Name}           &  Face blurring \\ \hline
-\textbf{Code}           &  FR02 \\ \hline
-\textbf{Priority}       & Extreme \\ \hline
-\textbf{Critical}       & It's extremely essential to ensure the privacy and identity of the citizens that exposed to privacy violation in the video surveillance \\ \hline
-\textbf{Description}    &In the real-time video surveillance after detecting the people's faces, the system uses a blur algorithm to blur the face to be indiscernible.   \\ \hline
-\textbf{Input}          & Video stream                                                                             \\ \hline
-\textbf{Output}         & Video stream                                                                             \\ \hline
-\textbf{Pre-condition}  & Detecting people's faces in real-time video surveillance to blur it                                                                                                                                                                    \\ \hline
-\textbf{Post-condition} &The detected faces are been blurred      \\ \hline
-\textbf{Dependency}     & FR01 – FR03                                      \\ \hline
-\textbf{Risk}           &If there is any failure that impacts the usefulness of the video stream \\ \hline
 \end{tabular}
 \end{table} 
 
