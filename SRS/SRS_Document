@@ -165,6 +165,7 @@ Our system is crucial, as its fundamental goal is to ensure the citizens’ safe
 \item The system must be able to detect the accident accurately.
 \item The system must be able to predict the event before occurring in order to prevent it.
 \item The system must be able to track the kidnapper from the location of the incident.
+\item The system should requires face blurring for normal citizens in order to enhance privacy in surveillance system.
 to search either all of the initial set of databases or select a subset from it. 
 
 \end{enumerate}
