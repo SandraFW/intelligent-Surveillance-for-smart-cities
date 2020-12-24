@@ -142,8 +142,9 @@ national security. Moreover, there is nothing to prevent or reduce this problem 
 \subsection{ User Objectives}
 Our system is crucial, as its fundamental goal is to ensure the citizens’ safety. For our users, the system should provide a rapid response to take appropriate action in time. When an anomaly gets captured on a surveillance camera, the system should detect it and determine if it’s a kidnapping case. Moreover, the system should track the kidnapper, identify his face, and trigger an alarm for our users, in our case, to the nearest police unit.
 \subsection{ User Characteristics}
-Describes the features of the user community, including their expected expertise with software systems and the application domain. 
-
+\begin{itemize}
+\item Police: Must have basic knowledge in following up any notification that the system will sent in order to catch the kidnapper.
+\end{itemize}
 \subsection{System Context}
 \begin{figure}[htp]
 \centering
