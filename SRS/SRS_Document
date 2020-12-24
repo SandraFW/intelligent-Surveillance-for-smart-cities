@@ -77,10 +77,16 @@ This section also details any constraints that were placed upon the requirements
 The system aims to prevent Kidnapping acts in smart cities by fast prediction and detection of those incidents, using a framework composed of three computing layers. First, the cameras located at the potential crime scenes acting as the edge nodes; Light-weighted algorithms are deployed on them for any possible failure in the device and human motion detection. Once it detects abnormal motion, the data moves to the second layer, the fog nodes layer where the processing is completed and alerts are generated to the authorities, with possibilities to track and detect the kidnapper's face too. Then transmits the data to the third layer, the cloud layer where data backup and system updates are done. The system must ensure safety and privacy measures for the citizens while using and transferring the captured data throughout the day. 
 
 \subsection{System Scope}
-Define The scope of your project. The scope should briefly:
 \begin{itemize}
-\item Define the boundaries of the project.
-\item Define the expected outcomes of the project.
+\item Fog/Edge computing-based surveillance system to monitoring the whole city 24/7.
+\item Efficiently detect any abnormal actions caused by human behavior and response immediately.
+\item Privacy assurance by blur people’s faces to secure their exposed identity in the video.
+\item Scalability system to handle such massive data generated from surveillance cameras and sensors.
+\item Efficiently detection for any failure that impacts the usefulness of the video streams.
+\item Dispatch crime details (i.e., video and location of the event, criminal's face) and giving alert to the nearest competent authority.
+\item Applying a prediction function to predict possible abnormal events.
+\item Providing efficient real-time tracking for the criminal in case of detecting a massive crime.
+\item Face recognition for a criminal when an event occurs in the far distance through high-resolution video.
 \end{itemize} 
 
 \subsection{Business Context}
