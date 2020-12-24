@@ -161,11 +161,11 @@ Our system is crucial, as its fundamental goal is to ensure the citizens’ safe
 
 \section{Functional Requirements}
 \subsection{System Functions}\label{System Functions}
-Describes the general functionality of the product using \textbf{Use Cases diagrams}. \\
-You also need to list  project requirements. A good requirement states something that is \textbf{necessary}, \textbf{verifiable}, and \textbf{attainable}. Even if it is verifiable and attainable if it is not necessary, it is not a good requirement \cite{hooks1994writing}.
-For example:
 \begin{enumerate}
-\item The user shall be able to search either all of the initial set of databases or select a subset from it. 
+\item The system must be able to detect the accident accurately.
+\item The system must be able to predict the event before occurring in order to prevent it.
+
+to search either all of the initial set of databases or select a subset from it. 
 \item The admin shall update security rules.
 \item The user shall be able to create a new event.
 \end{enumerate}
