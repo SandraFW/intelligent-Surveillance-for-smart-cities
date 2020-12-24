@@ -169,7 +169,7 @@ Our system is crucial, as its fundamental goal is to ensure the citizens’ safe
 \item The system should send alert if any failure is detected in the cameras occurred in order to help the maintenance team to solve the problem.
 \item The system must send alert message when anomaly behaviour is detected using the fog nodes in the architecture system.
 \item The system shall provide face recognition feature for the kidnapper.
-to search either all of the initial set of databases or select a subset from it. 
+\item The system should filter the incident using video splitting technique in order to be saved and sent to the cloud to save storage.
 
 \end{enumerate}
 
