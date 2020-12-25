@@ -6,7 +6,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{mathptmx}
 \usepackage[normalem]{ulem}
-
+\usepackage{placeins}
 \renewcommand\theadalign{bc}
 \renewcommand\theadfont{\bfseries}
 \renewcommand\theadgape{\Gape[4pt]}
@@ -73,7 +73,6 @@ Intelligent surveillance system is useful for kidnapping prevention,terrorist or
 \label{fig:D1}
 \end{figure}
 The system aims to prevent Kidnapping acts in smart cities by fast prediction and detection of those incidents, using a framework composed of three computing layers. First, the cameras located at the potential crime scenes acting as the edge nodes; Light-weighted algorithms are deployed on them for any possible failure in the device and human motion detection. Once it detects abnormal motion, the data moves to the second layer, the fog nodes layer where the processing is completed and alerts are generated to the authorities, with possibilities to track and detect the kidnapper's face too. Then transmits the data to the third layer, the cloud layer where data backup and system updates are done. The system must ensure safety and privacy measures for the citizens while using and transferring the captured data throughout the day. 
-\floatbarrier
 \newpage
 \subsection{System Scope}
 \begin{itemize}
@@ -92,7 +91,6 @@ The system aims to prevent Kidnapping acts in smart cities by fast prediction an
 The proposed system is implemented to reduce kidnapping rate. By using fog-edge computing in camera sensors, it will be easy to detect kidnapping or predict it before happening, also it would recognize the criminal by face recognition by the aid of AI and ML. Moreover, it will alert the police to track him.
 The most important thing that fog computing has an important role to store and processing essential surveillance data even though it's big storage.
 
-\newpage
 \section{Similar Systems}
 \subsection{Academic}
 \begin{itemize}
@@ -104,13 +102,10 @@ The most important thing that fog computing has an important role to store and p
     \caption{IoT-guard security management system}
     \label{security}
 \end{figure}
-
+\newpage
 \item Hui Sun et al. \cite{sun2019vu} presented an edge computing-enabled video usefulness model (VU) in order to handle failures that might occur in surveillance videos, using failure detection approaches, as it usually takes a great amount of time for maintenance teams to determine what causes the failure. Moreover, the system provides bandwidth improvement, as useless video surveillance data might consume bandwidth that is needed by useful and informative videos. Experimental results show that the system detects failures efficiently.
- 
- \newpage
+
 \item Due to the large number of data collected by surveillance cameras, many challenges appeared in analyzing, storing, and retrieving data. Santamaria et al. \cite{santamaria2019cooperative} introduced the basics needed to build a framework for people’s abnormal behaviors, after investigating the current techniques and technologies. The authors proposed a distributed architecture as shown in Figure \ref{Santamaria}. Distributed architectures assist in reducing the computation of the end devices, which help in improving the performance and avoiding waste of bandwidth and memory.  In addition, they mentioned the responsibility of each layer in the system, the possible computer vision techniques that can be used with their pros and cons as Neural networks, and the KNN model for object detection and tracking. Results show that an alarm is triggered when detecting an anomaly in  order to track it.
-
-
 
 \begin{figure}[!ht]
 \centering
@@ -123,9 +118,7 @@ The most important thing that fog computing has an important role to store and p
  
 \end{itemize}
 
-
-
-
+\pagebreak
 \subsection{Business Applications}
 \begin{itemize}
 \item For helping smart cities to achieve a safe and secure environment, Logipix \cite{logipix} Technical Development Ltd is a privately held organization founded in 1996 in Hungary that provides intelligent video monitoring solutions for wide public areas in the cities. They highlighted their solutions as a scalable city-wide system that is designed and developed to achieve a video surveillance system and traffic violation management tasks at the same time. The main goal of Logipix solutions is to provide a real-time system that is able to surveil the whole city 24/7 efficiently, the system also can respond immediately and take proper action in case of detecting any abnormal event. Moreover, the system captures all the events with high resolution even at miles away, face recognition is still possible. For helping the competent authorities, these recordings can be used as unappealable evidence on demand.
@@ -146,13 +139,13 @@ Our system is crucial, as its fundamental goal is to ensure the citizens’ safe
 \item Police: Must have basic knowledge in following up any notification that the system will sent in order to catch the kidnapper.
 \end{itemize}
 \subsection{System Context}
-\begin{figure}[htp]
+\begin{figure}[h!]
 \centering
 \includegraphics[width=15cm,height=10cm,keepaspectratio]{./D1.jpeg}
 \caption{Architecture of the system.}
 \label{fig:D1}
 \end{figure}
- \begin{figure}[htp]
+ \begin{figure}[h!]
 \centering
 \includegraphics[width=15cm,height=10cm,keepaspectratio]{./D3.jpeg}
 \caption{Context Diagram of the system.}
@@ -175,27 +168,8 @@ Our system is crucial, as its fundamental goal is to ensure the citizens’ safe
 
 \subsection{Detailed Functional Specification}
 Show the details of all functions shown in section \ref{System Functions}. Describe each function in the following structure.
-\begin{table}[htb!]
-\caption{readFile Function Description}
-\begin{tabular}{|p{0.15\textwidth}|p{0.85\textwidth}|}
-\hline
-\textbf{Name}           &  Such as: readFile \\ \hline
-\textbf{Code}           & Such as FR01 \\ \hline
-\textbf{Priority}       & Such as: Extreme, high, low \\ \hline
-\textbf{Critical}       & Describes how essential this requirement is to the overall system. \\ \hline
-\textbf{Description}    & A full description of the requirement such as: reads a file and writes it to the output buffer.  \\ \hline
-\textbf{Input}          & Such as: File name                                                                                                                                                                   \\ \hline
-\textbf{Output}         & Such as: Boolean (true for success, false otherwise)                                                                                                                                                                     \\ \hline
-\textbf{Pre-condition}  & Such as: User must be logged in and file exist                                                                                                                                                                     \\ \hline
-\textbf{Post-condition} & Such as: Redirect to view file page and displays file content      \\ \hline
-\textbf{Dependency}     & \begin{tabular}[c]{@{}l@{}}
-Dependencies with other requirements\\ Describes interactions with other requirements.
-\end{tabular}                                       \\ \hline
-\textbf{Risk}           & Describes the circumstances under which this requirement might not able to be satisfied, and what actions can be taken to reduce the probability of this occurrence. \\ \hline
-\end{tabular}
-\end{table} 
 
-\begin{table}[htb!]
+\begin{table}[h!]
 \caption{Check failure of the camera}
 \begin{tabular}{|p{0.15\textwidth}|p{0.85\textwidth}|}
 \hline
@@ -213,7 +187,7 @@ Dependencies with other requirements\\ Describes interactions with other require
 \end{tabular}
 \end{table} 
 
-\begin{table}[htb!]
+\begin{table}[h!]
 \caption{Face blurring}
 \begin{tabular}{|p{0.15\textwidth}|p{0.85\textwidth}|}
 \hline
@@ -231,7 +205,7 @@ Dependencies with other requirements\\ Describes interactions with other require
 \end{tabular}
 \end{table} 
 
-\begin{table}[htb!]
+\begin{table}[h!]
 \caption{motion detection}
 \begin{tabular}{|p{0.15\textwidth}|p{0.85\textwidth}|}
 \hline
@@ -253,7 +227,7 @@ FR01.\\ This function depends on FR01, because if any failure took place on surv
 
 
 
-\begin{table}[htb!]
+\begin{table}[h!]
 \caption{Motion Image Dispatch Function }
 \begin{tabular}{|p{0.15\textwidth}|p{0.85\textwidth}|}
 \hline
@@ -271,7 +245,7 @@ FR01.\\ This function depends on FR01, because if any failure took place on surv
 \end{tabular}
 \end{table} 
 
-\begin{table}[htb!]
+\begin{table}[h!]
 \caption{action prediction}
 \begin{tabular}{|p{0.15\textwidth}|p{0.85\textwidth}|}
 \hline
@@ -292,7 +266,7 @@ FR03: if motion is not detected, surveillance data cannot be processed further m
 \end{tabular}
 \end{table} 
 
-\begin{table}[htb!]
+\begin{table}[h!]
 \caption{Alert Function Description}
 \begin{tabular}{|p{0.15\textwidth}|p{0.85\textwidth}|}
 \hline
@@ -303,7 +277,7 @@ FR03: if motion is not detected, surveillance data cannot be processed further m
 \textbf{Description}    & To maintain the situation, there must an alert send to the police to come urgently and catch the criminal.. \\ \hline
 \textbf{Input}          & Video stream , face recognition ,location                                                                                                                                                                 \\ \hline
 \textbf{Output}         & Alert                                                                                                                                                                   \\ \hline
-\textbf{Pre-condition}  & After detection of kidnapping incident in FR05 and face recognition in FR08, an alert must be sent to police by Fog computing.                      \\ \hline                                                                                          
+\textbf{Pre-condition}  & After detection of kidnapping incident in FR05 and face recognition in FR08, an alert must be sent to police by Fog computing.                      \\ \hline                                                                                     
 \textbf{Post-condition} & Alert to police.      \\ \hline
 \textbf{Dependency}     & \begin{tabular}[c]{@{}l@{}}
 FR05: By detection of the kidnapping incident, \\ FR08: by Face recognition \\ FR07: By detecting the location of the criminal, Fog will send an alert to the police to rescue the victim.
@@ -312,7 +286,7 @@ FR05: By detection of the kidnapping incident, \\ FR08: by Face recognition \\ F
 \end{tabular}
 \end{table} 
 
-\begin{table}[htb!]
+\begin{table}[h!]
 \caption{Kidnapper Tracking Function }
 \begin{tabular}{|p{0.15\textwidth}|p{0.85\textwidth}|}
 \hline
@@ -330,7 +304,7 @@ FR05: By detection of the kidnapping incident, \\ FR08: by Face recognition \\ F
 \end{tabular}
 \end{table} 
 
-\begin{table}[htb!]
+\begin{table}[h!]
 \caption{Face Recognition Function Description}
 \begin{tabular}{|p{0.15\textwidth}|p{0.85\textwidth}|}
 \hline
@@ -350,6 +324,7 @@ Failure in camera when capturing the criminal.
 \textbf{Risk}           & Failure in camera when capturing criminal. \\ \hline
 \end{tabular}
 \end{table} 
+\FloatBarrier
 \newpage
 \section{Interface Requirements}
 This section describes how the software interfaces with other software products or users for input or output. Examples of such interfaces include library routines, token streams, shared memory, data streams, and so forth. 
