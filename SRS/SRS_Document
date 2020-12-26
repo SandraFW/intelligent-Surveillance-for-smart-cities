@@ -339,7 +339,7 @@ Describes the command-line interface if present. For each command, a description
 
 
 \subsection{Hardware Interfaces}
-Describes interfaces to hardware devices. (According to your Project)
+At this stage, there is no need for hardware as we can use simulators. But on deploying this project in reality,  we need IP surveillance cameras to capture the incidents and personal computers at the end-users sites to help them monitor the system or receive alerts and make records for the crimes.
 \subsection{Communications Interfaces}
 As our project highly depends on communication among entities, architectures such as fog networking, edge networking, and cloud networking are dominant. To reduce the overload on the network, the processing happens on both the edge and fog nodes to provide real-time response. Moreover, the data then gets transferred to the cloud for further processing.
 \subsection {API}
@@ -350,8 +350,11 @@ Specifies any constraints for the design team using this document.
 \subsection{ Standards Compliance}
 \subsection{ Hardware Limitations}
 N/A
-\subsection{ Other Constraints as appropriate}
-
+\subsection{ Other Constraints }
+\begin{itemize}
+    \item \textbf{Safety and security considerations}: the data transferred through the network and the databases used should be secured against any malicious deformations.
+    \item \textbf{Reliability and Fault tolerance}: Data should not be corrupted or lost in any case, especially while transferring data through the system layers
+\end{itemize}
 \newpage
 \section{Non-functional Requirements}
 Specifies any other particular non-functional attributes required by the system. Such as: Security, Reliability, Maintainability, Portability, Extensibility
