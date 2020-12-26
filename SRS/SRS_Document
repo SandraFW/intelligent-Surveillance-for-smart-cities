@@ -341,7 +341,7 @@ Describes the command-line interface if present. For each command, a description
 \subsection{Hardware Interfaces}
 Describes interfaces to hardware devices. (According to your Project)
 \subsection{Communications Interfaces}
-Describes network interfaces. (According to your Project)
+As our project highly depends on communication among entities, architectures such as fog networking, edge networking, and cloud networking are dominant. To reduce the overload on the network, the processing happens on both the edge and fog nodes to provide real-time response. Moreover, the data then gets transferred to the cloud for further processing.
 \subsection {API}
 Describes the application programming interface, if present. For each public interface function, the name, arguments, return values, examples of invocation, and interactions with other functions should be provided. 
 
