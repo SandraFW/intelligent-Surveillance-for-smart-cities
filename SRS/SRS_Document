@@ -88,9 +88,7 @@ The system aims to prevent kidnapping acts in smart cities by fast prediction an
 \end{itemize} 
 
 \subsection{Business Context}
-The proposed system is implemented to reduce kidnapping rate. By using fog-edge computing in camera sensors, it will be easy to detect kidnapping or predict it before happening, also it would recognize the criminal by face recognition by the aid of AI and ML. Moreover, it will alert the police to track him.
-The most important thing that fog computing has an important role to store and processing essential surveillance data even though it's big storage.
-
+The proposed system is implemented to reduce kidnapping rates. By using fog-edge computing in camera sensors, it will be easy to detect kidnapping or predict it before happening, also it would recognize the criminal by face recognition. Moreover, it will alert the police to track him. The most important thing that fog computing has an important role in storing and processing essential surveillance data to give real time response.
 \section{Similar Systems}
 \subsection{Academic}
 \begin{itemize}
