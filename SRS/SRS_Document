@@ -133,7 +133,7 @@ One of the problems that face inhabitants in smart cities is kidnapping. Nowaday
 Our system is crucial, as its fundamental goal is to ensure the citizens’ safety. For our users, the system should provide a rapid response to take appropriate action in time. When an anomaly gets captured on a surveillance camera, the system should detect it and determine if it’s a kidnapping case. Moreover, the system should track the kidnapper, identify his face, and trigger an alarm for our users, in our case, to the nearest police unit.
 \subsection{ User Characteristics}
 \begin{itemize}
-\item Police: Must have basic knowledge in following up any notification that the system will sent in order to catch the kidnapper.
+\item Police: Must have basic knowledge in using Android mobile devices to follow up any notification that the system will sent in order to catch the kidnapper.
 \end{itemize}
 \subsection{System Context}
 \begin{figure}[h!]
