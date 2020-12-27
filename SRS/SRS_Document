@@ -421,10 +421,25 @@ This section presents a more detailed description of each class identified durin
 
 \section{Operational Scenarios}
 As shown in Figure 4, the system should go through various stages to successfully propose to users the required information to take the appropriate action to stop the kidnapping. First, the system should check for any failures in the surveillance cameras. If camera failure gets detected, the system should determine its cause and manage to fix it. If not, face blurring gets applied to protect people’s privacy while the surveillance data get processed. Moreover, a motion detection algorithm gets used to identify if any abnormal behavior occurred. When motion gets observed, the video stream containing the occasion gets dispatched for further processing. A prediction algorithm gets then implemented to determine if the event is a kidnapping case. If yes, a face recognition algorithm gets used to identify the kidnapper. Moreover, an alarm gets triggered to notify the users, and the kidnapper gets tracked.
+ \begin{figure}[!ht]
+\centering
+ \begin{minipage}{.5\textwidth}
+  \includegraphics[width=15cm, height=15cm]{Activity2.jpeg}
+  \caption{Activity Diagram}
+  \label{Santamaria}
+ \end{minipage}
+\end{figure}
+
+
 \section{Project Plan}
 This section provides an initial version of the project plan, including the major tasks to be accomplished, their inter-dependencies, and their tentative start/stop dates. The plan also includes information on hardware, software, and  resource requirements. 
 The project plan should be accompanied by one or more PERT or GANTT charts such as the chart shown in Figure \ref{fig:GANTT Chart}.\\
 The plan should include the projects task and who is responsible for this task.
+
+
+
+
+
 Table \ref{tab:Time Plan} shows a simple example.
 
 \begin{table}[h]
