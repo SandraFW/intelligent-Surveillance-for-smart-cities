@@ -164,7 +164,6 @@ Our system is crucial, as its fundamental goal is to ensure the citizens’ safe
 \end{enumerate}
 
 \subsection{Detailed Functional Specification}
-Show the details of all functions shown in section \ref{System Functions}. Describe each function in the following structure.
 
 \begin{table}[h!]
 \caption{Check failure of the camera}
