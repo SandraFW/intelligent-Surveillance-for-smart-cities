@@ -359,7 +359,8 @@ As we're using the simulation approach rather than using hardware, there are no 
 \section{Non-functional Requirements}
 \subsection{Security}
 The proposed system ensures security and provides data privacy to prevent anonymous and malicious users from using the transmitting data.  Fog and edge computing deal with privacy issues by reducing the amount of data propagation as it processes the data locally which increases the data security. Also, network isolation mechanisms or the physical infrastructure access policies can be applied to provide a more secure and privacy system.
-
+\subsection{Scalability}
+The proposed system ensures scalability to handle such massive generated data, it must be constructed to be a real-time scalable up and down system.  It's expected for the fog networks to deal with more nodes.  So, it is needed for them to become acclimated to the system scalability. Otherwise, due to the increment of developing IoT devices, edge services guaranteeing to scale-out accordingly to the enormous amount of devices that being connected to the edge of the network.
 \section{Data Design}
 \subsection{Data Description}
 Our system collects incident data from streets, uses datasets to train its algorithms, and has a SQL database on the servers where event data and users' data are being saved.
