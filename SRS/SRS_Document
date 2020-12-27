@@ -361,21 +361,25 @@ Specifies any other particular non-functional attributes required by the system.
 
 \section{Data Design}
 \subsection{Data Description}
-Explain how the information domain of your system is transformed into data structures. Describe how the major data or system entities are stored, processed and organized. \\
-Explain your Dataset. How the dataset is collected, stored and organized.\\
-You may consider the answer for the following questions:
+Our system collects incident data from streets, uses datasets to train its algorithms, and has a SQL database on the servers where event data and users' data are being saved.
 \begin{itemize}
-\item What is the original format of the data (paper based, excel files, old system database)?
-\item Identify the method used to capture the data into your system(web page forms, import documents etc..)?
-\item How large is the database expected to be (in numbers of rows and columns for the main entities)?
-\item What is the expected number of users/customers for the system?
-\item How is your entity keys(ids) constructed (is there a specific code or format for ID definition)
-\item Does your data contain date/time, if yes which format are they presented in
+\item The original format of the data is video streams and SQL database records
+\item The data captured by the surveillance cameras in the streets, processed using fog nodes, and stored on servers. Users use web forms to communicate with those data.
+\item On a large scale The database should be a large dataset as it deals with video streams taken 24/7 and users' information and criminals' information as well.
+\item It is expected that we have two users for this system.
+\item The data must contain the date and time of each crime; to help the users to report it and arrest the criminal as soon as possible.
 \end{itemize}
 
 
 \subsection{Database design description}
-Describe any databases (provide database schema diagram) and/or description of other data storage items. (According to your Project)
+\begin{figure}[h]
+\centering
+\includegraphics[width=15cm,height=15cm,keepaspectratio]{./Database}
+\caption{Database of the software}
+\label{fig:D}
+\end{figure}
+This database in fig:\ref{fig:D} is for the users' software; it also interacts with the criminals' database provided by the social security, and data sets updated frequently to help the performance of detection algorithms used by the system.
+\FloatBarrier
 
 
 
