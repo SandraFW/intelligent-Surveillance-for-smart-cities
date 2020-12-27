@@ -127,8 +127,7 @@ The proposed system is implemented to reduce kidnapping rates. By using fog-edge
 \section{System Description}
 
 \subsection{User Problem Statement}
-One of the problems that face inhabitants in smart cities is kidnapping. Nowadays, the rate of kidnapping is constantly increasing which threatens 
-national security. Moreover, there is nothing to prevent or reduce this problem like a camera sensor when something dangerous happened, it makes an alert to the police.
+One of the problems that face inhabitants in smart cities is kidnapping. Nowadays, the rate of kidnapping is rapidly increasing, which threatens national security. Moreover, real-time response is needed to prevent or avoid any catastrophic event from occurring.
 
 \subsection{ User Objectives}
 Our system is crucial, as its fundamental goal is to ensure the citizens’ safety. For our users, the system should provide a rapid response to take appropriate action in time. When an anomaly gets captured on a surveillance camera, the system should detect it and determine if it’s a kidnapping case. Moreover, the system should track the kidnapper, identify his face, and trigger an alarm for our users, in our case, to the nearest police unit.
