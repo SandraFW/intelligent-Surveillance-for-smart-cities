@@ -63,7 +63,7 @@ Surveillance systems are of vital importance for the development of smart cities
 The main purpose of this software requirement specification document is to clarify and illustrate the idea of our project, which is mainly about IoT guard. Nowadays, cloud-based IoT architectures have many issued in storing and processing essential surveillance data. By locating fog in between cloud and edge devices, it would offer decentralized computing infrastructure to execute significant amount of storage, management, control and communication. Also, it will respond quickly.
 On the other hand, instead of using camera sensors all the time in the presence of any target events, event driven offered to monitor surveillance activity in the field of view.
 \subsection{Scope of this document}
-Intelligent surveillance system is useful for kidnapping prevention,terrorist or forensic evidence detection and traffic monitoring.The system is fog computing based that should be accurate and responsive.The police units will receive a notification when a kidnapping accident occurs.Also the location of the accident will be sent to reach the place quickly.The system will also enhance privacy in order to keep citizen's data blurred.
+The scope of this document is to show the basic outlines of our system requirements in order to understand our system for any further updates later on and the issues we may face.Further more,the objectives that we will reach in our system.Requirements outlined in this document are subject to be changed. 
 \subsection{System Overview}
 
 \begin{figure}[htp]
