@@ -357,7 +357,8 @@ As we're using the simulation approach rather than using hardware, there are no 
 \end{itemize}
 
 \section{Non-functional Requirements}
-Specifies any other particular non-functional attributes required by the system. Such as: Security, Reliability, Maintainability, Portability, Extensibility
+\subsection{Security}
+The proposed system ensures security and provides data privacy to prevent anonymous and malicious users from using the transmitting data.  Fog and edge computing deal with privacy issues by reducing the amount of data propagation as it processes the data locally which increases the data security. Also, network isolation mechanisms or the physical infrastructure access policies can be applied to provide a more secure and privacy system.
 
 \section{Data Design}
 \subsection{Data Description}
