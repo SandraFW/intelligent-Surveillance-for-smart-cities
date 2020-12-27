@@ -349,7 +349,7 @@ Describes the application programming interface, if present. For each public int
 Specifies any constraints for the design team using this document. 
 \subsection{ Standards Compliance}
 \subsection{ Hardware Limitations}
-N/A
+As we're using the simulation approach rather than using hardware, there are no limitations to be defined. However, when this project gets applied for real-life use, surveillance cameras can be costly. This project requires various cameras to get installed in multiple areas across a smart city. Moreover, an additional cost gets added for the maintenance of these cameras. 
 \subsection{ Other Constraints }
 \begin{itemize}
     \item \textbf{Safety and security considerations}: the data transferred through the network and the databases used should be secured against any malicious deformations.
