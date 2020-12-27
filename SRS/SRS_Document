@@ -328,8 +328,52 @@ This section describes how the software interfaces with other software products 
 The system is designed to be more simple and facilitate to use and to seem more clear to the user that he must understand the steps that he must do.
 Moreover, system provides user by implementing all necessary interactions to make it easy to use.
 \subsubsection {GUI}
-Describes the graphical user interface if present. This section should include a set of screen dumps or mockups to illustrate user interface features. 
-If the system is menu-driven, a description of all menus and their components should be provided. 
+\begin{figure}[!ht]
+\centering
+ \begin{minipage}{.5\textwidth}
+  \includegraphics[width=10.0cm, height=10.0cm]{signUp.png}
+  \caption{Sign Up}
+  \label{Sign Up}
+ \end{minipage}
+\end{figure}
+
+\\
+\newpage
+\begin{figure}[!ht]
+\centering
+ \begin{minipage}{.5\textwidth}
+  \includegraphics[width=10.0cm, height=10.0cm]{login.png}
+  \caption{Login}
+  \label{Login}
+ \end{minipage}
+\end{figure}
+User Sign up Page: First, user must sign up to have an account to have an access to the website. After making an account,he will login and he can show the alerts that come to him to know the features of the murder, the time of kidnapping and his location.\\
+
+\\
+\newpage
+\begin{figure}[!ht]
+\centering
+ \begin{minipage}{.5\textwidth}
+  \includegraphics[width=10.0cm, height=10.0cm]{alert.png}
+  \caption{Alert}
+  \label{Alert}
+ \end{minipage}
+\end{figure}
+
+Alert Page: if there is the kidnapping, an alert will sent to the police by the picture of the murder, location of kidnapping and the time.
+\\
+\newpage
+\begin{figure}[!ht]
+\centering
+ \begin{minipage}{.5\textwidth}
+  \includegraphics[width=10.0cm, height=10.0cm]{map.png}
+  \caption{Map}
+  \label{Map}
+ \end{minipage}
+\end{figure}
+
+Map Page: After system sends an alert to the police, he will see the details then he will put his location and the location he will go after the murder to catch him.
+
 \subsubsection { CLI}
 Describes the command-line interface if present. For each command, a description of all arguments and example values and invocations should be provided. 
 
