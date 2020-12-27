@@ -355,7 +355,7 @@ As we're using the simulation approach rather than using hardware, there are no 
     \item \textbf{Safety and security considerations}: the data transferred through the network and the databases used should be secured against any malicious deformations.
     \item \textbf{Reliability and Fault tolerance}: Data should not be corrupted or lost in any case, especially while transferring data through the system layers
 \end{itemize}
-\newpage
+
 \section{Non-functional Requirements}
 Specifies any other particular non-functional attributes required by the system. Such as: Security, Reliability, Maintainability, Portability, Extensibility
 
