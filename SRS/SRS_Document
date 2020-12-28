@@ -440,7 +440,6 @@ This database in fig:\ref{fig:D} is for the users' software; it also interacts w
 
 
 \section{Preliminary Object-Oriented Domain Analysis}
-This section presents a list of the fundamental objects that must be modeled within the system to satisfy its requirements. The purpose is to provide an alternative, ''structural'' view on the requirements stated above and how they might be satisfied in the system. A primitive class diagram to be delivered.
 
 \subsection{Inheritance Relationships}
  \ref{fig:image}. 
