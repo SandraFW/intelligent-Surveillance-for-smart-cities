@@ -1092,6 +1092,27 @@ Police officers can sign up and log into the system. Moreover, when an incident 
 \section{Project Plan}
 \includegraphics[width=1\textwidth]{./Taskplan.jpg}
 
+\begin{table}[h]
+\centering
+\caption{surveillance system for smart cities time plan}
+\label{tab:Time Plan}
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+Id & Task               & Start Date & Number of Days & Team Member \\ \hline
+1  & Finishing hardware architecture on simulator    & 11/15/2020 &35              & All members        \\ \hline
+2  & Collect Dataset    & 1/12/2021 & 23             & sandra,mariam        \\ \hline
+3  & Work on GUI        & 1/5/2020 & 15             & nour, samiha,nour        \\ \hline
+4  & Anomaly detection enhancement        & 1/5/2020 & 30             & sandra,mariam,nour       \\ \hline
+5  & system analysis    & 12/10/2020 & 60              & All members          \\ \hline
+6  & Feature Extraction & 2/2/2021 & 12             & All members     \\ \hline
+7  & Classification     & 2/10/2021 & 10             & nour,samiha        \\ \hline
+8  & Experiments        & 2/3/2021 & 20             & All members    \\ \hline
+9  & Writing paper        & 3/15/2021 & 10             & All members    \\ \hline
+10  & Writing thesis        & 4/15/2021 & 45             & All members    \\ \hline
+\end{tabular}
+\end{table}
+
+
 \section{Appendices}
 
 \subsection{Definitions, Acronyms, Abbreviations}
