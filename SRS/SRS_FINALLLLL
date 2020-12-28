@@ -337,7 +337,7 @@ Failure in camera when capturing the criminal.
 \FloatBarrier
 \newpage
 \section{Interface Requirements}
-This section describes how the software interfaces with other software products or users for input or output. Examples of such interfaces include library routines, token streams, shared memory, data streams, and so forth. 
+
 \subsection{User Interfaces}
 The system is designed to be more simple and facilitate to use and to seem more clear to the user that he must understand the steps that he must do.
 Moreover, system provides user by implementing all necessary interactions to make it easy to use.
