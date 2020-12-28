@@ -409,10 +409,9 @@ As our project highly depends on communication among entities, architectures suc
 \subsection{ Hardware Limitations}
  When this project gets applied for real-life use, surveillance cameras can be costly. This project requires various cameras to get installed in multiple areas across a smart city. Moreover, an additional cost gets added for the maintenance of these cameras. 
 \subsection{ Other Constraints }
-\begin{itemize}
-    \item \textbf{Safety and security considerations}: the data transferred through the network and the databases used should be secured against any malicious deformations.
-    \item \textbf{Reliability and Fault tolerance}: Data should not be corrupted or lost in any case, especially while transferring data through the system layers
-\end{itemize}
+  \textbf{Safety and security considerations}: the data transferred through the network and the databases used should be secured against any malicious deformations, Ismagilova et al discussed it in\cite{Ismagilova2020}.
+  \newline
+ \textbf{Reliability and Fault tolerance}: Data should not be corrupted or lost in any case, especially while transferring data through the system layers, N.Mohamed and et al discussed it in \cite{8666447}.
 
 \section{Non-functional Requirements}
 \subsection{Security}
