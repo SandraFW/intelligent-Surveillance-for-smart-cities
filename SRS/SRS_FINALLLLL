@@ -404,6 +404,11 @@ As our project highly depends on communication among entities, architectures suc
 \end{itemize}
 
 \section{Design Constraints}
+\begin{itemize}
+    \item European Data Protection Board ('EDPB') and the General Data Protection Regulation ('GDPR')
+    settled a guidelines on how to process data from CCTV devices without sharing citizen's bio metrics and personal data including car plates,person's face and many other private things that should be avoided from being shared. \cite{EDPB}\cite{GDPR}
+    
+
  
 \subsection{ Standards Compliance}
 \subsection{ Hardware Limitations}
