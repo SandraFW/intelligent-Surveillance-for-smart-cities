@@ -113,6 +113,12 @@ The proposed system is implemented to reduce kidnapping rates. By using fog-edge
   \label{Santamaria}
  \end{minipage}
 \end{figure}
+
+\newpage
+\item Jianyu Wang et al. \cite{wang2017elastic} designed fog computing architecture for urban surveillance systems to provide low latency and decrease the workload of cloud centers. The authors implemented Network Functions Virtualization and Software-Defined Networking on the cloud computing platform OpenStack, resulting in a real-time video processing system. Experimental results are promising. They show that the system can be developed on a larger scale and that fog computing can be potentially used for smart urban surveillance systems. 
+
+\item In the hopes of exploiting fog computing and tackling the cost challenges faced when building surveillance systems, Mansoor Nasir et al \cite{nasir2019fog} presented a cost-effective fog computing based surveillance system. The system does not only reduce the energy consumed and the bandwidth, but also reduces the cost. The authors proposed a video summarization technique to reach their goal. By using Raspberry Pi devices as the system’s fog nodes, and by distributing data onto these nodes to provide a summary, the system is scalable and delivers satisfactory outcomes.
+
  
 \end{itemize}
 
