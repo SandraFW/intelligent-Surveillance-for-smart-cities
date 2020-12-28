@@ -388,7 +388,11 @@ At this stage, there is no need for hardware as we can use simulators. But on de
 \subsection{Communications Interfaces}
 As our project highly depends on communication among entities, architectures such as fog networking, edge networking, and cloud networking are dominant. To reduce the overload on the network, the processing happens on both the edge and fog nodes to provide real-time response. Moreover, the data then gets transferred to the cloud for further processing.
 \subsection {API}
-Describes the application programming interface, if present. For each public interface function, the name, arguments, return values, examples of invocation, and interactions with other functions should be provided. 
+\begin{itemize}
+\item Google Maps API, to get the actual location of the event and dispatch it. Also, in tracking the criminal.
+\item  Kairos Face Recognition API, for easily real-time detection to detect people's faces.
+\item Face Blur API for blurring people's faces, as it's essential to ensure privacy for people's identity in public places.
+\end{itemize}
 
 \section{Design Constraints}
 Specifies any constraints for the design team using this document. 
