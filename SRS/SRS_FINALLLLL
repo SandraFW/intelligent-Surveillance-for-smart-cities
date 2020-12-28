@@ -393,7 +393,7 @@ N/A
 
 
 \subsection{Hardware Interfaces}
-At this stage, there is no need for hardware as we can use simulators. But on deploying this project in reality,  we need IP surveillance cameras to capture the incidents and personal computers at the end-users sites to help them monitor the system or receive alerts and make records for the crimes.
+At this stage, there is no need for hardware as we can use simulator as ifogsim toolkit developed by Harshit \cite{ifog} and mentioned by Redowan Mahmud in \cite{{ifog2} . But on deploying this project in reality,  we need IP surveillance cameras to capture the incidents and personal computers at the end-users sites to help them monitor the system or receive alerts and make records for the crimes.
 \subsection{Communications Interfaces}
 As our project highly depends on communication among entities, architectures such as fog networking, edge networking, and cloud networking are dominant. To reduce the overload on the network, the processing happens on both the edge and fog nodes to provide real-time response. Moreover, the data then gets transferred to the cloud for further processing.
 \subsection {API}
