@@ -1094,7 +1094,29 @@ Fog computing: A mid-layer between edge devices and the cloud, at which data pro
 Edge computing: An architecture at which data gets processed on devices rather than the cloud to provide low latency.
 
 \subsection{Supportive Documents}
+We have done a systematic review, as well as a review paper, which was sent to SSIC 2021(3rd International
+Conference on Smart Systems: Innovations in Computing). The paper is accepted now and we are waiting to publish it.The paper is available on github.
+    \begin{figure}[h!]
+    
+    \includegraphics[width=15cm]{swedyy.jpg}
+    \caption{Contacting ELSEWEDY technology company}
+    \end{figure}
+    
+    \begin{figure}[h!]
+    \includegraphics[width=15cm]{swedy1.jpg}
+    \caption{The company's response}
+    \end{figure}
+   \begin{figure}[h!]
+    \includegraphics[width=15cm]{paper.jpg}
+    \caption{Review Paper}
+ \end{figure}
 
+
+    \begin{figure}[h!]
+    \includegraphics[width=15cm]{confrence.png}
+    \caption{Acceptance email from SSIC}
+
+\end{figure}
 \newpage
 \section {References}
 
