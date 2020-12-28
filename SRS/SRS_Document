@@ -480,15 +480,29 @@ This section presents a more detailed description of each class identified durin
 \end{table}
 
 \section{Operational Scenarios}
-As shown in Figure 4, the system should go through various stages to successfully propose to users the required information to take the appropriate action to stop the kidnapping. First, the system should check for any failures in the surveillance cameras. If camera failure gets detected, the system should determine its cause and manage to fix it. If not, face blurring gets applied to protect people’s privacy while the surveillance data get processed. Moreover, a motion detection algorithm gets used to identify if any abnormal behavior occurred. When motion gets observed, the video stream containing the occasion gets dispatched for further processing. A prediction algorithm gets then implemented to determine if the event is a kidnapping case. If yes, a face recognition algorithm gets used to identify the kidnapper. Moreover, an alarm gets triggered to notify the users, and the kidnapper gets tracked.
+\subsection{Scenario 1: Intelligent Surveillance System}
+As shown in Figure \ref{Activity}, the system should go through various stages to successfully propose to users the required information to take the appropriate action to stop the kidnapping. First, the system should check for any failures in the surveillance cameras. If camera failure gets detected, the system should determine its cause and manage to fix it. If not, face blurring gets applied to protect people’s privacy while the surveillance data get processed. Moreover, a motion detection algorithm gets used to identify if any abnormal behavior occurred. When motion gets observed, the video stream containing the occasion gets dispatched for further processing. A prediction algorithm gets then implemented to determine if the event is a kidnapping case. If yes, a face recognition algorithm gets used to identify the kidnapper. Moreover, an alarm gets triggered to notify the users, and the kidnapper gets tracked.
  \begin{figure}[!ht]
 \centering
  \begin{minipage}{.5\textwidth}
   \includegraphics[width=15cm, height=15cm]{Activity2.jpeg}
   \caption{Activity Diagram}
-  \label{Santamaria}
+  \label{Activity}
  \end{minipage}
 \end{figure}
+\newpage
+\subsection{Scenario 2: Admin}
+The system’s admin controls all the users within the system. He has the ability to:
+\begin{itemize}
+    \item Add new police officers.
+    \item Edit police officers' information.
+    \item Delete police officers.
+\end{itemize}
+
+\subsection{Scenario 3: Police Units}
+Police officers can sign up and log into the system. Moreover, when an incident occurs, they get notified via notifications. When they view notifications, they can then go through video streams, identify the kidnappers' faces, and track the location of incidents.
+
+
 
 
 \section{Project Plan}
