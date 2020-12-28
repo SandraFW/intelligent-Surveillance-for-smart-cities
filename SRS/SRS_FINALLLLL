@@ -67,7 +67,7 @@ It will figure both functional and non-functional requirements of the system in 
 cover the system. Moreover, this document will define both stakeholders and developers of the system.
 
 \subsection{Scope of this document}
-The scope of this document is to show the basic outlines of our system requirements in order to understand our system for any further updates later on and the issues we may face.Further more,the objectives that we will reach in our system.Requirements outlined in this document are subject to be changed. 
+The scope of this document is to show the basic outlines of our system requirements\cite{I} in order to understand our system for any further updates later on and the issues we may face.Further more,the objectives that we will reach in our system.Requirements outlined in this document are subject to be changed. 
 \subsection{System Overview}
 
 \begin{figure}[htp]
