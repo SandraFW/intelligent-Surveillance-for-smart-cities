@@ -423,6 +423,8 @@ The proposed system ensures scalability to handle such massive generated data, i
 Fog and edge models guaranteeing the best performance real-time system. They have proven that in the bandwidth and the response time especially. For edge computing, nodes need to be placed near the end of the devices. So, it will reduce the amount of receiving data, which leads to low latency and high bandwidth. Also, due to the small amount of transmitted data as it preprocessing locally. Fog computing achieves low latency and high performance efficiently.
 \subsection{Interoperability}
 It's expected for fog, edge, and cloud to be managed by various providers. So, the system ensures interoperability between them, as it's essential when utilizing services from various cloud providers to have the ability to transfer workloads among them. Also, for fog and edge computing, the components are managed by different providers.
+\subsection{Usability}
+The system ensures usability to achieve the demand efficiently with low latency and high bandwidth. Fog and edge models reduce transmitted data which makes it easier for the system to preprocessing it, increase usability, and increase the potential of the cloud platform.
 
 \section{Data Design}
 \subsection{Data Description}
