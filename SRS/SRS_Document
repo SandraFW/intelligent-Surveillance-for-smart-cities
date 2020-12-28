@@ -60,8 +60,10 @@ Surveillance systems are of vital importance for the development of smart cities
 \section{Introduction}
 
 \subsection{Purpose of this document}
-The main purpose of this software requirement specification document is to clarify and illustrate the idea of our project, which is mainly about IoT guard. Nowadays, cloud-based IoT architectures have many issued in storing and processing essential surveillance data. By locating fog in between cloud and edge devices, it would offer decentralized computing infrastructure to execute significant amount of storage, management, control and communication. Also, it will respond quickly.
-On the other hand, instead of using camera sensors all the time in the presence of any target events, event driven offered to monitor surveillance activity in the field of view.
+The purpose of this document is to present a detailed description of how to use edge-fog model to handle kidnapping cases and reduce kidnapping.
+It will figure both functional and non-functional requirements of the system in addition to the interfaces, GUI and constraints that will 
+cover the system. Moreover, this document will define both stakeholders and developers of the system.
+
 \subsection{Scope of this document}
 The scope of this document is to show the basic outlines of our system requirements in order to understand our system for any further updates later on and the issues we may face.Further more,the objectives that we will reach in our system.Requirements outlined in this document are subject to be changed. 
 \subsection{System Overview}
