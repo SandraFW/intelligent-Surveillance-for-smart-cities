@@ -38,9 +38,9 @@ Dr. Islam Tharwat, Eng. Lobna Mostafa
 \begin{tabular}{|c|c|l|}
 \hline
 \thead{Version}    & \thead{Date} & \thead{Reason for Change}  \\ \hline
-1.0 & 25-Oct-2020   & \makecell[l]{SRS First version’s specifications are defined.}   \\ \hline
-1.1 & 2-Dec-2020   & \makecell[l]{Added use case for User and Admin.\\Identified remaining functional requirements.\\Identified hardware constraints} \\ \hline
-1.3 & 5-Dec-2020   & \makecell[l]{Non-Functional Requirements updated.\\Removed additional unnecessary user interface design constraints.} \\
+1.0 & 12-Dec-2020   & \makecell[l]{SRS First version’s specifications are defined.}   \\ \hline
+1.1 & 20-Dec-2020   & \makecell[l]{Added Non-Functional Requirements\\Identified remaining functional requirements.\\Identified hardware constraints\\Added end user Interface} \\ \hline
+1.3 & 28-Dec-2020   & \makecell[l]{Non-Functional Requirements are updated.\\ Added class diagram and data base schema\\Added use case for actors in the system and operational scenarios} \\
 \hline
 \end{tabular}
 \end{center}
