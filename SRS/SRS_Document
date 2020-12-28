@@ -1047,6 +1047,15 @@ As shown in Figure \ref{Activity}, the system should go through various stages t
   \label{Activity}
  \end{minipage}
 \end{figure}
+\begin{figure}[!ht]
+\centering
+ \begin{minipage}{.5\textwidth}
+  \includegraphics[width=15cm, height=15cm]{sequenceDiagram.png}
+  \caption{Sequence Diagram}
+  \label{Sequence}
+ \end{minipage}
+\end{figure}
+
 \newpage
 \subsection{Scenario 2: Admin}
 The system’s admin controls all the users within the system. He has the ability to:
