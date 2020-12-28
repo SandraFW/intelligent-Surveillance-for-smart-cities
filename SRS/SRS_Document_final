@@ -410,8 +410,8 @@ As our project highly depends on communication among entities, architectures suc
  When this project gets applied for real-life use, surveillance cameras can be costly. This project requires various cameras to get installed in multiple areas across a smart city. Moreover, an additional cost gets added for the maintenance of these cameras. 
 \subsection{ Other Constraints }
 \begin{itemize}
-    \item \textbf{Safety and security considerations}: the data transferred through the network and the databases used should be secured against any malicious deformations.
-    \item \textbf{Reliability and Fault tolerance}: Data should not be corrupted or lost in any case, especially while transferring data through the system layers
+    \item \textbf{Safety and security considerations}: the data transferred through the network and the databases used should be secured against any malicious deformations \cite{Ismagilova2020}.
+    \item \textbf{Reliability and Fault tolerance}: Data should not be corrupted or lost in any case, especially while transferring data through the system layers \cite{8666447}.
 \end{itemize}
 
 \section{Non-functional Requirements}
