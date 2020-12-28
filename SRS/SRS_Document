@@ -528,11 +528,12 @@ Id & Task               & Start Date & Number of Days & Team Member \\ \hline
 \end{figure}
 
 \section{Appendices}
-Specifies other useful information for understanding the requirements. All SRS documents should include at least the following two appendices: 
 
 \subsection{Definitions, Acronyms, Abbreviations}
-Provides definitions of unfamiliar definitions, terms, and acronyms. 
-
+Fog computing: A mid-layer between edge devices and the cloud, at which data processing occurs. 
+\\
+\\
+Edge computing: An architecture at which data gets processed on devices rather than the cloud to provide low latency.
 
 \subsection{Supportive Documents}
 
