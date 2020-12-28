@@ -1117,7 +1117,9 @@ Fog computing: A mid-layer between edge devices and the cloud, at which data pro
 \\
 \\
 Edge computing: An architecture at which data gets processed on devices rather than the cloud to provide low latency.
-
+\\
+\\
+SQL : Structured Query Language used to communicate with database.
 \subsection{Supportive Documents}
 We have done a systematic review, as well as a review paper, which was sent to SSIC 2021(3rd International
 Conference on Smart Systems: Innovations in Computing). The paper is accepted now and we are waiting to publish it.The paper is available on github.
