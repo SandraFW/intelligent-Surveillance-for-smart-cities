@@ -22,7 +22,9 @@ citestyle=ieee
 \addbibresource{Ref.bib}
 
 %opening
-\title{Software Requirement Specification Document for Intelligent Surveillance for smart cities}
+\title{Software Requirement Specification Document 
+\newline For Intelligent Surveillance system for smart cities}
+
 \author{
 Nour Ahmed, Nour ElHoda Hisham, Mariam Hesham, Samiha Hesham, Sandra Fares\\
 Supervised by:
