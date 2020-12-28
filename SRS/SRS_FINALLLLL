@@ -425,7 +425,8 @@ Fog and edge models guaranteeing the best performance real-time system. They hav
 It's expected for fog, edge, and cloud to be managed by various providers. So, the system ensures interoperability between them, as it's essential when utilizing services from various cloud providers to have the ability to transfer workloads among them. Also, for fog and edge computing, the components are managed by different providers.
 \subsection{Usability}
 The system ensures usability to achieve the demand efficiently with low latency and high bandwidth. Fog and edge models reduce transmitted data which makes it easier for the system to preprocessing it, increase usability, and increase the potential of the cloud platform.
-
+\subsection{Reliability}
+With large numbers of edge computing devices and edge data centers associated with the network, it increases the difficulty for any failure to shut down service entirely. Data can be rerouted through various pathways to guarantee clients retain admittance to the items and data they need. Effectively incorporating IoT edge computing devices and edge data centers into an extensive edge architecture can accordingly give reliability.
 \section{Data Design}
 \subsection{Data Description}
 Our system collects incident data from streets, uses datasets to train its algorithms, and has a SQL database on the servers where event data and users' data are being saved.
