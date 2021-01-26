@@ -1,0 +1,60 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{makecell}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage[normalem]{ulem}
+\usepackage{multicol}
+\renewcommand\theadalign{bc}
+\renewcommand\theadfont{\bfseries}
+\renewcommand\theadgape{\Gape[4pt]}
+\renewcommand\cellgape{\Gape[4pt]}
+
+\usepackage[
+backend=biber,
+style=numeric,
+sorting=none,
+citestyle=ieee
+]{biblatex}
+
+\addbibresource{Ref.bib}
+
+%opening
+\title{Fog-based intelligent surveillance system in smart cities}
+\author{
+Nour Ahmed, Nour ElHoda Hisham, Mariam Hesham, Samiha Hesham, Sandra Fares\\
+Supervised by:
+Dr. Islam Tharwat, Eng. Lobna Mostafa
+}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+Surveillance systems are of vital importance for the development of smart cities. These systems can be considered vision organs of such cities. It is expected that a huge amount of data (Big Data) will be generated in smart cities. Therefore, to ensure the safety of its citizens, it is important to provide an efficient and real-time analysis of these data to get real-time responses, when catastrophic events occur. Accordingly, transmitting this massive data to the cloud, to be processed, is relatively slow. Therefore, the purpose of this project is to implement an edge computing- based surveillance system to offer real-time data processing. When surveillance videos capture an incident, the data get transferred to the edge for processing. Moreover, a rapid response is then provided to properly handle the occasion. Furthermore, despite tackling scalability obstacles, the system should handle privacy-sensitive data to overcome the privacy challenges in smart cities.
+\end{abstract}
+\section{Introduction}
+\begin{multicols}{2}
+Video surveillance depends on numerous cameras deployed to monitor the streets and control events occurring. These devices will generate a massive amount of data throughout the day; with this increase, videos need to be streamed to a centralized unit to process and analyze. Therefore cloudification of the system was introduced by many. But, sending those streams to the cloud increases the network congestion. Thus, the service latency increases, consumption of the cloud resources, and the cost respectively. Therefore, Fog computing is introduced to solve these problems.
+
+Fog computing, also known as fogging, is a layer of the shared network environment connected with the cloud and the internet of things (IoT). It works as an internetwork between edge devices and cloud servers. Fog can create a low-latency connection between devices and cloud endpoints. This framework decreases the bandwidth needed compared to if that information had to be transmitted back to the cloud for further processing. Also, security features can be applied in a fog network.
+
+Our approach is an event-driven approach to provide an efficient surveillance system. The edge node will send the information to the fog devices whenever it detects an event; by deploying light-weighted processing algorithms to analyze video streams captured, minimizing the amount of data sent to fog devices throughout the day. Upon the previously gathered information; fog nodes can take the proper action using deep learning algorithms for further analysis, which are very necessary to provide accurate identification of kidnapping events, track and detect the criminal. 
+
+Based on the discussion above and the limitations stated earlier, we propose EFISS, an edge-fog-based framework for intelligent surveillance systems in smart cities. This framework aims to enhance public safety and improve security within cities by reducing kidnapping occurrences while protecting the citizens’ privacy. Moreover, it handles camera failures [1] to prevent any loss of informative data. The system presents a three-tier architectural framework that manages edge devices along with fog nodes to provide real-time crime detection. Also, it triggers an alert and sends the information to the police to take appropriate action.
+
+The main contributions of this system are: (i) an intelligent edge node implementation to detect failures, apply a privacy algorithm, examine people’s movements and interact with the fog nodes to inaugurate processing. (ii) a fog infrastructure to detect crimes and confirm them, identify criminals’ faces, as well as victims’ faces, and track them. (iii) an alert to provide police units with the data needed to capture criminals and handle the case. As the processing becomes divided among the layers, the load on each layer is minimal, which leads to efficient results.
+
+The rest of the paper is structured as follows. Section II addresses works related to our system. Section III describes and discusses the proposed EFISS framework in a detailed manner. The system’s evaluation and discussion are presented in Section IV. Lastly, Section V concludes the paper’s discussion and provides possible future works.
+
+
+\end{multicols}
+
+\newpage
+\section{Related Work}
+
+\section {References}
+30 Reference Minimum (80\% Academic)
+\printbibliography
+\end{document}
