@@ -78,6 +78,24 @@ try:
 except OSError:
     print("Error cant make directories")
 
+capp = cv2.VideoCapture("final13.avi")
+for (k,hist) in index.items():
+    success, keyframe = capp.read()
+    cframee = 0
+    d = cv2.compareHist(index[k], hist, cv2.HISTCMP_INTERSECT)
+    while success:
+        if (d > th):
+            namee = 'keyframes/' + str(cframee) + '.jpg'
+            cv2.imwrite(namee, keyframe)
+            success, keyframe = capp.read()
+            print("Read new keyframe:", success)
+            cframee += 1
+        else:
+            print("oh no oh no oh nononononooo")
+
+            #print("hellooooooooyyyyyyy")
+   
+
 
    
 
