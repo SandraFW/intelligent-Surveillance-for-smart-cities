@@ -423,22 +423,26 @@ You need to provide the design rationale for using these design patterns.
 \subsection{Algorithm viewpoint}
 The system consists of edge-fog layers, where each layer is responsible for a sequence of tasks that it completes and passes on to the next layer. 
 \begin{itemize}
-\item Sensors placed on street lights are introduced in this system as our edge nodes. The edge nodes are responsible for checking for camera failures. They make sure that the camera capturing is not interrupted quality-wise by any external sources. Moreover, edge nodes apply a human detection algorithm, as well as, face blurring to protect the privacy of the citizens. Also, a human intersection algorithm gets applied to acknowledge the meeting of two or more individuals. When this meeting occurs, the nodes determine the current location and send it, with the video streams, to the next layer. 
-\item Vehicles are proposed as the system’s nodes for the second layer, the first tier fog layer. The fog nodes in this layer are responsible for applying feature extraction on video streams received by the edge layer, to decrease the computational power. Moreover, video summarization is applied to extract the most relevant information.
-\item Summarized video streams are then passed to the second-tier fog layer, where the nodes are the traffic lights. Deep learning techniques are applied to determine if the contact between people was unproblematic or if an incident occurs. If an unusual event occurred, face detection gets carried out on the individuals, and a tracking algorithm is placed to track them.
+\item Sensors placed on street lights are introduced in this system as our edge nodes. The edge nodes are responsible for checking for camera failures. They make sure that the camera capturing is not interrupted quality-wise by any external sources. Moreover, edge nodes apply a face comparison algorithm to compare faces detected with the faces detected in previous captures. Also, a crime detection algorithm using YOLO is applied to acknowledge if a crime occurred. When a crime is detected, the nodes determine the current location of the incident and send it, with the video streams, to the next layer. 
 
-\item The cloud layer, which is the last layer, collects all the data passed to it by the layers and triggers an alarm to police units.
+\item Vehicles are proposed as the system’s nodes for the second layer, the first tier fog layer. The fog nodes in this layer are responsible for applying a video summarization approach which is the keyframe extraction technique. The goal of this approach is to decrease the computational power by eliminating repeated frames and choosing frames that have relevant information as keyframes. Moreover, a face blurring algorithm is applied to protect the privacy of the citizens. 
+
+\item Summarized video frames are then passed to the second-tier fog layer, where the nodes are the traffic lights. Deep learning techniques are applied to determine if the contact between people was unproblematic or if an incident occurred. If a crime occurred, the algorithm determines the crime’s type. Moreover, deblurring and face detection get applied to expose the criminal's face.
+
+\item The cloud layer, which is the last layer, collects all the data passed to it by the layers and triggers an alarm to police units. Moreover, it backs up the data received by the layers and contains an archive to store video streams from the edge layer.
+
 
 
 \end{itemize}
 \subsection{Interaction viewpoint}
 \begin{figure}[h]
   \centering
-  \includegraphics[width=19cm]{Activityy.jpeg}
+  \includegraphics[width=19cm]{Activity diagram .jpeg}
   \label{fig:2}
    \caption{The workflow diagram of the framework}
 \end{figure}
 
+\newpage
 
 \subsection{Interface viewpoint}
 \subsubsection{Main Page}
