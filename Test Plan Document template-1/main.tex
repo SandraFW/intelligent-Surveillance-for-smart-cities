@@ -13,10 +13,10 @@
 \renewcommand\cellgape{\Gape[4pt]}
 
 %opening
-\title{Test Plan for .... }
+\title{Test Plan for Intelligent Surveillance system for smart cities }
 \author{
-Ahmed Mohamed, Mohamed Ahmed\\
-Supervised by:
+Nour Ahmed, Nour El Hoda Hisham, Mariam Hesham, Samiha Hesham ,Sandra Fares\\
+Supervised by: Eng Lobna Mostafa, Dr.Islam Tharwat
 }
 
 \begin{document}
@@ -38,7 +38,7 @@ Supervised by:
 
 \begin{table}[htp]
 \begin{tabular}{cc}
-\thead{GitHub:}    & {........................................................}   
+\thead{GitHub:}    & {https://github.com/SandraFW/intelligent-Surveillance-for-smart-cities}   
 \end{tabular}
 \end{table}
 
@@ -50,41 +50,57 @@ Supervised by:
 \section{Introduction}
 
 \subsection{Purpose}
-What is the purpose of this document.
+The Test Plan has been created to facilitate communication among the team members. This document describes approaches and methodologies that will be applied to the system functions and the whole system. This document will identify what the test deliverables will be.
 
 \subsection{Scope}
-The scope of the document.
+The scope of this test plan is to make sure that all the requirements proposed in the software specification requirements are met and developed correctly.  Any Test plan changes will be done, they will be documented in this document by changing the version numbers of the document. 
 
-\section{Test Scenario X}\label{sec:TSx}
-include a minimum of 5 Test Scenarios.\\
-Describe possible users' actions and behaviors. Determine the technical aspects of the requirement. Ascertain possible scenarios of system failure. You may refer to use cases in SRS and Sequence diagrams in SDD.
+\section{Test Scenario 1}\label{sec:TSx}
 
+The crime detection function FR03 , It depends on the camera captured the video successfully then it must detect either the video streams has any abnormal behaviour or normal in order to send the video stream to the following function.  
 \subsection{Test Cases}
-Test Cases for the scenario mention in section \ref{sec:TSx} shown in Table \ref{tab:TC1}
 \begin{table}[h]
-\caption{Test Cases for Scenario x}
+\caption{Test Cases for Scenario 1}
 \label{tab:TC1}
-\begin{tabular}{|l|l|l|l|l|}
+\begin{tabular}{|p{0.1\linewidth}|p{0.3\linewidth}|p{0.1\linewidth}|p{0.2\linewidth}|p{0.2\linewidth}|}
 \hline
 Test Case ID & Test Case Desc & Functional Req Code & Test Data & Expected Result \\ \hline
-TC01         & xxxx           & FR01                &           &                 \\ \hline
-TC02         & xxxx           & FR01                &           &                 \\ \hline
+TC01  & The time taken by the function to output the new video frames & FR03 &  video frames  &   time taken to process the frames               \\ \hline
+TC02 & the function correctly detects the crime incidents   & FR03    &  video frames     &  the incident is annotated with a box          \\ \hline
+TC03 & the function performance in normal cases  & FR03    &  video frames     &  nothing is annotated          \\ \hline
+
+\end{tabular}
+\end{table}
+\newpage
+\section{Test Scenario: Check for camera failure}\label{sec:TSy}
+As our system depends heavily on data captured by the sensors (cameras), it is essential to check the availability of sensors and make sure that their functionality is not interrupted by any external source.
+
+\subsection{Test Cases}
+\begin{table}[h]
+\caption{Test Cases for Scenario 1}
+\label{tab:TC1}
+\begin{tabular}{|p{0.1\linewidth}|p{0.3\linewidth}|p{0.1\linewidth}|p{0.2\linewidth}|p{0.2\linewidth}|}
+\hline
+Test Case ID & Test Case Desc & Functional Req Code & Test Data & Expected Result \\ \hline
+TC01  & a black screen appeared while capturing data & FR01 &  video   &  an alert is triggered                \\ \hline
+TC02 & a green screen appeared while capturing data   & FR01    &  video      &  an alert is triggered           \\ \hline
+TC03 & an unfocused camera view  & FR01    &  video      &  quality enhanced          \\ \hline
+
 \end{tabular}
 \end{table}
 
-\section{Test Scenario Y}\label{sec:TSy}
-Describe possible users' actions and behaviors. Determine the technical aspects of the requirement. Ascertain possible scenarios of system failure. You may refer to use cases in SRS and Sequence diagrams in SDD.
 
+\section{Test Scenario: Check for video summarization functionality}\label{sec:TSy}
+It is beneficial to extract the needed information instead of processing irrelevant data, especially when our goal is to decrease computational power. That is why video summarization plays a huge goal in this system. It's important to make sure that it successfully does its role.
 \subsection{Test Cases}
-Test Cases for the scenario mention in section \ref{sec:TSy} shown in Table \ref{tab:TC2}
 \begin{table}[h]
-\caption{Test Cases for Scenario y}
-\label{tab:TC2}
-\begin{tabular}{|l|l|l|l|l|}
+\caption{Test Cases for Scenario 1}
+\label{tab:TC1}
+\begin{tabular}{|p{0.1\linewidth}|p{0.3\linewidth}|p{0.1\linewidth}|p{0.2\linewidth}|p{0.2\linewidth}|}
 \hline
 Test Case ID & Test Case Desc & Functional Req Code & Test Data & Expected Result \\ \hline
-TC03         & xxxx           & FR02                &           &                 \\ \hline
-TC04         & xxxx           & FR02                &           &                 \\ \hline
+TC01  & a video is received from the edge layer & FR04 &  video frames   &  keyframes extracted                \\ \hline
+
 \end{tabular}
 \end{table}
 
