@@ -458,8 +458,14 @@ The alert page consists of alerts triggered by the cloud layer. It has all the i
 \section{Data Design}
 \subsection{Data Description}
 Our system handles and processes data in various ways as data needed are retrieved from either the application implemented for storing users’ data or from the edge layer of our system’s architecture. Moreover, Data received from our dataset to train our models is originally in CSV file format. Data get captured in the application from the forms available for the users to fill in. On the other hand, sensors (cameras) placed on the edge layer capture data in video format to get processed further. Information extracted from users will be stored in Cloud Firestore, a NoSQL database that will provide our application with flexibility and scalability.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=15cm]{ERdiagram.jpg}
+  \label{fig:2}
+   \caption{ER Diagram}
+\end{figure}
 
-
+\newpage
 \subsection{Dataset Description}
 We have acquired a data set of surveillance videos published by the \textbf{ 'UCF Center for research in computer vision'} called  \textbf{ UCF-Crime}; It is a large-scale dataset of 128 hours of videos; it has 1900 video of many classes as Robbery, Stealing, Shooting ... etc. And it is widely used in any research or project that targets public safety and surveillance. Therefore we took some of those videos from the classes that meet our requirements. \ref{tab:ds} illustrates the dataset.
 
