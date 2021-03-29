@@ -6,6 +6,7 @@ the purpose of this project is to implement an edge Fog computing- based surveil
 # Programming Languages 
 * Java
 * Python
+* Dart
 
 # Modules   
  * YOLOv4 Object Detection Model { https://github.com/AlexeyAB/darknet }
