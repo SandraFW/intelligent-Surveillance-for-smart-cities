@@ -91,10 +91,9 @@ for (k,hist) in index.items():
             print("Read new keyframe:", success)
             cframee += 1
         else:
-            print("oh no oh no oh nononononooo")
+            print("difference smaller than threshold")
 
-            #print("hellooooooooyyyyyyy")
-   
+           
 
 
    
