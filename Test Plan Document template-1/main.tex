@@ -135,4 +135,20 @@ TC02 & anomaly is not detected   & FR06    &  video frames      &  video is sent
 \end{tabular}
 \end{table}
 
+
+\newpage
+\section{Test Scenario: application's login functionality}\label{sec:TSy}
+\subsection{Test Cases}
+\begin{table}[h]
+\caption{Test Cases for Scenario 1}
+\label{tab:TC1}
+\begin{tabular}{|p{0.1\linewidth}|p{0.3\linewidth}|p{0.1\linewidth}|p{0.2\linewidth}|p{0.2\linewidth}|}
+\hline
+Test Case ID & Test Case Desc & Functional Req Code & Test Data & Expected Result \\ \hline
+TC01  & user entered an incorrect email or password & FR09 & string   & user is not allowed to proceed with the application               \\ \hline
+TC02 & user entered a correct email and password   & FR09    &  string      &  user can proceed with the application and view alerts          \\ \hline
+
+\end{tabular}
+\end{table}
+
 \end{document}
