@@ -17,6 +17,6 @@ the purpose of this project is to implement an edge Fog computing- based surveil
 * opencv-python 
 * tensorflow
 * sklearn
-* yolo
+
 
 
