@@ -1048,15 +1048,22 @@ requirements from the SRS. Refer to the functional requirements by the numbers/c
 
 \begin{table}[htbp]
 \centering
-\caption{Requirements Ratrix}
+\caption{Requirements Matrix}
 \label{tab:RM}
 \begin{tabular}{|l|l|l|l|l|}
 \hline
 Req. ID  & Req Desc & Class & Test Cases ID & Status      \\ \hline
-FR01     & xxxx     & class name & TC01, TC02    & In Progress \\ \hline
-FR02     & xxxx     & class name & TC03, TC04    & Developed   \\ \hline
+FR01     & camera failure (edge layer)     & camera & TC03, TC04, TC05    & Developed \\ \hline
+FR03     & crime detection using YOLO (edge layer)     & camera & TC01, TC02    & Developed \\ \hline
+FR04     & video summarization (fog tier 1)     & image & TC06   & In Progress   \\ \hline
+FR05     & face blurring (fog tier 1)     & object & TC07   & Developed   \\ \hline
+FR06     & deep learning detection (fog tier 2)     & image & TC08, TC09   & In Progress   \\ \hline
+FR07     & face detection (fog tier 2)     & object & TC10   & Developed   \\ \hline
+FR09     & login     & officers & TC11,TC12   & Developed   \\ \hline
+FR10     & create account     & Admin & TC13,TC14,TC15   & Developed   \\ \hline
 \end{tabular}
 \end{table}
+
 
 \section{APPENDICES}
 Fog computing: A mid-layer between edge devices and the cloud, at which data processing occurs. 
