@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
+import 'package:screentwo/screens/intro_page.dart';
 import '../Animation/FadeAnimation.dart';
 
 class ImageCarousel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Material(
+    return Container(
       child: Stack(
         children: [
           Carousel(
@@ -28,6 +29,7 @@ class ImageCarousel extends StatelessWidget {
                         'Right Protection, Right Time',
                         textAlign: TextAlign.center,
                         style: TextStyle(
+                          decoration: TextDecoration.none,
                           fontFamily: 'Arial Black',
                           fontSize: 30.0,
                           fontWeight: FontWeight.bold,
@@ -43,8 +45,24 @@ class ImageCarousel extends StatelessWidget {
                   Container(
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                          image: AssetImage('images/security2.jpg'),
+                          image: AssetImage('images/wafflesandwitch.jpg'),
                           fit: BoxFit.cover),
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: 80.0, left: 100.0),
+                    child: FadeAnimation(
+                      4,
+                      Text(
+                        'Elevate your at-home food experience!',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontFamily: 'SourceSansPro',
+                          fontSize: 30.0,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.red[900],
+                        ),
+                      ),
                     ),
                   ),
                 ],
@@ -54,8 +72,24 @@ class ImageCarousel extends StatelessWidget {
                   Container(
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                          image: AssetImage('images/security4.jpg'),
+                          image: AssetImage('images/frenchtoast.jpg'),
                           fit: BoxFit.cover),
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: 100.0, left: 220.0),
+                    child: FadeAnimation(
+                      4,
+                      Text(
+                        'Share your \n recipes with \n others!',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontFamily: 'SourceSansPro',
+                          fontSize: 30.0,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.red[900],
+                        ),
+                      ),
                     ),
                   ),
                 ],
@@ -67,12 +101,11 @@ class ImageCarousel extends StatelessWidget {
           ),
           Container(
             margin: EdgeInsets.only(top: 580.0, left: 90.0),
-            // ignore: deprecated_member_use
             child: RaisedButton(
               onPressed: () {
-                //Navigator.push(context, MaterialPageRoute(builder: (context) {
-                //return Login();
-                //}));
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return IntroPage();
+                }));
               },
               color: Colors.lightBlue[900],
               textColor: Colors.white,
@@ -88,6 +121,10 @@ class ImageCarousel extends StatelessWidget {
               ),
             ),
           ),
+          Row(
+            children: [
+            ],
+          )
         ],
       ),
     );
