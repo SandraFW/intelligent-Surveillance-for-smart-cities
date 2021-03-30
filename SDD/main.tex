@@ -192,7 +192,7 @@ Id & Task               & Start Date & Number of Days & Team Member \\ \hline
 8 &   face detection    & 3/20/2021 & 20             & samiha    \\ \hline
 9 &  deep learning detection classifier    & 4/5/2021 & 20             & nour ahmed,sandra    \\ \hline
 10 & mobile application    & 4/5/2021 & 20             & samiha,mariam    \\ \hline
-11 & enhancing video quality   & 4/5/2021 & 15             & samiha,mariam          \\ \hline
+11 & enhancing video quality   & 4/5/2021 & 15             & nour elhoda,samiha,mariam          \\ \hline
 
 \hline
 \end{tabular}
@@ -267,6 +267,587 @@ Various architectures have been introduced in the field of real-time video surve
 \end{figure}
 \subsubsection{Detailed classes}
 \FloatBarrier
+\subsubsection{Detailed classes}
+\begin{table}[h!]
+
+\caption{Class Name - officers}
+\label{tab:my-table}
+\begin{tabular}{|p{0.15\textwidth}|p{0.85\textwidth}|}
+
+ \hline
+\textbf{List of Superclasses}  & none                                                      
+\\ \hline
+\textbf{List of Subclasses}    & none                                                                    
+\\ \hline
+\textbf{Purpose}               & The class represents police officer'data                                                                             
+\\ \hline
+\textbf{Collaborations}        & associated with shift type,stations,department and aggregated with officers type and notifications.
+\\ \hline
+\textbf{Attributes}  & officerid:int,officerTypeID:int,firstname:string,last name:string,email:string,
+password:string,stationID:int,deployment date:date,shiftID:int,isdeleted:boolean,
+notifications[]:notification.
+\\ \hline
+\textbf{Operations} & 
+login(email,password),logout(),signUP(firstname,lastname,email,password,
+officersTypeID),updateINFO(officersID,firstname,lastname,email,password),
+viewNotifications(notificationID),searchNotifications().
+
+\\ \hline
+\textbf{Constraints} & officer is one of the core classes of the application  
+\\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\caption{Class Name - Officers type}
+\label{tab:my-table}
+\begin{tabular}{|p{0.15\textwidth}|p{0.85\textwidth}|}
+
+
+ \hline
+\textbf{List of Superclasses}  & none                                                    
+\\ \hline
+\textbf{List of Subclasses}    & none                                                                    
+\\ \hline
+\textbf{Purpose}               & the class represents officer's types.                                                                           
+\\ \hline
+\textbf{Collaborations}        & aggregated with officers.
+\\ \hline
+\textbf{Attributes}  & ID:int,officerTypeID:int,isdeleted:boolean
+\\ \hline
+\textbf{Operations} & 
+getusertypeID(),insert(),edit(),delete()
+
+\\ \hline
+\textbf{Constraints} & cannot work without officers class
+\\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\caption{Class Name - Admin}
+\label{tab:my-table}
+\begin{tabular}{|p{0.15\textwidth}|p{0.85\textwidth}|}
+
+
+ \hline
+\textbf{List of Superclasses}  & officers                                                     
+\\ \hline
+\textbf{List of Subclasses}    & none                                                                    
+\\ \hline
+\textbf{Purpose}               & a class represent admin in the system                                                                           
+\\ \hline
+\textbf{Collaborations}        & extends with officers.
+\\ \hline
+\textbf{Attributes}  & ID:int,email:string,password:string
+\\ \hline
+\textbf{Operations} & 
+addpoliceofficer(),edit(),delete(),checkFailure(),AddFognodes()
+
+\\ \hline
+\textbf{Constraints} & Admin is the main controller in the application.
+\\ \hline
+\end{tabular}
+\end{table}
+
+
+\begin{table}[h!]
+\caption{Class Name - shift Type}
+\label{tab:my-table}
+\begin{tabular}{|p{0.15\textwidth}|p{0.85\textwidth}|}
+
+
+ \hline
+\textbf{List of Superclasses}  & none                                                     
+\\ \hline
+\textbf{List of Subclasses}    & none                                                                    
+\\ \hline
+\textbf{Purpose}               & the class represents shift types for the police officers.                                                                        
+\\ \hline
+\textbf{Collaborations}        & associated with officers.
+\\ \hline
+\textbf{Attributes}  & ID:int,shiftID:int,officerID:int,shiftTimeStarted:datetime,shiftTimeEnded
+:datetime,isdeleted:boolean
+\\ \hline
+\textbf{Operations} & 
+getShiftTypeID(),insert(),edit(),delete()
+\\ \hline
+\textbf{Constraints} & can't work without officers.
+\\ \hline
+\end{tabular}
+\end{table}
+
+
+\begin{table}[h!]
+\caption{Class Name - department}
+\label{tab:my-table}
+\begin{tabular}{|p{0.15\textwidth}|p{0.85\textwidth}|}
+
+
+ \hline
+\textbf{List of Superclasses}  & none                                                     
+\\ \hline
+\textbf{List of Subclasses}    & none                                                                    
+\\ \hline
+\textbf{Purpose}               & the class represents departments of the police officers.                                                                        
+\\ \hline
+\textbf{Collaborations}        & associated with officers.
+\\ \hline
+\textbf{Attributes}  & depCode:int,depDescription:string
+\\ \hline
+\textbf{Operations} & 
+getDepCode(),insert(),edit(),delete()
+\\ \hline
+\textbf{Constraints} & cannot work without officers.
+\\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\caption{Class Name - stations}
+\label{tab:my-table}
+\begin{tabular}{|p{0.15\textwidth}|p{0.85\textwidth}|}
+
+
+ \hline
+\textbf{List of Superclasses}  & none                                                     
+\\ \hline
+\textbf{List of Subclasses}    & none                                                                    
+\\ \hline
+\textbf{Purpose}               & the class represents stations locations of each police officer.                                                                        
+\\ \hline
+\textbf{Collaborations}        & associated with officers and locations.
+\\ \hline
+\textbf{Attributes}  & stationID:int,locationID:int
+\\ \hline
+\textbf{Operations} & 
+getLocation()
+\\ \hline
+\textbf{Constraints} & cannot work without officers and locations.
+\\ \hline
+\end{tabular}
+\end{table}
+
+
+\begin{table}[h!]
+\caption{Class Name - notifications}
+\label{tab:my-table}
+\begin{tabular}{|p{0.15\textwidth}|p{0.85\textwidth}|}
+
+
+ \hline
+\textbf{List of Superclasses}  & none                                                     
+\\ \hline
+\textbf{List of Subclasses}    & none                                                                    
+\\ \hline
+\textbf{Purpose}               & the class represents the notifications that views to the police officer.                                                                        
+\\ \hline
+\textbf{Collaborations}        & associated with fog nodes and aggregated with officers.
+\\ \hline
+\textbf{Attributes}  & ID:int,message:string,FogNodeID:int
+\\ \hline
+\textbf{Operations} & saveLocation(),sendNotification(),getNearestStation()
+getLocation()
+\\ \hline
+\textbf{Constraints} & cannot work without officers and fognodes.
+\\ \hline
+\end{tabular}
+\end{table}
+
+
+\begin{table}[h!]
+\caption{Class Name - fog nodes}
+\label{tab:my-table}
+\begin{tabular}{|p{0.15\textwidth}|p{0.85\textwidth}|}
+
+
+ \hline
+\textbf{List of Superclasses}  & none                                                     
+\\ \hline
+\textbf{List of Subclasses}    & none                                                                    
+\\ \hline
+\textbf{Purpose}               & the class represents the fognodes that sends the alerts that came from the edge node to the officers through class notifications                                                                        
+\\ \hline
+\textbf{Collaborations}        & associated with notifications,locations and cameras.
+\\ \hline
+\textbf{Attributes}  & FogNodeID:int,data:string
+\\ \hline
+\textbf{Operations} & prediction(),detection(),trackingLocation()
+\\ \hline
+\textbf{Constraints} & cannot work without locations and cameras.
+\\ \hline
+\end{tabular}
+\end{table}
+
+
+\begin{table}[h!]
+\caption{Class Name - cameras}
+\label{tab:my-table}
+\begin{tabular}{|p{0.15\textwidth}|p{0.85\textwidth}|}
+
+
+ \hline
+\textbf{List of Superclasses}  & none                                                     
+\\ \hline
+\textbf{List of Subclasses}    & none                                                                    
+\\ \hline
+\textbf{Purpose}               & the class represents the edge nodes that carries the video data and ready to be sent to fog nodes.                                                                       
+\\ \hline
+\textbf{Collaborations}        & associated with locations,fognodes and videos.
+\\ \hline
+\textbf{Attributes}  & cameraID:int,noOfcameras:int,locationID:int
+,serialNumber:int
+\\ \hline
+\textbf{Operations} & getVideos(),sendToFognodes()
+\\ \hline
+\textbf{Constraints} & cannot work without videos and locations.
+\\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\caption{Class Name - locations}
+\label{tab:my-table}
+\begin{tabular}{|p{0.15\textwidth}|p{0.85\textwidth}|}
+
+
+ \hline
+\textbf{List of Superclasses}  & none                                                     
+\\ \hline
+\textbf{List of Subclasses}    & none                                                                    
+\\ \hline
+\textbf{Purpose}               & the class represents the locations of the surveillance camera that the kidnapping event will occur.                                                                
+\\ \hline
+\textbf{Collaborations}        & associated with cameras,stations,fogNodes
+and event.
+\\ \hline
+\textbf{Attributes}  & LocationID:int,noOfcameras:int,street:string,district:string
+\\ \hline
+\textbf{Operations} & getLocation(),sendLocation()
+\\ \hline
+\textbf{Constraints} & cannot work without event class
+\\ \hline
+\end{tabular}
+\end{table}
+
+
+\begin{table}[h!]
+\caption{Class Name - video}
+\label{tab:my-table}
+\begin{tabular}{|p{0.15\textwidth}|p{0.85\textwidth}|}
+
+
+ \hline
+\textbf{List of Superclasses}  & none                                                     
+\\ \hline
+\textbf{List of Subclasses}    & none                                                                    
+\\ \hline
+\textbf{Purpose}               & the class represents video data.                                                               
+\\ \hline
+\textbf{Collaborations}        & associated with cameras,event and aggregated with object.
+and event.
+\\ \hline
+\textbf{Attributes}  & id:int,title:string,duration:double,dateCreated:date,sizeInBytes:int,path:string
+\\ \hline
+\textbf{Operations} & getSequences(),sendObjects()
+\\ \hline
+\textbf{Constraints} & cannot work without object class.
+\\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\caption{Class Name - object}
+\label{tab:my-table}
+\begin{tabular}{|p{0.15\textwidth}|p{0.85\textwidth}|}
+
+
+ \hline
+\textbf{List of Superclasses}  & none                                                     
+\\ \hline
+\textbf{List of Subclasses}    & actors                                                                   
+\\ \hline
+\textbf{Purpose}               & the class represents objects in the video frame.                                                               
+\\ \hline
+\textbf{Collaborations}        & associated with region and aggregated with video class. 
+\\ \hline
+\textbf{Attributes}  & id:int,description:string
+\\ \hline
+\textbf{Operations} & getVideo(),getFrame(),getRegion()
+\\ \hline
+\textbf{Constraints} & cannot work without video class.
+\\ \hline
+\end{tabular}
+\end{table}
+
+
+\begin{table}[h!]
+\caption{Class Name - actors}
+\label{tab:my-table}
+\begin{tabular}{|p{0.15\textwidth}|p{0.85\textwidth}|}
+
+
+ \hline
+\textbf{List of Superclasses}  & object                                                    
+\\ \hline
+\textbf{List of Subclasses}    & none                                                                
+\\ \hline
+\textbf{Purpose}               & the class represents actors which is mainly the kidnapper or the victim in the video frame.                                                               
+\\ \hline
+\textbf{Collaborations}        & associated with position and event. 
+\\ \hline
+\textbf{Attributes}  & id:int,location:string
+\\ \hline
+\textbf{Operations} & getEvent(),getPosition()
+\\ \hline
+\textbf{Constraints} & cannot work without object class.
+\\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\caption{Class Name - Region}
+\label{tab:my-table}
+\begin{tabular}{|p{0.15\textwidth}|p{0.85\textwidth}|}
+
+
+ \hline
+\textbf{List of Superclasses}  &    none                                               
+\\ \hline
+\textbf{List of Subclasses}    & none                                                                  
+\\ \hline
+\textbf{Purpose}               & the class represents the region of the objects that are in the frame video.                                                             
+\\ \hline
+\textbf{Collaborations}        & associated with position and object. 
+\\ \hline
+\textbf{Attributes}  & topLeftX:int,topLeftY:int,width:int,height:int
+\\ \hline
+\textbf{Operations} & getter(),setter()
+\\ \hline
+\textbf{Constraints} & cannot work without object and position classes.
+\\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\caption{Class Name - position}
+\label{tab:my-table}
+\begin{tabular}{|p{0.15\textwidth}|p{0.85\textwidth}|}
+
+
+ \hline
+\textbf{List of Superclasses}  &    none                                               
+\\ \hline
+\textbf{List of Subclasses}    & none                                                                  
+\\ \hline
+\textbf{Purpose}               & the class represents the exact video frame that the event occur at  be saved and detection will be processed on it.                                      
+\\ \hline
+\textbf{Collaborations}        & associated with region and actors. 
+\\ \hline
+\textbf{Attributes}  & startingFrame:double,endingFrame:double
+\\ \hline
+\textbf{Operations} & getRegion(),getActors()
+\\ \hline
+\textbf{Constraints} & cannot work without actors class.
+\\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\caption{Class Name - event}
+\label{tab:my-table}
+\begin{tabular}{|p{0.15\textwidth}|p{0.85\textwidth}|}
+
+
+ \hline
+\textbf{List of Superclasses}  &    none                                               
+\\ \hline
+\textbf{List of Subclasses}    & none                                                                  
+\\ \hline
+\textbf{Purpose}               & the class represents the event of kidnapping.
+\\ \hline
+\textbf{Collaborations}        & associated with video,actors,locations and aggregated with event status and structure 
+\\ \hline
+\textbf{Attributes}  & statusCode:id,where:string,when:date,startingFrame:double,endingFrame:double.
+\\ \hline
+\textbf{Operations} & getshots(),getActors(),getTimeInterval()
+\\ \hline
+\textbf{Constraints} & cannot work without actors and locations classes.
+\\ \hline
+\end{tabular}
+\end{table}
+
+
+\begin{table}[h!]
+\caption{Class Name - event status}
+\label{tab:my-table}
+\begin{tabular}{|p{0.15\textwidth}|p{0.85\textwidth}|}
+
+
+ \hline
+\textbf{List of Superclasses}  &    none                                               
+\\ \hline
+\textbf{List of Subclasses}    & none                                                                  
+\\ \hline
+\textbf{Purpose}               & the class represents the status of the event occurred.
+\\ \hline
+\textbf{Collaborations}        & aggregated with event class. 
+\\ \hline
+\textbf{Attributes}  & statusCode:id,statusDescription:string
+\\ \hline
+\textbf{Operations} & getter(),setter()
+\\ \hline
+\textbf{Constraints} & cannot work without event class.
+\\ \hline
+\end{tabular}
+\end{table}
+
+
+\begin{table}[h!]
+\caption{Class Name - structure}
+\label{tab:my-table}
+\begin{tabular}{|p{0.15\textwidth}|p{0.85\textwidth}|}
+
+
+ \hline
+\textbf{List of Superclasses}  &    none                                               
+\\ \hline
+\textbf{List of Subclasses}    & scene,sequence,shot                                                                  
+\\ \hline
+\textbf{Purpose}               & the class represents the structure of the event occurred that is divided into shots,scenes and sequence.
+\\ \hline
+\textbf{Collaborations}        & aggregated with event class. 
+\\ \hline
+\textbf{Attributes}  & startingFrame:double,endingFrame:double
+\\ \hline
+\textbf{Operations} & getTimeInterval(Event)
+\\ \hline
+\textbf{Constraints} & cannot work without event class.
+\\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\caption{Class Name - sequence}
+\label{tab:my-table}
+\begin{tabular}{|p{0.15\textwidth}|p{0.85\textwidth}|}
+
+
+ \hline
+\textbf{List of Superclasses}  &    structure                                              
+\\ \hline
+\textbf{List of Subclasses}    & none                                                                 
+\\ \hline
+\textbf{Purpose}               & the class represents the sequence of the structure the video surveillance captured when an event occured.
+\\ \hline
+\textbf{Collaborations}        & aggregated with scene class. 
+\\ \hline
+\textbf{Attributes}  & id:int,description:string
+\\ \hline
+\textbf{Operations} & getScenes()
+\\ \hline
+\textbf{Constraints} & cannot work without structure class.
+\\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\caption{Class Name - scene}
+\label{tab:my-table}
+\begin{tabular}{|p{0.15\textwidth}|p{0.85\textwidth}|}
+
+
+ \hline
+\textbf{List of Superclasses}  &    structure                                              
+\\ \hline
+\textbf{List of Subclasses}    & none                                                                 
+\\ \hline
+\textbf{Purpose}               & the class represents the scenes of the kidnapping event that occurred.
+\\ \hline
+\textbf{Collaborations}        & aggregated with shots class. 
+\\ \hline
+\textbf{Attributes}  & id:int,description:string
+\\ \hline
+\textbf{Operations} & getSequence(),getShots()
+\\ \hline
+\textbf{Constraints} & cannot work without structure class.
+\\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\caption{Class Name - shots}
+\label{tab:my-table}
+\begin{tabular}{|p{0.15\textwidth}|p{0.85\textwidth}|}
+
+
+ \hline
+\textbf{List of Superclasses}  &    structure                                              
+\\ \hline
+\textbf{List of Subclasses}    & none                                                                 
+\\ \hline
+\textbf{Purpose}               & the class represents the shots of the actors in the event that occurred.
+\\ \hline
+\textbf{Collaborations}        & associated with frame class. 
+\\ \hline
+\textbf{Attributes}  & id:int,shotTime:time
+\\ \hline
+\textbf{Operations} & getFrames(),getActorShots()
+\\ \hline
+\textbf{Constraints} & cannot work without structure class.
+\\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\caption{Class Name - Frame}
+\label{tab:my-table}
+\begin{tabular}{|p{0.15\textwidth}|p{0.85\textwidth}|}
+
+
+ \hline
+\textbf{List of Superclasses}  &    none                                             
+\\ \hline
+\textbf{List of Subclasses}    & none                                                                 
+\\ \hline
+\textbf{Purpose}               & the class represents the frame of the actors that occurred in an event. 
+\\ \hline
+\textbf{Collaborations}        & associated with shot and image classes. 
+\\ \hline
+\textbf{Attributes}  & FrameNumber:int
+\\ \hline
+\textbf{Operations} & getImage(),getObject()
+\\ \hline
+\textbf{Constraints} & cannot work without shot class.
+\\ \hline
+\end{tabular}
+\end{table}
+
+
+\begin{table}[h!]
+\caption{Class Name - Image}
+\label{tab:my-table}
+\begin{tabular}{|p{0.15\textwidth}|p{0.85\textwidth}|}
+
+
+ \hline
+\textbf{List of Superclasses}  &    none                                             
+\\ \hline
+\textbf{List of Subclasses}    & none                                                                 
+\\ \hline
+\textbf{Purpose}               & the class represents the image data of the frame captured.
+\\ \hline
+\textbf{Collaborations}        & associated with frame class. 
+\\ \hline
+\textbf{Attributes}  & title:string,format:string,width:int,height:int,texture:string,
+histogram:string,rawData:string
+\\ \hline
+\textbf{Operations} & getFrame()
+\\ \hline
+\textbf{Constraints} & cannot work without Frame class.
+\\ \hline
+\end{tabular}
+\end{table}
 
 \begin{table}[h!]
 \caption{Check failure of the camera}
