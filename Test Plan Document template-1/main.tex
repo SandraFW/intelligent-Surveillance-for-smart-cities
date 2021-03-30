@@ -54,7 +54,7 @@ The Test Plan has been created to facilitate communication among the team member
 
 \subsection{Scope}
 The scope of this test plan is to make sure that all the requirements proposed in the software specification requirements are met and developed correctly.  Any Test plan changes will be done, they will be documented in this document by changing the version numbers of the document. 
-o
+
 \section{Test Scenario: check crime detection's functionality}\label{sec:TSx}
 
 The crime detection function FR03 , It depends on the camera captured the video successfully then it must detect either the video streams has any abnormal behaviour or normal in order to send the video stream to the following function.  
@@ -81,9 +81,9 @@ As our system depends heavily on data captured by the sensors (cameras), it is e
 \begin{tabular}{|p{0.1\linewidth}|p{0.3\linewidth}|p{0.1\linewidth}|p{0.2\linewidth}|p{0.2\linewidth}|}
 \hline
 Test Case ID & Test Case Desc & Functional Req Code & Test Data & Expected Result \\ \hline
-TC01  & a black screen appeared while capturing data & FR01 &  video   &  an alert is triggered                \\ \hline
-TC02 & a green screen appeared while capturing data   & FR01    &  video      &  an alert is triggered           \\ \hline
-TC03 & an unfocused camera view  & FR01    &  video      &  quality enhanced          \\ \hline
+TC03  & a black screen appeared while capturing data & FR01 &  video   &  an alert is triggered                \\ \hline
+TC04 & a green screen appeared while capturing data   & FR01    &  video      &  an alert is triggered           \\ \hline
+TC05 & an unfocused camera view  & FR01    &  video      &  quality enhanced          \\ \hline
 
 \end{tabular}
 \end{table}
@@ -98,7 +98,7 @@ It is beneficial to extract the needed information instead of processing irrelev
 \begin{tabular}{|p{0.1\linewidth}|p{0.3\linewidth}|p{0.1\linewidth}|p{0.2\linewidth}|p{0.2\linewidth}|}
 \hline
 Test Case ID & Test Case Desc & Functional Req Code & Test Data & Expected Result \\ \hline
-TC01  & a video is received from the edge layer & FR04 &  video frames   &  keyframes extracted                \\ \hline
+TC06  & a video is received from the edge layer & FR04 &  video frames   &  keyframes extracted                \\ \hline
 
 \end{tabular}
 \end{table}
@@ -113,12 +113,10 @@ After applying video summarization, video streams are passed to a face blurring 
 \begin{tabular}{|p{0.1\linewidth}|p{0.3\linewidth}|p{0.1\linewidth}|p{0.2\linewidth}|p{0.2\linewidth}|}
 \hline
 Test Case ID & Test Case Desc & Functional Req Code & Test Data & Expected Result \\ \hline
-TC01  & a video is received from the summarization function & FR05 &  video   &  blurred faces                \\ \hline
+TC07  & a video is received from the summarization function & FR05 &  video   &  blurred faces                \\ \hline
 
 \end{tabular}
 \end{table}
-
-
 
 \section{Test Scenario: Check for Deep learning detection functionality}\label{sec:TSy}
 After applying video summarization and face blurring, video streams are passed to the detection model, placed in the fog layer, so that it could detect and classify the crime use case that took place. 
@@ -129,13 +127,11 @@ After applying video summarization and face blurring, video streams are passed t
 \begin{tabular}{|p{0.1\linewidth}|p{0.3\linewidth}|p{0.1\linewidth}|p{0.2\linewidth}|p{0.2\linewidth}|}
 \hline
 Test Case ID & Test Case Desc & Functional Req Code & Test Data & Expected Result \\ \hline
-TC01  & an anomaly got detected & FR06 &  video frames   & video is extracted to apply deblurring                \\ \hline
-TC02 & anomaly is not detected   & FR06    &  video frames      &  video is sent to the archive in the cloud layer         \\ \hline
+TC08  & an anomaly got detected & FR06 &  video frames   & video is extracted to apply deblurring                \\ \hline
+TC09 & anomaly is not detected   & FR06    &  video frames      &  video is sent to the archive in the cloud layer         \\ \hline
 
 \end{tabular}
 \end{table}
-
-
 \newpage
 \section{Test Scenario: application's login functionality}\label{sec:TSy}
 \subsection{Test Cases}
@@ -145,8 +141,8 @@ TC02 & anomaly is not detected   & FR06    &  video frames      &  video is sent
 \begin{tabular}{|p{0.1\linewidth}|p{0.3\linewidth}|p{0.1\linewidth}|p{0.2\linewidth}|p{0.2\linewidth}|}
 \hline
 Test Case ID & Test Case Desc & Functional Req Code & Test Data & Expected Result \\ \hline
-TC01  & user entered an incorrect email or password & FR09 & string   & user is not allowed to proceed with the application               \\ \hline
-TC02 & user entered a correct email and password   & FR09    &  string      &  user can proceed with the application and view alerts          \\ \hline
+TC10  & user entered an incorrect email or password & FR09 & string   & user is not allowed to proceed with the application               \\ \hline
+TC11 & user entered a correct email and password   & FR09    &  string      &  user can proceed with the application and view alerts          \\ \hline
 
 \end{tabular}
 \end{table}
@@ -159,9 +155,9 @@ TC02 & user entered a correct email and password   & FR09    &  string      &  u
 \begin{tabular}{|p{0.1\linewidth}|p{0.3\linewidth}|p{0.1\linewidth}|p{0.2\linewidth}|p{0.2\linewidth}|}
 \hline
 Test Case ID & Test Case Desc & Functional Req Code & Test Data & Expected Result \\ \hline
-TC01  & Admin creates, for a user, an account that already exists & FR10 & string   & new account is not added and an alert message appears               \\ \hline
-TC02 & Admin enters wrong data format   & FR10    &  string      &  validation messages appear         \\ \hline
-TC03 & Admin enters correctly formatted data   & FR10    &  string      &  a new account got created         \\ \hline
+TC12  & Admin creates, for a user, an account that already exists & FR10 & string   & new account is not added and an alert message appears               \\ \hline
+TC13 & Admin enters wrong data format   & FR10    &  string      &  validation messages appear         \\ \hline
+TC14 & Admin enters correctly formatted data   & FR10    &  string      &  a new account got created         \\ \hline
 
 \end{tabular}
 \end{table}
