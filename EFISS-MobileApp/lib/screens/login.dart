@@ -1,31 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:survillience_screens/screens/edit_profile.dart';
-import 'package:survillience_screens/services/auth.dart';
-import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'forget_password.dart';
-import 'constants.dart';
+import 'package:screentwo/screens/constants.dart';
 import 'package:email_validator/email_validator.dart';
 import '../Animation/FadeAnimation.dart';
-import 'package:survillience_screens/widgets/profile_view.dart';
-import 'package:get/get.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'package:provider/provider.dart';
-
-void main() {
-  runApp(Login());
-}
-
-class Login extends StatelessWidget {
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: LoginPage(),
-    );
-  }
-}
+import 'package:screentwo/screens/forget_password.dart';
+import 'package:screentwo/screens/profile_main.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -33,22 +11,10 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  final AuthService _auth = AuthService();
   GlobalKey<FormState> _formkey = GlobalKey<FormState>();
-  final TextEditingController _email = TextEditingController();
-  final TextEditingController _password = TextEditingController();
-  bool _obscureText = true;
-  void _toggle() {
-    setState(() {
-      _obscureText = !_obscureText;
 
-      if (_obscureText) {
-        _obscureText = true;
-      } else {
-        _obscureText = false;
-      }
-    });
-  }
+  String _email;
+  final TextEditingController _password = TextEditingController();
 
   Widget _buildLogo() {
     return Row(
@@ -78,7 +44,6 @@ class _LoginPageState extends State<LoginPage> {
           children: [
             TextFormField(
               autofocus: true,
-              controller: _email,
               validator: (value) {
                 if (value.isEmpty) {
                   return "This Field is Empty";
@@ -88,7 +53,7 @@ class _LoginPageState extends State<LoginPage> {
                 return null;
               },
               onSaved: (String email) {
-                _email.text = email;
+                _email = email;
               },
               decoration: InputDecoration(
                   prefixIcon: Icon(
@@ -158,20 +123,12 @@ class _LoginPageState extends State<LoginPage> {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30.0),
                 ),
-                onPressed: () async {
+                onPressed: () {
                   if (_formkey.currentState.validate()) {
-                    dynamic result = await _auth.signInWithEmailAndPassword(
-                        _email.text, _password.text);
-                    if (result == null) {
-                      return 'error occurred';
-                    } else {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) {
-                        return ProfileFirst();
-                      }));
-                    }
-                  } else {
-                    return "unsuccessful";
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return Profile();
+                    }));
                   }
                 },
                 child: Text(
@@ -187,7 +144,6 @@ class _LoginPageState extends State<LoginPage> {
       ],
     );
   }
-
   Widget _buildContainer() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
@@ -226,7 +182,7 @@ class _LoginPageState extends State<LoginPage> {
     return SafeArea(
       child: Scaffold(
         resizeToAvoidBottomInset: false,
-        backgroundColor: Color(0xFF0091EA),
+        backgroundColor: Color(0xFF01579B),
         body: Stack(
           children: <Widget>[
             Container(
