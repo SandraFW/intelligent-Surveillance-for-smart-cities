@@ -98,7 +98,7 @@ It is beneficial to extract the needed information instead of processing irrelev
 \begin{tabular}{|p{0.1\linewidth}|p{0.3\linewidth}|p{0.1\linewidth}|p{0.2\linewidth}|p{0.2\linewidth}|}
 \hline
 Test Case ID & Test Case Desc & Functional Req Code & Test Data & Expected Result \\ \hline
-TC06  & a video is received from the edge layer & FR04 &  video frames   &  keyframes extracted                \\ \hline
+TC06  & a video is received from the edge layer & FR04 &  video frames   &  keyframes extracted and video is summarized                \\ \hline
 
 \end{tabular}
 \end{table}
@@ -133,31 +133,45 @@ TC09 & anomaly is not detected   & FR06    &  video frames      &  video is sent
 \end{tabular}
 \end{table}
 \newpage
-\section{Test Scenario: application's login functionality}\label{sec:TSy}
+\section{Test Scenario: Check for face detection's functionality}\label{sec:TSy}
+If an anomaly got detected, the faces get deblurred and a face detection algorithm gets applied.
 \subsection{Test Cases}
 \begin{table}[h]
-\caption{Test Cases for Scenario 1}
+\caption{Test Cases for Scenario}
 \label{tab:TC1}
 \begin{tabular}{|p{0.1\linewidth}|p{0.3\linewidth}|p{0.1\linewidth}|p{0.2\linewidth}|p{0.2\linewidth}|}
 \hline
 Test Case ID & Test Case Desc & Functional Req Code & Test Data & Expected Result \\ \hline
-TC10  & user entered an incorrect email or password & FR09 & string   & user is not allowed to proceed with the application               \\ \hline
-TC11 & user entered a correct email and password   & FR09    &  string      &  user can proceed with the application and view alerts          \\ \hline
+TC10  & face detected & FR07 &  video frames   & trigger an alarm                \\ \hline
 
 \end{tabular}
 \end{table}
 
-\section{Test Scenario: creating a new account}\label{sec:TSy}
+\section{Test Scenario: application's login functionality}\label{sec:TSy}
 \subsection{Test Cases}
 \begin{table}[h]
-\caption{Test Cases for Scenario 1}
+\caption{Test Cases for Scenario}
 \label{tab:TC1}
 \begin{tabular}{|p{0.1\linewidth}|p{0.3\linewidth}|p{0.1\linewidth}|p{0.2\linewidth}|p{0.2\linewidth}|}
 \hline
 Test Case ID & Test Case Desc & Functional Req Code & Test Data & Expected Result \\ \hline
-TC12  & Admin creates, for a user, an account that already exists & FR10 & string   & new account is not added and an alert message appears               \\ \hline
-TC13 & Admin enters wrong data format   & FR10    &  string      &  validation messages appear         \\ \hline
-TC14 & Admin enters correctly formatted data   & FR10    &  string      &  a new account got created         \\ \hline
+TC11  & user entered an incorrect email or password & FR09 & string   & user is not allowed to proceed with the application               \\ \hline
+TC12 & user entered a correct email and password   & FR09    &  string      &  user can proceed with the application and view alerts          \\ \hline
+
+\end{tabular}
+\end{table}
+\newpage
+\section{Test Scenario: creating a new account}\label{sec:TSy}
+\subsection{Test Cases}
+\begin{table}[h]
+\caption{Test Cases for Scenario}
+\label{tab:TC1}
+\begin{tabular}{|p{0.1\linewidth}|p{0.3\linewidth}|p{0.1\linewidth}|p{0.2\linewidth}|p{0.2\linewidth}|}
+\hline
+Test Case ID & Test Case Desc & Functional Req Code & Test Data & Expected Result \\ \hline
+TC13  & Admin creates, for a user, an account that already exists & FR10 & string   & new account is not added and an alert message appears               \\ \hline
+TC14 & Admin enters wrong data format   & FR10    &  string      &  validation messages appear         \\ \hline
+TC15 & Admin enters correctly formatted data   & FR10    &  string      &  a new account got created         \\ \hline
 
 \end{tabular}
 \end{table}
