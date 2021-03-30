@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:email_validator/email_validator.dart';
-import 'package:get/get.dart';
-//import 'package:screentwo/screens/intro_page.dart';
-import 'package:survillience_screens/screens/login.dart';
-import 'package:survillience_screens/services/auth.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+import 'login_page.dart';
+
+void main() {
+  runApp(ForgetPass());
+}
 
 class ForgetPass extends StatelessWidget {
   @override
@@ -21,8 +21,6 @@ class ForgetPassword extends StatefulWidget {
 }
 
 class _ForgetPassState extends State<ForgetPassword> {
-  String _email;
-  final _auth = FirebaseAuth.instance;
   GlobalKey<FormState> formkey = GlobalKey<FormState>();
 
   void validate() {
@@ -30,38 +28,6 @@ class _ForgetPassState extends State<ForgetPassword> {
       print('Validated');
     }
     print('Not validated');
-  }
-
-  showAlertDialog(BuildContext context) {
-    Widget okayButton = FlatButton(
-      child: Text(
-        "Okay",
-        style: TextStyle(color: Colors.grey[700]),
-      ),
-      onPressed: () {
-        Get.to(Login());
-      },
-    );
-
-    AlertDialog alert = AlertDialog(
-      title: Text(
-        "Password Reset",
-        style: TextStyle(
-          color: Colors.blue[500],
-        ),
-      ),
-      content: Text("A link was sent on your email to reset your password."),
-      actions: [
-        okayButton,
-      ],
-    );
-
-    showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        return alert;
-      },
-    );
   }
 
   String EmailValidation(value) {
@@ -75,7 +41,6 @@ class _ForgetPassState extends State<ForgetPassword> {
 
   @override
   Widget build(BuildContext context) {
-    final AuthService _auth = AuthService();
     return Scaffold(
         backgroundColor: Colors.white,
         body: ListView(children: <Widget>[
@@ -86,7 +51,7 @@ class _ForgetPassState extends State<ForgetPassword> {
               children: <Widget>[
                 IconButton(
                   icon: Icon(Icons.arrow_back_ios),
-                  color: Colors.black,
+                  color: Colors.lightBlue[900],
                   onPressed: () {
                     if (formkey.currentState.validate()) {
                       Navigator.push(context,
@@ -111,7 +76,7 @@ class _ForgetPassState extends State<ForgetPassword> {
                       textAlign: TextAlign.center,
                       style: TextStyle(
                           fontFamily: 'Montserrat',
-                          color: Colors.black,
+                          color: Colors.lightBlue[900],
                           fontWeight: FontWeight.bold,
                           fontSize: 25.0)),
                 ),
@@ -130,20 +95,16 @@ class _ForgetPassState extends State<ForgetPassword> {
                   padding: const EdgeInsets.all(15.0),
                   child: Center(
                     child: Form(
+                      // ignore: deprecated_member_use
                       autovalidate: true,
                       key: formkey,
                       child: Column(
                         children: <Widget>[
                           TextFormField(
-                              onChanged: (value) {
-                                setState(() {
-                                  _email = value.trim();
-                                });
-                              },
                               validator: EmailValidation,
                               autofocus: true,
                               decoration: InputDecoration(
-                                fillColor: Colors.white,
+                                fillColor: Colors.blueGrey[50],
                                 filled: true,
                                 border: InputBorder.none,
                                 hintText: 'Enter you email..',
@@ -160,18 +121,17 @@ class _ForgetPassState extends State<ForgetPassword> {
                   child: Container(
                     width: 290,
                     height: 50,
-                    // ignore: deprecated_member_use
                     child: RaisedButton(
-                        onPressed: () async {
+                        onPressed: () {
                           if (formkey.currentState.validate()) {
-                            _auth.sendPasswordResetEmail(_email);
-                            showAlertDialog(context);
-                          } else {
-                            return ("try again later");
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (context) {
+                              return Reset();
+                            }));
                           }
                         },
-                        color: Colors.blue[500],
-                        child: Text("Send Request",
+                        color: Colors.lightBlue[900],
+                        child: Text("Send Now",
                             style: TextStyle(color: Colors.white))),
                   ),
                 )
