@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-//import 'package:survillience_screens/screens/detail_page.dart';
 import 'package:get/get.dart';
-import 'package:survillience_screens/services/auth.dart';
+import 'package:screentwo/services/auth.dart';
 
 Widget logoutWidgets() {
   final AuthService _auth = AuthService();
@@ -13,7 +12,7 @@ Widget logoutWidgets() {
         child: Icon(
           Icons.logout,
           size: 120.0,
-          color: Colors.blue[500],
+          color: Colors.lightBlue[900],
         ),
       ),
       Container(
@@ -24,7 +23,7 @@ Widget logoutWidgets() {
             fontFamily: 'SourceSansPro',
             fontSize: 28.0,
             fontWeight: FontWeight.bold,
-            color: Colors.blue[500],
+            color: Colors.lightBlue[900],
           ),
           textAlign: TextAlign.center,
         ),
@@ -36,7 +35,7 @@ Widget logoutWidgets() {
             //Get.to(Detail());
             await _auth.signout();
           },
-          color: Colors.red[900].withOpacity(1),
+          color: Colors.lightBlue[900].withOpacity(1),
           textColor: Colors.white,
           child: Container(
             child: Text('Logout',
@@ -49,7 +48,7 @@ Widget logoutWidgets() {
           ),
           shape: new RoundedRectangleBorder(
             borderRadius: new BorderRadius.circular(18.0),
-            side: BorderSide(color: Colors.blue[500], width: 2.5),
+            side: BorderSide(color: Colors.lightBlue[900], width: 2.5),
           ),
         ),
       ),
@@ -60,7 +59,7 @@ Widget logoutWidgets() {
             Get.back();
           },
           color: Colors.white.withOpacity(1),
-          textColor: Colors.blue[500],
+          textColor: Colors.lightBlue[900],
           child: Container(
             child: Text('Cancel',
                 style: TextStyle(
@@ -72,7 +71,7 @@ Widget logoutWidgets() {
           ),
           shape: new RoundedRectangleBorder(
             borderRadius: new BorderRadius.circular(18.0),
-            side: BorderSide(color: Colors.blue[500], width: 2.5),
+            side: BorderSide(color: Colors.lightBlue[900], width: 2.5),
           ),
         ),
       ),
