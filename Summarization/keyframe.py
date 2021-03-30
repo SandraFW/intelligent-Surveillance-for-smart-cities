@@ -4,9 +4,9 @@ from matplotlib import pyplot as plt
 import numpy as np
 import glob
 
-cap = cv2.VideoCapture("final13.avi")
+cap = cv2.VideoCapture("final14.mp4")
 frame_list = []
-
+distance = []
 try:
     if not os.path.exists('data'):
         os.makedirs('data')
@@ -29,7 +29,7 @@ index = {}
 
 for imagePath in glob.glob('data/*.jpg'):
     filename = imagePath[imagePath.rfind("/") + 1:]
-                  
+    
     image = cv2.imread(imagePath,1)
     images[filename] = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
@@ -59,16 +59,17 @@ for (k, hist) in index.items():
 		d = cv2.compareHist(index[k], hist, cv2.HISTCMP_INTERSECT)
 		results[k] = d
 		print(d)
+       
 
 for (k,hist) in index.items():
 	        mean__ = np.mean(index[k], dtype=np.float64)
 
 for (k,hist) in index.items():
             variance = np.var(index[k], dtype=np.float64)
-
+            
 print("variance", variance)
 standard_deviation = np.sqrt(variance)
-th = mean__ + standard_deviation
+th = mean__ + standard_deviation + 3
 #th = standard_deviation * 8
 print("threshold value", th)
 
@@ -78,25 +79,25 @@ try:
 except OSError:
     print("Error cant make directories")
 
-capp = cv2.VideoCapture("final13.avi")
-for (k,hist) in index.items():
-    success, keyframe = capp.read()
-    cframee = 0
-    d = cv2.compareHist(index[k], hist, cv2.HISTCMP_INTERSECT)
-    while success:
-        if (d > th):
-            namee = 'keyframes/' + str(cframee) + '.jpg'
-            cv2.imwrite(namee, keyframe)
-            success, keyframe = capp.read()
-            print("Read new keyframe:", success)
-            cframee += 1
-        else:
-            print("difference smaller than threshold")
 
-           
+directory = 'data/'
+for filename in os.listdir(directory):
+    fileee = os.path.join(directory, filename)
+    capp = cv2.imread(fileee)
+    for k, v in results.items():
+        #success, keyframe = capp.read()
+        #cframee = 0
+        #fileee.read()
+        if (os.path.samefile(fileee, k)):
+                if(results[k] > th):
+                        name3 = os.path.basename(fileee)
+                        namee = 'keyframes/' + name3
+                        cv2.imwrite(namee, capp)
+                        #print("Read new keyframe:", success)
+                        #cframee += 1
+                else:
+                    print("difference smaller than threshold")
+                    
 
-
-   
-
-
- 
+    #print(os.path.join(directory, filename))
+#for k, v in results.items():
