@@ -12,7 +12,7 @@ the purpose of this project is to implement an edge Fog computing- based surveil
  * YOLOv4 Object Detection Model { https://github.com/AlexeyAB/darknet }
  * Viola–Jones Object Detection Framework
  * PIL is the Python Imaging Library 
- * IFogSim (for simulation)
+ * IFogSim (for simulation) {https://github.com/Cloudslab/iFogSim}
 # Dependencies
 * opencv-python 
 * tensorflow
