@@ -267,8 +267,6 @@ Various architectures have been introduced in the field of real-time video surve
 \label{archdsgn}
 \end{figure}
 \subsubsection{Detailed classes}
-\FloatBarrier
-\subsubsection{Detailed classes}
 \begin{table}[h!]
 
 \caption{Class Name - officers}
@@ -343,7 +341,7 @@ getusertypeID(),insert(),edit(),delete()
 \textbf{Attributes}  & ID:int,email:string,password:string
 \\ \hline
 \textbf{Operations} & 
-addpoliceofficer(),edit(),delete(),checkFailure(),AddFognodes()
+createpoliceofficer(),edit(),delete(),checkFailure(),AddFognodes()
 
 \\ \hline
 \textbf{Constraints} & Admin is the main controller in the application.
@@ -499,7 +497,7 @@ getLocation()
 \textbf{Attributes}  & cameraID:int,noOfcameras:int,locationID:int
 ,serialNumber:int
 \\ \hline
-\textbf{Operations} & getVideos(),sendToFognodes()
+\textbf{Operations} & getVideos(),sendToFognodes(),caameraFailure(),CrimeDetection()
 \\ \hline
 \textbf{Constraints} & cannot work without videos and locations.
 \\ \hline
@@ -574,7 +572,7 @@ and event.
 \\ \hline
 \textbf{Attributes}  & id:int,description:string
 \\ \hline
-\textbf{Operations} & getVideo(),getFrame(),getRegion()
+\textbf{Operations} & getVideo(),getFrame(),getRegion(),faceDetection(),faceBlurring
 \\ \hline
 \textbf{Constraints} & cannot work without video class.
 \\ \hline
@@ -843,7 +841,7 @@ and event.
 \textbf{Attributes}  & title:string,format:string,width:int,height:int,texture:string,
 histogram:string,rawData:string
 \\ \hline
-\textbf{Operations} & getFrame()
+\textbf{Operations} & getFrame(), deepLearningDetection(),videoSummarization()
 \\ \hline
 \textbf{Constraints} & cannot work without Frame class.
 \\ \hline
