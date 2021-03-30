@@ -55,7 +55,7 @@ The Test Plan has been created to facilitate communication among the team member
 \subsection{Scope}
 The scope of this test plan is to make sure that all the requirements proposed in the software specification requirements are met and developed correctly.  Any Test plan changes will be done, they will be documented in this document by changing the version numbers of the document. 
 o
-\section{Test Scenario crime detection}\label{sec:TSx}
+\section{Test Scenario: check crime detection's functionality}\label{sec:TSx}
 
 The crime detection function FR03 , It depends on the camera captured the video successfully then it must detect either the video streams has any abnormal behaviour or normal in order to send the video stream to the following function.  
 \subsection{Test Cases}
@@ -65,9 +65,8 @@ The crime detection function FR03 , It depends on the camera captured the video 
 \begin{tabular}{|p{0.1\linewidth}|p{0.3\linewidth}|p{0.1\linewidth}|p{0.2\linewidth}|p{0.2\linewidth}|}
 \hline
 Test Case ID & Test Case Desc & Functional Req Code & Test Data & Expected Result \\ \hline
-TC01  & The time taken by the function to output the new video frames & FR03 &  video frames  &   time taken to process the frames               \\ \hline
-TC02 & the function correctly detects the crime incidents   & FR03    &  video frames     &  the incident is annotated with a box          \\ \hline
-TC03 & the function performance in normal cases  & FR03    &  video frames     &  nothing is annotated          \\ \hline
+TC01  & an incident got detected & FR03 &  video frames  & the incident is annotated with a boundary box and the video is sent to be summarized in the next layer           \\ \hline
+TC02 & no incident is detected   & FR03    &  video frames     & video is sent to the archive in the cloud layer           \\ \hline
 
 \end{tabular}
 \end{table}
