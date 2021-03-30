@@ -54,8 +54,8 @@ The Test Plan has been created to facilitate communication among the team member
 
 \subsection{Scope}
 The scope of this test plan is to make sure that all the requirements proposed in the software specification requirements are met and developed correctly.  Any Test plan changes will be done, they will be documented in this document by changing the version numbers of the document. 
-
-\section{Test Scenario 1}\label{sec:TSx}
+o
+\section{Test Scenario crime detection}\label{sec:TSx}
 
 The crime detection function FR03 , It depends on the camera captured the video successfully then it must detect either the video streams has any abnormal behaviour or normal in order to send the video stream to the following function.  
 \subsection{Test Cases}
@@ -105,8 +105,8 @@ TC01  & a video is received from the edge layer & FR04 &  video frames   &  keyf
 \end{table}
 
 \newpage
-\section{Test Scenario: Check for video summarization functionality}\label{sec:TSy}
-It is beneficial to extract the needed information instead of processing irrelevant data, especially when our goal is to decrease computational power. That is why video summarization plays a huge goal in this system. It's important to make sure that it successfully does its role.
+\section{Test Scenario: Check for face blurring functionality}\label{sec:TSy}
+After applying video summarization, video streams are passed to a face blurring algorithm to protect the privacy of citizens.
 \subsection{Test Cases}
 \begin{table}[h]
 \caption{Test Cases for Scenario 1}
@@ -114,43 +114,12 @@ It is beneficial to extract the needed information instead of processing irrelev
 \begin{tabular}{|p{0.1\linewidth}|p{0.3\linewidth}|p{0.1\linewidth}|p{0.2\linewidth}|p{0.2\linewidth}|}
 \hline
 Test Case ID & Test Case Desc & Functional Req Code & Test Data & Expected Result \\ \hline
-TC01  & a video is received from the edge layer & FR04 &  video frames   &  keyframes extracted                \\ \hline
-
-\end{tabular}
-\end{table}
-
-\newpage
-\section{Test Scenario: Check for video summarization functionality}\label{sec:TSy}
-It is beneficial to extract the needed information instead of processing irrelevant data, especially when our goal is to decrease computational power. That is why video summarization plays a huge goal in this system. It's important to make sure that it successfully does its role.
-\subsection{Test Cases}
-\begin{table}[h]
-\caption{Test Cases for Scenario 1}
-\label{tab:TC1}
-\begin{tabular}{|p{0.1\linewidth}|p{0.3\linewidth}|p{0.1\linewidth}|p{0.2\linewidth}|p{0.2\linewidth}|}
-\hline
-Test Case ID & Test Case Desc & Functional Req Code & Test Data & Expected Result \\ \hline
-TC01  & a video is received from the edge layer & FR04 &  video frames   &  keyframes extracted                \\ \hline
+TC01  & a video is received from the summarization function & FR05 &  video   &  blurred faces                \\ \hline
 
 \end{tabular}
 \end{table}
 
 
-
-
-\newpage
-\section{Test Scenario: Check for video summarization functionality}\label{sec:TSy}
-It is beneficial to extract the needed information instead of processing irrelevant data, especially when our goal is to decrease computational power. That is why video summarization plays a huge goal in this system. It's important to make sure that it successfully does its role.
-\subsection{Test Cases}
-\begin{table}[h]
-\caption{Test Cases for Scenario 1}
-\label{tab:TC1}
-\begin{tabular}{|p{0.1\linewidth}|p{0.3\linewidth}|p{0.1\linewidth}|p{0.2\linewidth}|p{0.2\linewidth}|}
-\hline
-Test Case ID & Test Case Desc & Functional Req Code & Test Data & Expected Result \\ \hline
-TC01  & a video is received from the edge layer & FR04 &  video frames   &  keyframes extracted                \\ \hline
-
-\end{tabular}
-\end{table}
 
 \section{Test Scenario: Check for Deep learning detection functionality}\label{sec:TSy}
 After applying video summarization and face blurring, video streams are passed to the detection model, placed in the fog layer, so that it could detect and classify the crime use case that took place. 
@@ -166,10 +135,5 @@ TC02 & anomaly is not detected   & FR06    &  video frames      &  video is sent
 
 \end{tabular}
 \end{table}
-
-\end{document}
-
-
-
 
 \end{document}
