@@ -15,7 +15,7 @@
 %opening
 \title{Test Plan for Intelligent Surveillance system for smart cities }
 \author{
-Nour Ahmed, Nour El Hoda Hisham, Mariam Hesham, Samiha Hesham ,Sandra Fares\\
+Nour Ahmed, Nour El Hoda Hisham, Mariam Hesham, Samiha Hesham, Sandra Fares\\
 Supervised by: Eng Lobna Mostafa, Dr.Islam Tharwat
 }
 
@@ -50,7 +50,7 @@ Supervised by: Eng Lobna Mostafa, Dr.Islam Tharwat
 \section{Introduction}
 
 \subsection{Purpose}
-The Test Plan has been created to facilitate communication among the team members. This document describes approaches and methodologies that will be applied to the system functions and the whole system. This document will identify what the test deliverables will be.
+ This document aims to describe the approaches and methodologies that will be used to test the system functions performance and whether it meets our requirements mentioned in the Software requirements specification paper or not.
 
 \subsection{Scope}
 The scope of this test plan is to make sure that all the requirements proposed in the software specification requirements are met and developed correctly.  Any Test plan changes will be done, they will be documented in this document by changing the version numbers of the document. 
@@ -175,5 +175,20 @@ TC15 & Admin enters correctly formatted data   & FR10    &  string      &  a new
 
 \end{tabular}
 \end{table}
+\section{Test Scenario: Non-functional Requirements testing}
+After deploying all the functional requirements, the non functional requirements mentioned in software specification document will be tested.And then it will be compared with other systems introduced to check if our work accomplished its target.
+\subsection{Scalability testing}
+the system will undergo some scalability tests using ifogsims simulator to check Scalability attributes as:\begin{itemize}
+    \item Response Time
+    \item CPU Usage
+    \item Network Usage
+    \item Performance under load
+\end{itemize}
+and then it will be compared with other similar systems performance.
 
+\subsection{Security testing}
+We will apply a security test as vulnerability scanning, security scanning,etc to identify the threats in the system and measure its potential vulnerabilities, so the threats can be encountered.
+
+\subsection{Availability Testing}
+One of the most non functional testing as the system will work continuously for long period of times.We must ensure that the system components do not crash.
 \end{document}
