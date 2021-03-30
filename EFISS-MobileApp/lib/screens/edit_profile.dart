@@ -1,11 +1,6 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:survillience_screens/widgets/profile_view.dart';
-import 'dart:io';
-import 'package:flutter/cupertino.dart';
-import 'package:image_picker/image_picker.dart';
-import 'package:provider/provider.dart';
-import 'package:survillience_screens/models/user.dart';
+import 'complete_profile.dart';
+import 'profile_main.dart';
 
 class EditProfile extends StatelessWidget {
   @override
@@ -20,32 +15,20 @@ class EditProfilePage extends StatefulWidget {
 }
 
 class _EditProfilePageState extends State<EditProfilePage> {
-  TextEditingController firstname = new TextEditingController();
-  TextEditingController lastname = new TextEditingController();
-
-  File _file;
-  String imgurl;
-  Future pickerCamera() async {
-    final myfile = await ImagePicker().getImage(source: ImageSource.gallery);
-    setState(() {
-      _file = File(myfile.path);
-    });
-  }
-
+  bool showPassword = false;
   @override
   Widget build(BuildContext context) {
-    final user = Provider.of<Users>(context);
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back,
-            color: Colors.blue[500],
+            color: Colors.lightBlue[900],
           ),
           onPressed: () {
             Navigator.push(context, MaterialPageRoute(builder: (context) {
-              return ProfileFirst();
+              return Profile();
             }));
           },
         ),
@@ -59,33 +42,35 @@ class _EditProfilePageState extends State<EditProfilePage> {
           child: ListView(
             children: [
               Text(
-                "Edit Profile",
-                style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500),
+                "Profile",
+                style: TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.lightBlue[900]),
               ),
               SizedBox(
-                height: 2,
+                height: 10,
               ),
               Center(
                 child: Stack(
                   children: [
                     Container(
-                      child: _file == null
-                          ? Text("image not selected")
-                          : CircleAvatar(backgroundImage: new FileImage(_file)),
-                      width: 280,
-                      height: 340,
-                      decoration: BoxDecoration(
-                        border: Border.all(width: 4, color: Colors.white),
-                        boxShadow: [
-                          BoxShadow(
-                            spreadRadius: 2,
-                            blurRadius: 10,
-                            color: Colors.grey[350],
-                          )
-                        ],
-                        shape: BoxShape.circle,
-                      ),
-                    ),
+                        width: 130,
+                        height: 130,
+                        decoration: BoxDecoration(
+                            border: Border.all(width: 4, color: Colors.white),
+                            boxShadow: [
+                              BoxShadow(
+                                spreadRadius: 2,
+                                blurRadius: 10,
+                                color: Colors.grey[350],
+                              )
+                            ],
+                            shape: BoxShape.circle,
+                            image: DecorationImage(
+                              fit: BoxFit.cover,
+                              image: new AssetImage('images/police.jpg'),
+                            ))),
                     Positioned(
                         bottom: 0,
                         right: 0,
@@ -98,111 +83,43 @@ class _EditProfilePageState extends State<EditProfilePage> {
                               width: 4,
                               color: Colors.white,
                             ),
-                            color: Colors.redAccent,
+                            color: Colors.lightBlue[900],
                           ),
                           child: IconButton(
                             icon: Icon(Icons.edit),
                             color: Colors.white,
-                            onPressed: () {
-                              pickerCamera();
-                            },
+                            onPressed: () {},
                           ),
                         )),
                   ],
                 ),
               ),
-              SizedBox(
-                height: 15,
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 12, right: 12, bottom: 12),
-                child: Container(
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      border: Border.all(color: Colors.grey, width: 0.2),
-                      borderRadius: BorderRadius.circular(20),
-                      boxShadow: [
-                        BoxShadow(
-                            color: Colors.grey.withOpacity(0.5), blurRadius: 7)
-                      ]),
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 14),
-                    child: TextFormField(
-                      controller: firstname,
-                      decoration: InputDecoration(
-                          border: InputBorder.none,
-                          hintText: "Your New First Name",
-                          hintStyle: TextStyle(
-                              color: Colors.grey,
-                              fontFamily: "Times New Roman",
-                              fontSize: 18)),
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 12, right: 12, bottom: 12),
-                child: Container(
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      border: Border.all(color: Colors.grey, width: 0.2),
-                      borderRadius: BorderRadius.circular(20),
-                      boxShadow: [
-                        BoxShadow(
-                            color: Colors.grey.withOpacity(0.5), blurRadius: 7)
-                      ]),
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 14),
-                    child: TextFormField(
-                      controller: lastname,
-                      decoration: InputDecoration(
-                          border: InputBorder.none,
-                          hintText: "You New Last Name",
-                          hintStyle: TextStyle(
-                              color: Colors.grey,
-                              fontFamily: "Times New Roman",
-                              fontSize: 18)),
-                    ),
-                  ),
-                ),
-              ),
+              buildTextField("Name", "Officer's Name", false),
+              buildTextField("Station ID", "342", false),
+              buildTextField("E-mail", "ex@gmail.com", false),
+              buildTextField("Password", "••••••••••", true),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  // ignore: deprecated_member_use
                   RaisedButton(
                     padding: EdgeInsets.symmetric(horizontal: 50),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20)),
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
+                    onPressed: () {},
                     child: Text("CANCEL",
                         style: TextStyle(
                             fontSize: 14,
                             letterSpacing: 2.2,
                             color: Colors.black)),
                   ),
-                  // ignore: deprecated_member_use
                   RaisedButton(
-                    onPressed: () {
-                      FirebaseFirestore.instance
-                          .collection('Users')
-                          .doc(user.uid)
-                          .update({
-                        "Firstname": firstname.text,
-                        "Lastname": lastname.text
-                      });
-                    },
-                    color: Colors.redAccent,
+                    onPressed: () {},
+                    color: Colors.lightBlue[900],
                     padding: EdgeInsets.symmetric(horizontal: 50),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20)),
                     child: Text(
-                      "SAVE",
+                      "UPDATE",
                       style: TextStyle(
                           fontSize: 14,
                           letterSpacing: 2.2,
@@ -214,6 +131,38 @@ class _EditProfilePageState extends State<EditProfilePage> {
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  Widget buildTextField(
+      String labelText, String placeholder, bool isPasswordTextField) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 35.0),
+      child: TextField(
+        obscureText: isPasswordTextField ? showPassword : false,
+        decoration: InputDecoration(
+            suffixIcon: isPasswordTextField
+                ? IconButton(
+                    onPressed: () {
+                      setState(() {
+                        showPassword = !showPassword;
+                      });
+                    },
+                    icon: Icon(
+                      Icons.remove_red_eye,
+                      color: Colors.grey,
+                    ),
+                  )
+                : null,
+            contentPadding: EdgeInsets.only(bottom: 3),
+            labelText: labelText,
+            floatingLabelBehavior: FloatingLabelBehavior.always,
+            hintText: placeholder,
+            hintStyle: TextStyle(
+              fontSize: 17,
+              color: Colors.black,
+            )),
       ),
     );
   }
