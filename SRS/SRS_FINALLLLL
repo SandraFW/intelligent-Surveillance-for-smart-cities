@@ -23,7 +23,7 @@ citestyle=ieee
 
 %opening
 \title{Software Requirement Specification Document 
-\newline For Intelligent Surveillance system for smart cities}
+\newline For Edge-Fog Intelligent Surveillance System for smart cities}
 
 \author{
 Nour Ahmed, Nour ElHoda Hisham, Mariam Hesham, Samiha Hesham, Sandra Fares\\
@@ -42,7 +42,8 @@ Dr. Islam Tharwat, Eng. Lobna Mostafa
 \thead{Version}    & \thead{Date} & \thead{Reason for Change}  \\ \hline
 1.0 & 12-Dec-2020   & \makecell[l]{SRS First version’s specifications are defined.}   \\ \hline
 1.1 & 20-Dec-2020   & \makecell[l]{Added Non-Functional Requirements\\Identified remaining functional requirements.\\Identified hardware constraints\\Added end user Interface} \\ \hline
-1.3 & 28-Dec-2020   & \makecell[l]{Non-Functional Requirements are updated.\\ Added class diagram and data base schema\\Added use case for actors in the system and operational scenarios} \\
+1.3 & 28-Dec-2020   & \makecell[l]{Non-Functional Requirements are updated.\\ Added class diagram and data base schema\\Added use case for actors in the system and operational scenarios} \\  \hline
+2.0 & 1-Jun-2021   & \makecell[l]{Diagrams are updated\\ Project plan is updated} \\
 \hline
 \end{tabular}
 \end{center}
@@ -56,42 +57,41 @@ Dr. Islam Tharwat, Eng. Lobna Mostafa
 
 \pagebreak
 \begin{abstract}
-Surveillance systems are of vital importance for the development of smart cities as mentioned by K. Zhang et al in \cite{7823349}. These systems can be considered vision organs of such cities. It is expected that a huge amount of data (Big Data) will be generated in smart cities. Therefore, to ensure the safety of its citizens, it is important to provide an efficient and real-time analysis of these data to get real-time responses, when catastrophic events occur. Accordingly, transmitting this massive data to the cloud, to be processed, is relatively slow as proved by Mluleki  Sinqadu  et al in   \cite{10.1007/978-3-030-44372-6_5}. Therefore, the purpose of this project is to implement an edge computing- based surveillance system to offer real-time data processing. When surveillance videos capture an incident, the data get transferred to the edge for processing. Moreover, a rapid response is then provided to properly handle the occasion. Furthermore, despite tackling scalability obstacles, the system should handle privacy-sensitive data to overcome the privacy challenges in smart cities discussed by Lei Cui et el in \cite{8409952}.
+Surveillance systems are of vital importance for the development of smart cities as mentioned by K. Zhang et al in \cite{7823349}. These systems can be considered vision organs of such cities. It is expected that a huge amount of data (Big Data) will be generated in smart cities. Therefore, to ensure the safety of its citizens, it is important to provide an efficient and real-time analysis of these data to get real-time responses, when catastrophic events occur. Accordingly, transmitting this massive data to the cloud, to be processed, is relatively slow as proved by Mluleki  Sinqadu  et al in   \cite{10.1007/978-3-030-44372-6_5}. Therefore, the purpose of this project is to implement an edge computing- based surveillance system to offer real-time data processing. When surveillance videos capture an incident, the data get transferred to the edge for processing. Moreover, a rapid response is then provided to properly handle the occasion. Furthermore, despite tackling scalability obstacles, the system should handle privacy-sensitive data to overcome the privacy challenges in smart cities discussed by Lei Cui et el. in \cite{8409952}.
 \end{abstract}
-
 \section{Introduction}
 
 \subsection{Purpose of this document}
-The purpose of this document is to present a detailed description of how to use edge-fog model to handle kidnapping cases and reduce kidnapping.
-It will figure both functional and non-functional requirements of the system in addition to the interfaces, GUI and constraints that will 
-cover the system. Moreover, this document will define both stakeholders and developers of the system.
+The purpose of this document is to present a detailed description of how to use an edge-fog model to handle criminal activities (fighting, kidnapping, robbery) on the streets. It will figure both functional and non-functional requirements of the system in addition to the interfaces, GUI, and constraints that will cover the system. Moreover, this document will define both stakeholders and developers of the system view.
 
 \subsection{Scope of this document}
-The scope of this document is to show the basic outlines of our system requirements\cite{I} in order to understand our system for any further updates later on and the issues we may face.Further more,the objectives that we will reach in our system.Requirements outlined in this document are subject to be changed. 
+The scope of this document is to show the basic outlines of our system requirements \cite{I} to understand our system for any further updates later on and the issues we may face.  Also, it states the main objective of the system with a well-studied timeline. Furthermore, the objectives that we will reach in our system. Requirements outlined in this document are subject to be changed. 
+
 \subsection{System Overview}
 
+The system aims to prevent any criminal acts (fighting, kidnapping, robbery) in smart cities by fast prediction and detection of those incidents, using a framework composed of three computing layers as shown in Figure \ref{3layers}, as some authors proposed in their papers \cite{8633626}, \cite{10.1145/3132479.3132490}, \cite{9126126} and \cite{sultana2019iot}. First, the cameras located at the potential crime scenes act as the edge nodes; Light-weighted algorithms get deployed on them for any possible failure in the device, crime detection, and face comparison algorithm to recognize criminals. Once a crime gets detected, the video streams drive to the second layer,  a two-tier fog nodes layer. In the first tier, captured video streams get further processed by applying a video summarizing algorithm, and a face blurring algorithm which ensures safety and privacy measures for the citizens by blurring their exposed identities.  In the second tier, a deep learning algorithm gets applied to data to confirm the occurrence of the crime and specify its type. Moreover, deblurring and face detection gets implemented to detect criminals' faces. Then data get transmitted to the third layer, the cloud layer, where it triggers an alarm to notify police units of the incident. Moreover, data backup and system updates are done in this layer.
 \begin{figure}[htp]
 \centering
-\includegraphics[width=15cm,height=10cm,keepaspectratio]{./D2.jpeg}
+\includegraphics[width=15cm,height=10cm,keepaspectratio]{./high-level.jpeg}
 \caption{Illustration of high-level view of the system.}
 \label{3layers}
 \end{figure}
-The system aims to prevent kidnapping acts in smart cities by fast prediction and detection of those incidents, using a framework composed of three computing layers as shown in Figure \ref{3layers}, as some authors proposed in their papers \cite{8633626}, \cite{10.1145/3132479.3132490}, \cite{9126126} and \cite{sultana2019iot}. First, the cameras located at the potential crime scenes act as the edge nodes; Light-weighted algorithms are deployed on them for any possible failure in the device and human motion detection. Once it detects abnormal motion, the data moves to the second layer, which is the fog nodes layer, where the processing is completed and alerts are generated to the authorities, with possibilities to track and detect the kidnapper’s face too. Then transmits the data to the third layer, the cloud layer where data backup and system updates are done. The system must ensure safety and privacy measures for the citizens while using and transferring the captured data throughout the day.\newpage
+
 \subsection{System Scope}
 \begin{itemize}
-\item Fog/Edge computing-based surveillance system to monitoring the whole city 24/7.
-\item Efficiently detect any abnormal actions caused by human behavior and response immediately.
-\item Privacy assurance by blur people’s faces to secure their exposed identity in the video.
-\item Scalability system to handle such massive data generated from surveillance cameras and sensors.
-\item Efficiently detection for any failure that impacts the usefulness of the video streams.
-\item Dispatch crime details (i.e., video and location of the event, criminal's face) and giving alert to the nearest competent authority.
-\item Applying a prediction function to predict possible abnormal events.
-\item Providing efficient real-time tracking for the criminal in case of detecting a massive crime.
-\item Face recognition for a criminal when an event occurs in the far distance through high-resolution video.
-\end{itemize} 
+\item Fog/Edge computing-based surveillance system to monitor the whole city 24/7.
+\item Efficiently detect any criminal activity (fighting, kidnapping, robbery) and response immediately.
+\item Privacy assurance by blurring people’s faces to secure their exposed identity in the video.
+\item Scalable system to handle massive data generated from surveillance cameras and sensors.
 
+\item Applying a prediction function to predict criminal activities.
+\item Dispatch data and location to the nearest police station.
+\item Camera failure detection (black screen, green screen, unfocused capturing) in order to successfully capture data. 
+\item Apply face recognition on criminals when an incident occurs.
+\end{itemize} 
+\newpage
 \subsection{Business Context}
-The proposed system is implemented to reduce kidnapping rates. By using fog-edge computing in camera sensors, it will be easy to detect kidnapping or predict it before happening, also it would recognize the criminal by face recognition. Moreover, it will alert the police to track him. The most important thing that fog computing has an important role in storing and processing essential surveillance data to give real time response.
+The intelligent surveillance system monitors smart city streets to assists the police, or the competent authority units, to get notified of any incident that occurs to take quick action against it using the three computing layers edge, fog, and cloud. Our proposed system aims to provide a high level of safety to the citizens in smart cities. Therefore, the system captures the pedestrians to collect data throughout the day. The collected data are processed to detect any failure in the surveillance cameras and if an incident occurred. If a crime got detected, the system identifies the criminal and forwards the collected information to the police unit to take the proper action and helps them track the criminal.
 \section{Similar Systems}
 \subsection{Academic}
 \begin{itemize}
@@ -99,7 +99,7 @@ The proposed system is implemented to reduce kidnapping rates. By using fog-edge
 
 \begin{figure}[htp]
     \centering
-    \includegraphics[width=12cm]{Screenshot (299).png}
+    \includegraphics[width=10cm]{Screenshot (299).png}
     \caption{IoT-guard security management system}
     \label{security}
 \end{figure}
@@ -121,56 +121,58 @@ The proposed system is implemented to reduce kidnapping rates. By using fog-edge
  
 \end{itemize}
 
-
 \subsection{Business Applications}
 \begin{itemize}
 \item For helping smart cities to achieve a safe and secure environment, Logipix \cite{logipix} Technical Development Ltd is a privately held organization founded in 1996 in Hungary that provides intelligent video monitoring solutions for wide public areas in the cities. They highlighted their solutions as a scalable city-wide system that is designed and developed to achieve a video surveillance system and traffic violation management tasks at the same time. The main goal of Logipix solutions is to provide a real-time system that is able to surveil the whole city 24/7 efficiently, the system also can respond immediately and take proper action in case of detecting any abnormal event. Moreover, the system captures all the events with high resolution even at miles away, face recognition is still possible. For helping the competent authorities, these recordings can be used as unappealable evidence on demand.
 
 \item BT Business \cite{BT} is a retail division of the United Kingdom telecommunications company that provides many solutions that build smart cities. For securing smart cities and in order to help the administrators make swift decisions and help them to fast respond to what’s going on and to prevent suspicious events before they happen, BT provides surveillance solutions for local councils, streets, public transport , police stations and more. Moreover, they helped many United Kingdom cities to turn to smart cities by the installation of public WiFi and cameras to help monitor traffics, give real-time alerts for trams, buses and more. For cost-effective and best-of-breed surveillance solutions, BT company partners with industry-leading suppliers as CISCO and BOSCH and many other huge suppliers.
 \end{itemize} 
-\newpage
+
 \section{System Description}
 
 \subsection{User Problem Statement}
-One of the problems that face inhabitants in smart cities is kidnapping. Nowadays, the rate of kidnapping is rapidly increasing as shown in \cite{knoema}, which threatens national security. Moreover, real-time response is needed to prevent or avoid any catastrophic event from occurring.
+One of the challenges that face surveillance systems in smart cities is Big data. Each camera records a massive amount of video and audio data to be processed. To handle such massive data, it is essential to figure out a way to provide real-time data processing analysis efficiently.
 \subsection{ User Objectives}
-Our system is crucial, as its fundamental goal is to ensure the citizens’ safety. For our users, the system should provide a rapid response to take appropriate action in time. When an anomaly gets captured on a surveillance camera, the system should detect it and determine if it’s a kidnapping case. Moreover, the system should track the kidnapper, identify his face, and trigger an alarm for our users, in our case, to the nearest police unit.
+Our system is crucial, as its fundamental goal is to ensure the citizens’ safety and privacy. For our users, the system should provide a rapid response to take appropriate action in time. When an anomaly gets captured on a surveillance camera, the system should detect it and determine the type of crime. Whether it is kidnapping, fighting, or robbery. Moreover, the system should track the criminal, identify his face, and trigger an alarm with the current location of the incident for the users, in our case, to the nearest police or competent authorities unit.
 \subsection{ User Characteristics}
 \begin{itemize}
-\item Police: Must have basic knowledge in using Android mobile devices to follow up any notification that the system will sent in order to catch the kidnapper.
+\item Police: Must have the basic knowledge to deal with the system in following up on any notification that will be sent to catch the criminal.
+
+\item Admin: Must have the basic knowledge to deal with the whole system in adding a new account for the competent authorities, updating and deleting their accounts. Also, for receiving the camera failure alerts.
 \end{itemize}
 \subsection{System Context}
+\FloatBarrier
 \begin{figure}[h!]
 \centering
-\includegraphics[width=15cm,height=8.5cm,keepaspectratio]{./D1.jpeg}
+\includegraphics[width=15cm,height=7.4cm,keepaspectratio]{./arch.jpeg}
 \caption{Architecture of the system.}
 \label{fig:D1}
 \end{figure}
  \begin{figure}[h!]
 \centering
-\includegraphics[width=14cm,height=8cm,keepaspectratio]{./D3.jpeg}
+\includegraphics[width=14cm,height=8cm,keepaspectratio]{./contextdiagram.jpeg}
 \caption{Context Diagram of the system.}
 \label{fig:D3}
 \end{figure}
+\FloatBarrier
 \newpage
 \section{Functional Requirements}
 \subsection{System Functions}\label{System Functions}
 \begin{enumerate}
-\item The system will be able to predict the event before occurring in order to prevent it and avoid tragic situations.
-\item The system will be able to detect the action occurred accurately.
-\item The system will be able to track the kidnapper from the location of the incident.
-\item The system should apply blurring method for normal citizen's bio metrics in order to enhance privacy in surveillance system.
-\item The system should send alert if any failure is detected in the cameras in order to help the maintenance team to solve the problem.
-\item The system will send alert message when anomaly behaviour is detected using the fog nodes in the architecture system.
-\item The system should provide face recognition feature for the kidnapper and the victim to get their information.
-\item The system will filter the incident using video splitting technique in order to be saved and sent to the cloud to save storage.
+\item The system must be able to detect the criminal action accurately.
 
-
+\item The system should be able to track the criminal from the location of the incident.
+\item The system must apply face blurring for citizens in order to enhance privacy in surveillance system.
+\item The system should send alert if any failure is detected in the cameras occurred in order to help the maintenance team to solve the problem.
+\item The system should send an alert message when criminal behaviour is detected.
+\item The system should provide a face recognition function to recognize criminals.
+\item The system must filter the incident using video splitting technique in order to be saved and sent to the cloud to save storage.
+\item The system should be able to predict the event before occurring in order to prevent it.
 \end{enumerate}
 \begin{figure}[!ht]
 \centering
  \begin{minipage}{.5\textwidth}
-  \includegraphics[width=12.0cm, height=10.0cm]{survillience use case.png}
+  \includegraphics[width=12.0cm, height=10.0cm]{survillience use case final.png}
   \caption{Use Case Diagram}
   \label{usecase}
  \end{minipage}
@@ -185,9 +187,9 @@ Our system is crucial, as its fundamental goal is to ensure the citizens’ safe
 \hline
 \textbf{Name}           &  Check failure of the camera \\ \hline
 \textbf{Code}           &  FR01 \\ \hline
-\textbf{Priority}       & Extreme \\ \hline
+\textbf{Priority}       & High \\ \hline
 \textbf{Critical}       & It's essential to detect if any failure happens to the video streams and enclose it to efficiently detect an event, avoid network overload, and improve the cloud storage usage \\ \hline
-\textbf{Description}    & The system detects if any failure that impacts the usefulness of the video streams (i.e., natural occlusion, disruption) happens. Then, sending an alert of the failure to the maintenance team to recover it   \\ \hline
+\textbf{Description}    & The system detects if any failure that impacts the usefulness of the video streams (i.e., natural occlusion, disruption) happens. Then, sends an alert of the failure to the maintenance team to recover it   \\ \hline
 \textbf{Input}          & Video stream                                                                             \\ \hline
 \textbf{Output}         & Boolean if it detects failure or not                                                                             \\ \hline
 \textbf{Pre-condition}  & A failure happens in the video streams.                                                                                                                                                                    \\ \hline
@@ -216,14 +218,14 @@ Our system is crucial, as its fundamental goal is to ensure the citizens’ safe
 \end{table} 
 
 \begin{table}[h!]
-\caption{motion detection}
+\caption{Crime detection}
 \begin{tabular}{|p{0.15\textwidth}|p{0.85\textwidth}|}
 \hline
-\textbf{Name}           &  motion detection function \\ \hline
+\textbf{Name}           &  Crime detection function \\ \hline
 \textbf{Code}           & FR03 \\ \hline
 \textbf{Priority}       & Extreme \\ \hline
 \textbf{Critical}       & It is really essential; An action needs to be detected in order to take the appropriate action to predict or prevent it.   \\ \hline
-\textbf{Description}    & when any action is captured from a surveillance camera, motion detection algorithms, as well as image processing techniques, are applied to detect it.  \\ \hline
+\textbf{Description}    & when any action is captured from a surveillance camera, crime detection algorithms, as well as image processing techniques, are applied to detect it.  \\ \hline
 \textbf{Input}          & video stream                                                                                                                                                                   \\ \hline
 \textbf{Output}         &  video stream                                                                                                                                                                     \\ \hline
 \textbf{Pre-condition}  & surveillance camera captures an event.                                                                                                                                                                    \\ \hline
@@ -238,17 +240,17 @@ FR01.\\ This function depends on FR01, because if any failure took place on surv
 
 
 \begin{table}[h!]
-\caption{Motion Image Dispatch Function }
+\caption{Crime Dispatch Function }
 \begin{tabular}{|p{0.15\textwidth}|p{0.85\textwidth}|}
 \hline
-\textbf{Name}           &   image motion dispatch \\ \hline
+\textbf{Name}           &   crime detail dispatch \\ \hline
 \textbf{Code}           &  FR04 \\ \hline
 \textbf{Priority}       &  Extreme \\ \hline
 \textbf{Critical}       & It is very essential function for the system \\ \hline
-\textbf{Description}    & On abnormal motion detection , it gathers location information and dispatches motion image and sends it for the further processing. \\ \hline
+\textbf{Description}    & On criminal action detection , it gathers location information and dispatches crime image and sends it for the further processing. \\ \hline
 \textbf{Input}          & video stream  \\ \hline
 \textbf{Output}         & video stream  \\ \hline
-\textbf{Pre-condition}  & abnormal motion detected in function FR03        \\ \hline
+\textbf{Pre-condition}  & crime is detected in function FR03        \\ \hline
 \textbf{Post-condition} & Dispatch the stream to other processing \\ \hline
 \textbf{Dependency}     & FR01-FR03 \\ \hline
 \textbf{Risk}           & Camera has any failure in capturing the video streams and can be fixed with FR01\\ \hline
@@ -265,14 +267,14 @@ FR01.\\ This function depends on FR01, because if any failure took place on surv
 \textbf{Critical}       & It is important to predict an event before occurring in order to prevent it and avoid tragic situations.  \\ \hline
 \textbf{Description}    & after dispatching the needed video stream, an event prediction function can be applied to determine the possible events that could happen.  \\ \hline
 \textbf{Input}          & video stream                                                                                                                                                                   \\ \hline
-\textbf{Output}         &  Boolean if action is kidnapping.                                                                                                                                                                   \\ \hline
+\textbf{Output}         &  Boolean if action is criminal.                                                                                                                                                                   \\ \hline
 \textbf{Pre-condition}  & Dispatched video stream is processed.                                                                                                                                                            \\ \hline
 \textbf{Post-condition} & action is predicted.      \\ \hline
 \textbf{Dependency}     & \begin{tabular}[c]{@{}l@{}}
 FR01, FR03, FR04.\\  FR01: if any failure took place on surveillance cameras, motion will not be detected \\ in order to predict it. \\
-FR03: if motion is not detected, surveillance data cannot be processed further more.\\ So, prediction  will not occur. \\ FR04: video stream needs to be dispatched before forwarding it for further \\ processing.
+FR03: if crime is not detected, surveillance data cannot be processed further more.\\ So, prediction  will not occur. \\ FR04: video stream needs to be dispatched before forwarding it for further \\ processing.
 \end{tabular}                                       \\ \hline
-\textbf{Risk}           &  If any failure happens when capturing video streams, if motion was not detected, or if the needed video stream was not dispatched. \\ \hline
+\textbf{Risk}           &  If any failure happens when capturing video streams, if crime was not detected, or if the needed video stream was not dispatched. \\ \hline
 \end{tabular}
 \end{table} 
 
@@ -283,34 +285,34 @@ FR03: if motion is not detected, surveillance data cannot be processed further m
 \textbf{Name}           & Alert  \\ \hline
 \textbf{Code}           & FR06 \\ \hline
 \textbf{Priority}       & Extreme  \\ \hline
-\textbf{Critical}       & It is important to alert police by kidnapping incident. \\ \hline
+\textbf{Critical}       & It is important to alert police by criminal incident. \\ \hline
 \textbf{Description}    & To maintain the situation, there must an alert send to the police to come urgently and catch the criminal.. \\ \hline
 \textbf{Input}          & Video stream , face recognition ,location                                                                                                                                                                 \\ \hline
 \textbf{Output}         & Alert                                                                                                                                                                   \\ \hline
-\textbf{Pre-condition}  & After detection of kidnapping incident in FR05 and face recognition in FR08, an alert must be sent to police by Fog computing.                      \\ \hline                                                                                     
+\textbf{Pre-condition}  & After detection of criminal incident in FR05 and face recognition in FR08, an alert must be sent to police by Fog computing.                      \\ \hline                                                                                     
 \textbf{Post-condition} & Alert to police.      \\ \hline
 \textbf{Dependency}     & \begin{tabular}[c]{@{}l@{}}
-FR05: By detection of the kidnapping incident, \\ FR08: by Face recognition \\ FR07: By detecting the location of the criminal, Fog will send an alert to the police to rescue the victim.
+FR05: By detection of the criminal incident, \\ FR08: by Face recognition \\ FR07: By detecting the location of the criminal, Fog will send an alert to the police \\ to rescue the victim.
 \end{tabular}                                       \\ \hline
 \textbf{Risk}           & Failure to send an alert if there is data is missing or there was a difficulty to send an alert. \\ \hline
 \end{tabular}
 \end{table} 
 
 \begin{table}[h!]
-\caption{Kidnapper Tracking Function }
+\caption{criminal Tracking Function }
 \begin{tabular}{|p{0.15\textwidth}|p{0.85\textwidth}|}
 \hline
-\textbf{Name}           & Kidnapper Tracking Function \\ \hline
+\textbf{Name}           & criminal Tracking Function \\ \hline
 \textbf{Code}           &  FR07 \\ \hline
 \textbf{Priority}       &  low \\ \hline
 \textbf{Critical}       & it is a supplementary function in the system\\ \hline
-\textbf{Description}    & After detection of a kidnapping incident their should be a tracking for the kidnapper from the location of the incident to help the authorities catch him \\ \hline
+\textbf{Description}    & After detection of a criminal incident their should be a tracking for the criminal from the location of the incident to help the authorities catch him \\ \hline
 \textbf{Input}          & location  \\ \hline
 \textbf{Output}         & location  \\ \hline
-\textbf{Pre-condition}  & abnormal motion detected FR03,location detetcted and video dispatched in FR04 and predection FR05     \\ \hline
-\textbf{Post-condition} & tracing kidnapper location and report the authorities \\ \hline
+\textbf{Pre-condition}  & crime detected FR03, location detetcted and video dispatched in FR04 and predection FR05     \\ \hline
+\textbf{Post-condition} & tracing criminal location and report the authorities \\ \hline
 \textbf{Dependency}     & FR01-FR03-FR04-FR05 \\ \hline
-\textbf{Risk}           & Camera has any failure in capturing the video streams and can be fixed with FR01. Or kidnapper runs to a place can't be reached by the system\\ \hline
+\textbf{Risk}           & Camera has any failure in capturing the video streams and can be fixed with FR01. Or criminal runs to a place can't be reached by the system\\ \hline
 \end{tabular}
 \end{table} 
 
@@ -325,137 +327,153 @@ FR05: By detection of the kidnapping incident, \\ FR08: by Face recognition \\ F
 \textbf{Description}    & During the crime scene, there should face recognition from a camera sensor to detect the features of the criminal. \\ \hline
 \textbf{Input}          & Video stream                                                                                                                                                                 \\ \hline
 \textbf{Output}         & Criminal's face                                                                                                                                                                    \\ \hline
-\textbf{Pre-condition}  & After detection of the kidnapping incident in FR05, the camera must capture a criminal's face.  \\ \hline                                                                                                                                                           
+\textbf{Pre-condition}  & After detection of the criminal incident in FR05, the camera must capture a criminal's face.  \\ \hline                                                                                                                                                           
 \textbf{Post-condition} & Face recognition      \\ \hline
 \textbf{Dependency}     & \begin{tabular}[c]{@{}l@{}}
-FR05: By detection of the kidnapping incident, the camera will capture or recognize \\ the features of the criminal.
+FR05: By detection of the criminal incident, the camera will capture or recognize \\ the features of the criminal.
 Failure in camera when capturing the criminal.
 \end{tabular}                                       \\ \hline
 \textbf{Risk}           & Failure in camera when capturing criminal. \\ \hline
 \end{tabular}
 \end{table} 
 \FloatBarrier
-\newpage
+
 \section{Interface Requirements}
 
 \subsection{User Interfaces}
-The system is designed to be more simple and facilitate to use and to seem more clear to the user that he must understand the steps that he must do.
-Moreover, system provides user by implementing all necessary interactions to make it easy to use.
+The system is designed to be more simple and facilitate to use and to seem more clear to the user that he must understand the steps that he must do. Moreover, system provides user by implementing all necessary interactions to make it easy to use.
 \subsubsection {GUI}
-User Sign up Page: First, user must sign up to have an account to have an access to the website. After making an account,he will login and he can show the alerts that come to him to know the features of the murder, the time of kidnapping and his location.\\
-\begin{figure}[!ht]
-\centering
- \begin{minipage}{.5\textwidth}
-  \includegraphics[width=12.0cm, height=10.0cm]{signUp.png}
-  \caption{Sign Up}
-  \label{Sign Up}
- \end{minipage}
+The proposed system's application focuses on two main ends, the user and the admin end. The application allows the admin to log in and create accounts for the police officer or security guards. Also, the admin can update and delete the user's account. The user will log in to the application with an email and password set by the admin. Also, the user can update his information and change his password. Moreover, the user will view the alerts sent by the system with images, location, and time.
+\FloatBarrier
+\begin{figure}[h]
+  \centering
+  \begin{minipage}[b]{0.32\textwidth}
+    \includegraphics[width=\textwidth]{HomePage.PNG}
+    \caption{Home Page}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.32\textwidth}
+    \includegraphics[width=\textwidth]{Login.PNG}
+    \caption{Login Page}
+     
+      \end{minipage}
+  \begin{minipage}[b]{0.32\textwidth}
+    \includegraphics[width=\textwidth]{AddAccount.PNG}
+    \caption{Add new account}
+  \end{minipage}
 \end{figure}
+\clearpage
 
-\\
-\newpage
-\begin{figure}[!ht]
-\centering
- \begin{minipage}{.5\textwidth}
-  \includegraphics[width=12.0cm, height=8.0cm]{login.png}
-  \caption{Login}
-  \label{Login}
- \end{minipage}
+\begin{figure}[h]
+
+  \begin{minipage}[b]{0.5\textwidth}
+    \includegraphics[width=5.0cm, height=10.0cm]{ForgetPass.PNG}
+   \caption{Forget Password}
+   \label{fig:2}
+  \end{minipage}
+    \begin{minipage}[b]{0.5\textwidth}
+    \includegraphics[width=5.0cm, height=10.0cm]{profile.PNG}
+    \label{fig:2}
+    \caption{Profile}
+  \end{minipage}
+      \begin{minipage}[b]{0.5\textwidth}
+    \label{fig:2}
+    \includegraphics[width=5.0cm, height=10.0cm]{Alerts.PNG}
+    \caption{Alerts Page}
+  \end{minipage}
+  \begin{minipage}[b]{0.5\textwidth}
+    \includegraphics[width=5.0cm, height=10.0cm]{Logout.PNG}
+     \label{fig:2}
+   \caption{Logout Page}
+  \end{minipage}
+  
+\label{label1}
 \end{figure}
-
-
-\\
-\begin{figure}[!ht]
-\centering
- \begin{minipage}{.5\textwidth}
-  \includegraphics[width=10.0cm, height=8.0cm]{alert.png}
-  \caption{Alert}
-  \label{Alert}
- \end{minipage}
-\end{figure}
-
-Alert Page: if there is the kidnapping, an alert will sent to the police by the picture of the murder, location of kidnapping and the time.
-\\
-\newpage
-\begin{figure}[!ht]
-\centering
- \begin{minipage}{.5\textwidth}
-  \includegraphics[width=10.0cm, height=10.0cm]{map.png}
-  \caption{Map}
-  \label{Map}
- \end{minipage}
-\end{figure}
-
-Map Page: After system sends an alert to the police, he will see the details then he will put his location and the location he will go after the murder to catch him.
+\FloatBarrier
 
 \subsubsection { CLI}
 N/A 
 
 
 \subsection{Hardware Interfaces}
-At this stage, there is no need for hardware as we can use simulator as ifogsim toolkit developed by Harshit \cite{ifog} and mentioned by Redowan Mahmud in \cite{{ifog2} . But on deploying this project in reality,  we need IP surveillance cameras to capture the incidents and personal computers at the end-users sites to help them monitor the system or receive alerts and make records for the crimes.
+At this stage, there is no need for hardware as we can use simulator as ifogsim toolkit developed by Harshit \cite{ifog} and mentioned by Redowan Mahmud in \cite{ifog2} . But on deploying this project in reality,  we need IP surveillance cameras to capture the incidents and personal computers at the end-users sites to help them monitor the system or receive alerts and make records for the crimes.
 \subsection{Communications Interfaces}
 As our project highly depends on communication among entities, architectures such as fog networking, edge networking, and cloud networking are dominant. To reduce the overload on the network, the processing happens on both the edge and fog nodes to provide real-time response. Moreover, the data then gets transferred to the cloud for further processing.
 \subsection {API}
 \begin{itemize}
 \item Google Maps API, to get the actual location of the event and dispatch it. Also, in tracking the criminal.
-\item  Kairos Face Recognition API, for easily real-time detection to detect people's faces.
+\item  Face Recognition API, for easily real-time detection to detect people's faces.
 \item Face Blur API for blurring people's faces, as it's essential to ensure privacy for people's identity in public places.
 \end{itemize}
+
 
 \section{Design Constraints}
 
  
 \subsection{ Standards Compliance}
-begin{itemize}
+\begin{itemize}
     \item European Data Protection Board ('EDPB') and the General Data Protection Regulation ('GDPR')
     settled a guidelines on how to process data from CCTV devices without sharing citizen's bio metrics and personal data including car plates,person's face and many other private things that should be avoided from being shared. \cite{EDPB}\cite{GDPR}
-    
-
     
 \end{itemize}
 \subsection{ Hardware Limitations}
  When this project gets applied for real-life use, surveillance cameras can be costly. This project requires various cameras to get installed in multiple areas across a smart city. Moreover, an additional cost gets added for the maintenance of these cameras. 
 \subsection{ Other Constraints }
-  \textbf{Safety and security considerations}: the data transferred through the network and the databases used should be secured against any malicious deformations, Ismagilova et al discussed it in\cite{Ismagilova2020}.
+  \textbf{Safety and Security considerations}: the data transferred through the network and the databases used should be secured against any malicious deformations, Ismagilova et al. discussed it in \cite{Ismagilova2020}.
   \newline
- \textbf{Reliability and Fault tolerance}: Data should not be corrupted or lost in any case, especially while transferring data through the system layers, N.Mohamed and et al discussed it in \cite{8666447}.
-
+ \textbf{Reliability and Fault tolerance}: Data should not be corrupted or lost in any case, especially while transferring data through the system layers, N. Mohamed and et al. discussed it in \cite{8666447}.
+ 
 \section{Non-functional Requirements}
 \subsection{Security}
-The proposed system ensures security and provides data privacy to prevent anonymous and malicious users from using the transmitting data. As mentioned in \cite{NFR1} Fog and edge computing deal with privacy issues by reducing the amount of data propagation as it processes the data locally which increases the data security. Also, network isolation mechanisms or the physical infrastructure access policies can be applied to provide a more secure and privacy system.
+The proposed system ensures security and provides data privacy to prevent anonymous and malicious users from using the transmitted data. As mentioned in \cite{NFR1}, fog and edge computing deal with privacy issues by reducing the amount of data propagation as it processes the data locally which increases the data security. Also, network isolation mechanisms or the physical infrastructure access policies can be applied to provide a more secure and privacy system.
 \subsection{Scalability}
 The proposed system ensures scalability to handle such massive generated data, it must be constructed to be a real-time scalable up and down system.  It's expected for the fog networks to deal with more nodes.  So, it is needed for them to become acclimated to the system scalability. Otherwise, due to the increment of developing IoT devices, edge services guaranteeing to scale-out accordingly to the enormous amount of devices that being connected to the edge of the network.
 \subsection{Performance}
 Fog and edge models guaranteeing the best performance real-time system. They have proven that in the bandwidth and the response time especially. For edge computing, nodes need to be placed near the end of the devices. So, it will reduce the amount of receiving data, which leads to low latency and high bandwidth. Also, due to the small amount of transmitted data as it preprocessing locally. Fog computing achieves low latency and high performance efficiently.
 \subsection{Interoperability}
 It's expected for fog, edge, and cloud to be managed by various providers. So, the system ensures interoperability between them, as it's essential when utilizing services from various cloud providers to have the ability to transfer workloads among them. Also, for fog and edge computing, the components are managed by different providers.
-\subsection{Usability}
-The system ensures usability to achieve the demand efficiently with low latency and high bandwidth. Fog and edge models reduce transmitted data which makes it easier for the system to preprocessing it, increase usability, and increase the potential of the cloud platform.
+
 \subsection{Reliability}
-With large numbers of edge computing devices and edge data centers associated with the network, it increases the difficulty for any failure to shut down service entirely. Data can be rerouted through various pathways to guarantee clients retain admittance to the items and data they need. Effectively incorporating IoT edge computing devices and edge data centers into an extensive edge architecture can accordingly give reliability.
+With large numbers of edge computing devices and edge data centers associated with the network, it increases the difficulty for any failure to shut down service entirely. In the proposed architecture cloud layer offers backup and archive services in order to guarantee clients retain admittance to the data they need later on. Effectively incorporating IoT edge computing devices and edge data centers into an extensive edge architecture can accordingly give reliability.
 \section{Data Design}
 \subsection{Data Description}
-Our system collects incident data from streets, uses datasets to train its algorithms, and has a SQL database on the servers where event data and users' data are being saved.
-\begin{itemize}
-\item The original format of the data is video streams and SQL database records
-\item The data captured by the surveillance cameras in the streets, processed using fog nodes, and stored on servers. Users use web forms to communicate with those data.
-\item On a large scale The database should be a large dataset as it deals with video streams taken 24/7 and users' information and criminals' information as well.
-\item It is expected that we have two users for this system.
-\item The data must contain the date and time of each crime; to help the users to report it and arrest the criminal as soon as possible.
-\end{itemize}
+We have acquired a data set of surveillance videos published by the \textbf{ 'UCF Center for research in computer vision'} called  \textbf{ UCF-Crime}; It is a large-scale dataset of 128 hours of videos; it has 1900 video of many classes as Robbery, Stealing, Shooting ... etc. And it is widely used in any research or project that targets public safety and surveillance. Therefore we took some of those videos from the classes that meet our requirements. \ref{tab:ds} illustrates the dataset.
+
 
 
 \subsection{Database design description}
 \begin{figure}[h]
 \centering
-\includegraphics[width=15cm,height=15cm,keepaspectratio]{./Database}
+\includegraphics[width=15cm,height=15cm,keepaspectratio]{./db Final.png}
 \caption{Database of the software}
 \label{fig:D}
 \end{figure}
 This database in Figure \ref{fig:D} is for the users' software; it also interacts with the criminals' database provided by the social security, and data sets updated frequently to help the performance of detection algorithms used by the system.
 \FloatBarrier
 
+\begin{table}[htbp]
+\centering
+\label{tab:ds}
+\caption{Dataset Description}
+\begin{tabular}{ | l | m{11cm}|} 
+\hline
+\textbf{Dataset Name} & UCF-Crime Dataset   \\ 
+\hline
+\textbf{Link} &  https://www.crcv.ucf.edu/projects/real-world/ \\ 
+\hline
+\textbf{Size} & 95.9 GB  \\ 
+\hline
+\textbf{Number of classes} & The dataset has 13 classes for anomaly events and normal class; we used 3 of them  \\
+\hline
+\textbf{Average Video frames} & 1000-1500 frames per video \\
+\hline
+\textbf{Number of videos used} & we used for fighting 10 videos,Robbery 10 videos,normal events 10 videos \\
+\hline
+\textbf{comments} & This data set has many videos in many places; we chose the suitable videos in streets. Also it didn't include kidnapping events; so we gathered 6 surveillance videos from Youtube with same video length and specifications as UCF-crime videos \\
+\hline
+\end{tabular}
+\end{table}
+ \FloatBarrier
 
 
 \section{Preliminary Object-Oriented Domain Analysis}
@@ -465,14 +483,15 @@ This database in Figure \ref{fig:D} is for the users' software; it also interact
 \begin{figure}[!ht]
 \centering
  \begin{minipage}{.5\textwidth}
-  \includegraphics[width=10.0cm, height=7.5cm]{classdiagram.png}
+  \includegraphics[width=12.0cm, height=7.5cm]{class diagram surv.png}
   \caption{Class Diagram}
   \label{classdiagram}
  \end{minipage}
 \end{figure}
-
+\newpage
 \subsection{Class descriptions}
 \begin{table}[h!]
+
 \caption{Class Name - officers}
 \label{tab:my-table}
 \begin{tabular}{|p{0.15\textwidth}|p{0.85\textwidth}|}
@@ -545,7 +564,7 @@ getusertypeID(),insert(),edit(),delete()
 \textbf{Attributes}  & ID:int,email:string,password:string
 \\ \hline
 \textbf{Operations} & 
-addpoliceofficer(),edit(),delete(),checkFailure(),AddFognodes()
+createpoliceofficer(),edit(),delete(),checkFailure(),AddFognodes()
 
 \\ \hline
 \textbf{Constraints} & Admin is the main controller in the application.
@@ -701,7 +720,7 @@ getLocation()
 \textbf{Attributes}  & cameraID:int,noOfcameras:int,locationID:int
 ,serialNumber:int
 \\ \hline
-\textbf{Operations} & getVideos(),sendToFognodes()
+\textbf{Operations} & getVideos(),sendToFognodes(),caameraFailure(),CrimeDetection()
 \\ \hline
 \textbf{Constraints} & cannot work without videos and locations.
 \\ \hline
@@ -776,7 +795,7 @@ and event.
 \\ \hline
 \textbf{Attributes}  & id:int,description:string
 \\ \hline
-\textbf{Operations} & getVideo(),getFrame(),getRegion()
+\textbf{Operations} & getVideo(),getFrame(),getRegion(),faceDetection(),faceBlurring
 \\ \hline
 \textbf{Constraints} & cannot work without video class.
 \\ \hline
@@ -1045,12 +1064,14 @@ and event.
 \textbf{Attributes}  & title:string,format:string,width:int,height:int,texture:string,
 histogram:string,rawData:string
 \\ \hline
-\textbf{Operations} & getFrame()
+\textbf{Operations} & getFrame(), deepLearningDetection(),videoSummarization()
 \\ \hline
 \textbf{Constraints} & cannot work without Frame class.
 \\ \hline
 \end{tabular}
 \end{table}
+
+
 \FloatBarrier
 \section{Operational Scenarios}
 \subsection{Scenario 1: Intelligent Surveillance System}
@@ -1058,15 +1079,16 @@ As shown in Figure \ref{Activity} and Figure \ref{Sequence}, the system should g
  \begin{figure}[!ht]
 \centering
  \begin{minipage}{.5\textwidth}
-  \includegraphics[width=15cm, height=13cm]{Activity2.jpeg}
+  \includegraphics[width=15cm, height=13cm]{Activity diagram.jpeg}
   \caption{Activity Diagram}
   \label{Activity}
  \end{minipage}
 \end{figure}
+
 \begin{figure}[!ht]
 
  \begin{minipage}{.5\textwidth}
-  \includegraphics[width=18cm, height=15cm]{sequenceDiagram.png}
+  \includegraphics[width=18cm, height=12cm]{sequence diagram.png}
   \caption{ \centering Sequence Diagram}
   \label{Sequence}
  \end{minipage}
@@ -1088,27 +1110,31 @@ Police officers can sign up and log into the system. Moreover, when an incident 
 
 
 \section{Project Plan}
-\includegraphics[width=1\textwidth]{./Taskplan.jpg}
-\begin{table}[h]
+\includegraphics[width=1\textwidth]{./final time plan .png}
+\begin{table}[htbp]
 \centering
-\caption{surveillance system for smart cities time plan}
+\caption{ISS time plan}
 \label{tab:Time Plan}
+
+
 \begin{tabular}{|l|l|l|l|l|}
 \hline
 Id & Task               & Start Date & Number of Days & Team Member \\ \hline
-1  & Finishing hardware architecture on simulator    & 11/15/2020 &35              & All members        \\ \hline
-2  & Collect Dataset    & 1/12/2021 & 23             & All members        \\ \hline
-3  & Work on GUI        & 1/5/2020 & 15             & All members       \\ \hline
-4  & Anomaly detection enhancement        & 1/5/2020 & 30             & All members       \\ \hline
-5  & system analysis    & 12/10/2020 & 60              & All members          \\ \hline
-6  & Feature Extraction & 2/2/2021 & 12             & All members     \\ \hline
-7  & Classification     & 2/10/2021 & 10             & All members        \\ \hline
-8  & Experiments        & 2/3/2021 & 20             & All members    \\ \hline
-9  & Writing paper        & 3/15/2021 & 10             & All members    \\ \hline
-10  & Writing thesis        & 4/15/2021 & 45             & All members    \\ \hline
+1  & Collecting Dataset    & 2/1/2021 & 5           & nour ahmed, sandra        \\ \hline
+2  & Work on GUI        & 3/1/2021 & 15             & samiha, mariam        \\ \hline
+3  & camera failure    & 3/5/2021 & 10              & nour elhoda          \\ \hline
+4  & video summarization     & 3/1/2021 & 10             & nour ahmed           \\ \hline
+
+5 & crime detection     & 3/1/2021 & 10    &    sandra          \\ \hline
+6 &   face blurring technique  & 3/20/2021 & 20             & mariam     \\ \hline
+7 &   face detection    & 3/20/2021 & 20             & samiha    \\ \hline
+8 &  deep learning detection classifier    & 4/5/2021 & 35             & nour ahmed,sandra    \\ \hline
+9 & mobile application    & 4/5/2021 & 40             & samiha,mariam    \\ \hline
+10 & enhancing video quality   & 4/5/2021 & 30             & nour elhoda        \\ \hline
+
+\hline
 \end{tabular}
 \end{table}
-
 
 \section{Appendices}
 
@@ -1120,6 +1146,10 @@ Edge computing: An architecture at which data gets processed on devices rather t
 \\
 \\
 SQL : Structured Query Language used to communicate with database.
+\\
+\\
+EFISS:Edge Fog Intelligent Surveillance System.
+
 \subsection{Supportive Documents}
 We have done a systematic review, as well as a review paper, which was sent to SSIC 2021(3rd International
 Conference on Smart Systems: Innovations in Computing). The paper is accepted now and we are waiting to publish it.The paper is available on github.
