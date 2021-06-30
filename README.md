@@ -1,4 +1,4 @@
-<p align="left"><img width="100" height="100" src=https://user-images.githubusercontent.com/55853937/124008954-4dba8000-d9dd-11eb-8ac3-f837863e0b69.png></p>
+
 # intelligent-Surveillance-for-smart-cities(EFISS)
 
 the purpose of this project is to implement an edge Fog computing- based surveillance system to offer real-time data processing. When surveillance videos capture an incident, the data get transferred from the edge to fog layer for processing. Moreover, a rapid response is then provided to properly handle the occasion. Furthermore, despite tackling scalability obstacles, the system should handle privacy-sensitive data to overcome the privacy challenges in smart cities
