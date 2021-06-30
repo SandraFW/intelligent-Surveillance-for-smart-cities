@@ -17,7 +17,7 @@ the purpose of this project is to implement an edge Fog computing- based surveil
 * opencv-python 
 * tensorflow
 * sklearn
-#Architecture Flow
+# Architecture Flow
 
 
 https://user-images.githubusercontent.com/55853937/124008631-e997bc00-d9dc-11eb-969f-2b1d34898e0f.mp4
